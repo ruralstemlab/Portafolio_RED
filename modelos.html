@@ -24,13 +24,19 @@
     </header>
 
     <!-- ============================================================
-    MENÚ HORIZONTAL
+    MENÚ CON SUBMENÚ
     ============================================================ -->
     <nav class="menu-principal">
         <div class="container">
             <ul class="menu-principal__lista">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="modelos.html" class="activo">Modelos de evaluación y RED</a></li>
+                <li class="menu-item-has-children">
+                    <a href="modelos.html" class="activo">Modelos de evaluación y RED ▾</a>
+                    <ul class="sub-menu">
+                        <li><a href="seleccionando-modelos.html">Selección de modelos</a></li>
+                        <li><a href="recursos.html">RED</a></li>
+                    </ul>
+                </li>
                 <li><a href="rediseno.html">Rediseño</a></li>
                 <li><a href="aplicacion.html">Aplicación del modelo</a></li>
                 <li><a href="referencias.html">Referencias</a></li>
@@ -143,23 +149,6 @@
                 <p>
                     Constituye uno de los referentes clásicos en la evaluación de la calidad del software, considerando factores como la corrección, confiabilidad, eficiencia, mantenibilidad, flexibilidad y portabilidad. Si bien su enfoque es eminentemente técnico, proporciona criterios útiles para valorar la calidad estructural de aplicaciones educativas digitales.
                 </p>
-            </section>
-
-            <!-- Subpáginas -->
-            <section style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #c8e6c9;">
-                <h2 class="subpagina-subtitulo">Subpáginas</h2>
-                <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 16px;">
-                    <li>
-                        <a href="seleccionando-modelos.html" style="display: inline-block; background-color: #1b5e20; color: #fff; padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold;">
-                            ▶ Seleccionando modelos
-                        </a>
-                    </li>
-                    <li>
-                        <a href="recursos.html" style="display: inline-block; background-color: #1b5e20; color: #fff; padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold;">
-                            ▶ Recursos Educativos Digitales
-                        </a>
-                    </li>
-                </ul>
             </section>
 
         </div>
