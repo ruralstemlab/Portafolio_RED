@@ -1,45 +1,53 @@
-/* ================================================================
-   ESTILOS GENERALES
-   ================================================================ */
-
+/* ============================================================
+   RESET Y ESTILOS BASE
+   ============================================================ */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #2e7d32; /* verde oscuro */
-    color: #1e1e1e;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #222;
     line-height: 1.6;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* ================================================================
-   ENCABEZADO INSTITUCIONAL
-   ================================================================ */
+a {
+    text-decoration: none;
+    color: #1b5e20;
+}
 
+a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================================
+   ENCABEZADO INSTITUCIONAL (SOLO para modelos, aplicacion, etc.)
+   ============================================================ */
 .header-institucional {
-    background-color: #1b5e20;
+    background: #1b5e20;
     color: #ffffff;
-    padding: 16px 0;
-    border-bottom: 4px solid #f9a825;
+    padding: 18px 0;
+    border-bottom: 4px solid #0d3b0e;
 }
 
 .header-institucional__contenido {
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .header-institucional__logo img {
-    max-height: 70px;
+    height: 65px;
     width: auto;
     display: block;
 }
@@ -52,83 +60,150 @@ body {
 .header-institucional__universidad {
     font-size: 1.3rem;
     font-weight: bold;
-    letter-spacing: 1px;
+    margin: 0;
 }
 
 .header-institucional__maestria {
     font-size: 0.95rem;
+    margin: 0;
     opacity: 0.9;
 }
 
-/* ================================================================
-   MENÚ PRINCIPAL
-   ================================================================ */
-
+/* ============================================================
+   MENÚ DE NAVEGACIÓN PRINCIPAL (TODAS las páginas)
+   ============================================================ */
 .menu-principal {
-    background-color: #1b5e20;
-    border-bottom: 2px solid #f9a825;
+    background: #2c3e50;
+    border-bottom: 3px solid #1b5e20;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .menu-principal__lista {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 6px 0;
-    padding: 8px 0;
+    gap: 4px;
+    padding: 6px 0;
 }
 
 .menu-principal__lista li {
-    margin-right: 4px;
+    display: inline-block;
 }
 
 .menu-principal__lista a {
     display: block;
-    padding: 8px 18px;
     color: #ffffff;
-    text-decoration: none;
+    padding: 12px 22px;
     font-weight: bold;
     font-size: 0.95rem;
     border-radius: 4px 4px 0 0;
-    transition: background-color 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
-.menu-principal__lista a:hover,
+.menu-principal__lista a:hover {
+    background: #1b5e20;
+    color: #fff;
+    text-decoration: none;
+}
+
 .menu-principal__lista a.activo {
-    background-color: #ffffff;
-    color: #1b5e20;
+    background: #1b5e20;
+    color: #ffffff;
+    border-bottom: 3px solid #ffc107;
 }
 
-/* ================================================================
-   CONTENIDO PRINCIPAL
-   ================================================================ */
-
+/* ============================================================
+   CONTENIDO PRINCIPAL (genérico)
+   ============================================================ */
 .contenido-principal {
-    background-color: #ffffff;
     padding: 30px 0 40px 0;
+    background: #ffffff;
     min-height: 60vh;
 }
 
-/* Banner */
+/* ============================================================
+   PORTADA (index.html) - Centrada y sin banner
+   ============================================================ */
+.portada {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    background: #ffffff;
+    padding: 40px 20px;
+}
+
+.logo-portada {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.portada h1 {
+    font-family: Arial, sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    margin: 25px 0 10px 0;
+    letter-spacing: 1px;
+    color: #1b5e20;
+}
+
+.portada h2 {
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    margin: 30px 0 20px 0;
+    color: #222;
+}
+
+.portada p {
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    margin: 10px 0;
+    color: #222;
+}
+
+/* ============================================================
+   BANNER (solo para otras páginas)
+   ============================================================ */
 .banner-universidad {
-    margin-bottom: 28px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .banner-universidad img {
     width: 100%;
     height: auto;
     display: block;
-    border: 2px solid #c8e6c9;
-    border-radius: 4px;
 }
 
-/* Títulos */
+/* ============================================================
+   TÍTULOS DE SUBPÁGINAS
+   ============================================================ */
 .titulo-principal {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
+    font-size: 2.2rem;
     color: #1b5e20;
-    margin-bottom: 16px;
-    letter-spacing: 1px;
+    text-align: center;
+    margin: 30px 0 20px 0;
+    border-bottom: 3px solid #c8e6c9;
+    padding-bottom: 15px;
+}
+
+.subpagina-titulo {
+    font-size: 2rem;
+    color: #1b5e20;
+    text-align: center;
+    margin: 10px 0 30px 0;
+}
+
+.subpagina-subtitulo {
+    font-size: 1.6rem;
+    color: #1b5e20;
+    margin: 30px 0 18px 0;
+    border-left: 6px solid #1b5e20;
+    padding-left: 16px;
 }
 
 .autor,
@@ -136,164 +211,128 @@ body {
 .universidad {
     text-align: center;
     font-size: 1.1rem;
-    margin-bottom: 4px;
+    margin: 6px 0;
 }
 
-.autor strong,
-.profesor strong {
-    color: #1b5e20;
-}
-
-.universidad {
-    font-weight: bold;
-    color: #1b5e20;
-    margin-top: 8px;
-    margin-bottom: 28px;
-    font-size: 1.2rem;
-}
-
-/* Introducción y secciones */
-.introduccion h2,
-.subpagina-titulo,
-.subpagina-subtitulo {
-    color: #1b5e20;
-}
-
-.subpagina-titulo {
-    font-size: 2rem;
-    border-bottom: 3px solid #c8e6c9;
-    padding-bottom: 8px;
-    margin-bottom: 24px;
-}
-
-.subpagina-subtitulo {
-    font-size: 1.5rem;
+/* ============================================================
+   INTRODUCCIÓN (solo en index viejo, se mantiene por si acaso)
+   ============================================================ */
+.introduccion {
     margin-top: 30px;
-    margin-bottom: 16px;
-    border-bottom: 2px solid #e8f5e9;
-    padding-bottom: 6px;
+    padding: 20px;
+    background: #f9fbf9;
+    border-radius: 8px;
+    border-left: 5px solid #1b5e20;
 }
 
-.introduccion p,
-section p {
+.introduccion h2 {
+    color: #1b5e20;
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+}
+
+.introduccion p {
     margin-bottom: 14px;
     text-align: justify;
 }
 
-/* ================================================================
-   TABLAS
-   ================================================================ */
-
+/* ============================================================
+   TABLAS (modelos, comparativas, etc.)
+   ============================================================ */
 .tabla-modelos {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
     font-size: 0.95rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-.tabla-modelos th,
-.tabla-modelos td {
-    border: 1px solid #a5d6a7;
-    padding: 10px 12px;
-    text-align: left;
-    vertical-align: top;
+.tabla-modelos thead {
+    background: #1b5e20;
+    color: #ffffff;
 }
 
 .tabla-modelos th {
-    background-color: #1b5e20;
-    color: #ffffff;
+    padding: 14px 12px;
+    text-align: left;
     font-weight: bold;
 }
 
-.tabla-modelos tr:nth-child(even) {
-    background-color: #f1f8e9;
+.tabla-modelos td {
+    padding: 12px 12px;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: top;
 }
 
-.tabla-modelos tr:hover {
-    background-color: #e8f5e9;
+.tabla-modelos tbody tr:nth-child(even) {
+    background: #f6faf6;
 }
 
-/* ================================================================
-   RECURSOS EDUCATIVOS DIGITALES
-   ================================================================ */
+.tabla-modelos tbody tr:hover {
+    background: #e8f5e9;
+}
 
+/* ============================================================
+   RECURSOS EDUCATIVOS DIGITALES (fichas)
+   ============================================================ */
 .red-item {
-    border: 1px solid #a5d6a7;
-    border-radius: 6px;
-    padding: 20px;
-    margin-bottom: 28px;
-    background-color: #f9fbe7;
+    background: #fafdfa;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 24px 28px;
+    margin: 30px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
 .red-item h3 {
     color: #1b5e20;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.red-autor,
+.red-descripcion,
+.red-enlace,
+.red-caracteristicas,
+.red-limitaciones {
+    margin: 8px 0;
+}
+
+.red-item ul {
+    margin: 10px 0 10px 24px;
+}
+
+.red-item ul li {
     margin-bottom: 6px;
 }
 
-.red-item .red-autor {
-    font-style: italic;
-    color: #33691e;
-    margin-bottom: 10px;
+.red-imagen {
+    margin-top: 18px;
+    text-align: center;
 }
 
-.red-item .red-descripcion {
-    margin-bottom: 10px;
-    text-align: justify;
-}
-
-.red-item .red-enlace a {
-    color: #1b5e20;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.red-item .red-enlace a:hover {
-    color: #f9a825;
-}
-
-.red-item .red-caracteristicas,
-.red-item .red-limitaciones {
-    margin: 10px 0 6px 0;
-    font-weight: bold;
-    color: #1b5e20;
-}
-
-.red-item .red-caracteristicas + ul,
-.red-item .red-limitaciones + ul {
-    margin-top: 0;
-    padding-left: 24px;
-}
-
-.red-item .red-caracteristicas + ul li,
-.red-item .red-limitaciones + ul li {
-    margin-bottom: 4px;
-}
-
-.red-item .red-imagen {
-    margin-top: 14px;
-}
-
-.red-item .red-imagen img {
+.red-imagen img {
     max-width: 100%;
     height: auto;
-    border: 2px solid #a5d6a7;
-    border-radius: 4px;
-    display: block;
+    border: 1px solid #c8e6c9;
+    border-radius: 6px;
+    max-height: 350px;
+    object-fit: cover;
 }
 
-/* ================================================================
-   VÍDEO
-   ================================================================ */
-
+/* ============================================================
+   VIDEOS
+   ============================================================ */
 .contenedor-video {
-    margin: 24px 0;
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;
     overflow: hidden;
-    border: 2px solid #a5d6a7;
-    border-radius: 4px;
+    max-width: 100%;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .contenedor-video iframe {
@@ -305,65 +344,62 @@ section p {
     border: 0;
 }
 
-/* ================================================================
+/* ============================================================
    PIE DE PÁGINA
-   ================================================================ */
-
+   ============================================================ */
 .pie-pagina {
-    background-color: #1b5e20;
-    color: #e8f5e9;
+    background: #f5f7f5;
+    border-top: 2px solid #c8e6c9;
     text-align: center;
-    padding: 18px 0;
-    font-size: 0.9rem;
-    border-top: 4px solid #f9a825;
+    padding: 24px 20px;
+    margin-top: 50px;
+    font-size: 0.95rem;
+    color: #333;
 }
 
 .pie-pagina p {
-    margin-bottom: 4px;
+    margin: 4px 0;
 }
 
-.pie-pagina p:last-child {
-    margin-bottom: 0;
-}
-
-/* ================================================================
-   RESPONSIVE
-   ================================================================ */
-
+/* ============================================================
+   RESPONSIVE (ajustes para móviles)
+   ============================================================ */
 @media (max-width: 768px) {
     .header-institucional__contenido {
         flex-direction: column;
-        align-items: center;
         text-align: center;
     }
 
     .header-institucional__logo img {
-        max-height: 60px;
-    }
-
-    .header-institucional__universidad {
-        font-size: 1.1rem;
-    }
-
-    .header-institucional__maestria {
-        font-size: 0.85rem;
+        height: 50px;
     }
 
     .menu-principal__lista {
-        justify-content: center;
+        flex-direction: column;
+        gap: 2px;
+        padding: 10px 0;
     }
 
     .menu-principal__lista a {
-        font-size: 0.85rem;
-        padding: 6px 12px;
+        padding: 10px 16px;
+        border-radius: 4px;
+        text-align: center;
     }
 
-    .titulo-principal {
-        font-size: 1.5rem;
+    .portada h1 {
+        font-size: 30px;
     }
 
-    .subpagina-titulo {
-        font-size: 1.6rem;
+    .portada h2 {
+        font-size: 22px;
+    }
+
+    .portada p {
+        font-size: 18px;
+    }
+
+    .logo-portada {
+        width: 120px;
     }
 
     .tabla-modelos {
@@ -372,93 +408,45 @@ section p {
 
     .tabla-modelos th,
     .tabla-modelos td {
-        padding: 6px 8px;
+        padding: 8px 6px;
     }
 
-    .red-item h3 {
-        font-size: 1.2rem;
+    .titulo-principal {
+        font-size: 1.6rem;
+    }
+
+    .subpagina-titulo {
+        font-size: 1.5rem;
+    }
+
+    .subpagina-subtitulo {
+        font-size: 1.3rem;
+        padding-left: 12px;
+    }
+
+    .red-item {
+        padding: 16px;
     }
 }
 
 @media (max-width: 480px) {
-    .menu-principal__lista {
-        flex-direction: column;
-        align-items: center;
+    .portada h1 {
+        font-size: 24px;
     }
 
-    .menu-principal__lista li {
-        margin-right: 0;
-        width: 100%;
+    .portada h2 {
+        font-size: 18px;
     }
 
-    .menu-principal__lista a {
-        border-radius: 4px;
-        text-align: center;
-        padding: 8px;
+    .portada p {
+        font-size: 16px;
     }
 
     .container {
         padding: 0 12px;
     }
 
-    .titulo-principal {
-        font-size: 1.2rem;
+    .red-item ul {
+        margin-left: 16px;
     }
-
-    .autor,
-    .profesor,
-    .universidad {
-        font-size: 0.95rem;
-    }
-
-    .subpagina-titulo {
-        font-size: 1.3rem;
-    }
-}
-/* ===== PORTADA (index.html) ===== */
-body {
-    background: #fff;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-.portada {
-    max-width: 900px;
-    margin: 40px auto;
-    text-align: center;
-    background: #fff;
-    padding: 40px;
-}
-
-.logo-portada {
-    width: 140px;
-    margin-bottom: 25px;
-}
-
-.portada h1 {
-    font-family: Arial, sans-serif;
-    font-size: 40px;
-    margin: 30px 0;
-}
-
-.portada h2 {
-    font-family: Arial, sans-serif;
-    font-size: 28px;
-    margin: 40px 0;
-    font-weight: normal;
-}
-
-.portada p {
-    font-family: Arial, sans-serif;
-    font-size: 22px;
-    margin: 12px 0;
-}
-
-.pie-pagina {
-    text-align: center;
-    margin-top: 80px;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
 }
