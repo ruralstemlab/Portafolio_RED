@@ -9,7 +9,7 @@
 <body>
 
     <!-- ============================================================
-    ENCABEZADO INSTITUCIONAL (igual al resto de páginas)
+    ENCABEZADO INSTITUCIONAL
     ============================================================ -->
     <header class="header-institucional">
         <div class="container header-institucional__contenido">
@@ -24,13 +24,19 @@
     </header>
 
     <!-- ============================================================
-    MENÚ DE NAVEGACIÓN
+    MENÚ CON SUBMENÚ
     ============================================================ -->
     <nav class="menu-principal">
         <div class="container">
             <ul class="menu-principal__lista">
                 <li><a href="index.html" class="activo">Inicio</a></li>
-                <li><a href="modelos.html">Modelos de evaluación y RED</a></li>
+                <li class="menu-item-has-children">
+                    <a href="modelos.html">Modelos de evaluación y RED ▾</a>
+                    <ul class="sub-menu">
+                        <li><a href="seleccionando-modelos.html">Selección de modelos</a></li>
+                        <li><a href="recursos.html">RED</a></li>
+                    </ul>
+                </li>
                 <li><a href="rediseno.html">Rediseño</a></li>
                 <li><a href="aplicacion.html">Aplicación del modelo</a></li>
                 <li><a href="referencias.html">Referencias</a></li>
@@ -39,7 +45,7 @@
     </nav>
 
     <!-- ============================================================
-    CONTENIDO PRINCIPAL: PORTADA
+    PORTADA
     ============================================================ -->
     <main class="contenido-principal">
         <div class="portada">
