@@ -30,7 +30,7 @@ a:hover {
 }
 
 /* ============================================================
-   ENCABEZADO INSTITUCIONAL (TODAS las páginas)
+   ENCABEZADO INSTITUCIONAL
    ============================================================ */
 .header-institucional {
     background: #1b5e20;
@@ -70,7 +70,7 @@ a:hover {
 }
 
 /* ============================================================
-   MENÚ DE NAVEGACIÓN PRINCIPAL
+   MENÚ DE NAVEGACIÓN PRINCIPAL CON SUBMENÚ
    ============================================================ */
 .menu-principal {
     background: #2c3e50;
@@ -88,6 +88,7 @@ a:hover {
 
 .menu-principal__lista li {
     display: inline-block;
+    position: relative; /* Necesario para el submenú */
 }
 
 .menu-principal__lista a {
@@ -112,8 +113,60 @@ a:hover {
     border-bottom: 3px solid #ffc107;
 }
 
+/* --- Submenú desplegable --- */
+.menu-item-has-children > a::after {
+    content: " ▾";
+    font-size: 0.8rem;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #2c3e50;
+    min-width: 220px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 4px 4px;
+    z-index: 999;
+}
+
+.menu-principal__lista li:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.sub-menu a {
+    display: block;
+    padding: 10px 20px !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid #1b5e20;
+    white-space: nowrap;
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+.sub-menu a:hover {
+    background: #1b5e20;
+    text-decoration: none;
+}
+
+.sub-menu a.activo {
+    background: #1b5e20;
+    border-left: 4px solid #ffc107;
+    border-bottom: 1px solid #1b5e20;
+}
+
 /* ============================================================
-   CONTENIDO PRINCIPAL (genérico)
+   CONTENIDO PRINCIPAL
    ============================================================ */
 .contenido-principal {
     padding: 30px 0 40px 0;
@@ -122,7 +175,7 @@ a:hover {
 }
 
 /* ============================================================
-   PORTADA (index.html) - Centrada y con logo ajustado
+   PORTADA (index.html)
    ============================================================ */
 .portada {
     max-width: 900px;
@@ -133,7 +186,7 @@ a:hover {
 }
 
 .logo-portada {
-    width: 110px;   /* Reducido de 150 a 110 */
+    width: 110px;
     height: auto;
     margin-bottom: 20px;
     display: inline-block;
@@ -164,7 +217,7 @@ a:hover {
 }
 
 /* ============================================================
-   BANNER (solo para otras páginas)
+   BANNER
    ============================================================ */
 .banner-universidad {
     margin-bottom: 25px;
@@ -180,7 +233,7 @@ a:hover {
 }
 
 /* ============================================================
-   TÍTULOS DE SUBPÁGINAS
+   TÍTULOS
    ============================================================ */
 .titulo-principal {
     font-size: 2.2rem;
@@ -386,6 +439,22 @@ a:hover {
         text-align: center;
     }
 
+    .sub-menu {
+        position: static;
+        box-shadow: none;
+        border-left: 3px solid #1b5e20;
+        margin-left: 20px;
+        display: none;
+    }
+
+    .menu-principal__lista li:hover .sub-menu {
+        display: none;
+    }
+
+    .menu-principal__lista li.open .sub-menu {
+        display: block;
+    }
+
     .portada h1 {
         font-size: 30px;
     }
@@ -399,7 +468,7 @@ a:hover {
     }
 
     .logo-portada {
-        width: 90px; /* Aún más pequeño en móvil */
+        width: 90px;
     }
 
     .tabla-modelos {
