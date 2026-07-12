@@ -24,13 +24,19 @@
     </header>
 
     <!-- ============================================================
-    MENÚ HORIZONTAL
+    MENÚ CON SUBMENÚ
     ============================================================ -->
     <nav class="menu-principal">
         <div class="container">
             <ul class="menu-principal__lista">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="modelos.html" class="activo">Modelos de evaluación y RED</a></li>
+                <li class="menu-item-has-children">
+                    <a href="modelos.html">Modelos de evaluación y RED ▾</a>
+                    <ul class="sub-menu">
+                        <li><a href="seleccionando-modelos.html">Selección de modelos</a></li>
+                        <li><a href="recursos.html" class="activo">RED</a></li>
+                    </ul>
+                </li>
                 <li><a href="rediseno.html">Rediseño</a></li>
                 <li><a href="aplicacion.html">Aplicación del modelo</a></li>
                 <li><a href="referencias.html">Referencias</a></li>
@@ -113,11 +119,6 @@
                     <img src="img/phet-simulations.jpg" alt="PhET Interactive Simulations – Projectile Motion" />
                 </div>
             </article>
-
-            <!-- Enlace de regreso -->
-            <p style="margin-top:24px;">
-                <a href="modelos.html" style="color:#1b5e20; font-weight:bold;">← Volver a Modelos de evaluación y RED</a>
-            </p>
 
         </div>
     </main>
