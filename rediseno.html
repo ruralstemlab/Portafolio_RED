@@ -24,13 +24,19 @@
     </header>
 
     <!-- ============================================================
-    MENÚ HORIZONTAL
+    MENÚ CON SUBMENÚ
     ============================================================ -->
     <nav class="menu-principal">
         <div class="container">
             <ul class="menu-principal__lista">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="modelos.html">Modelos de evaluación y RED</a></li>
+                <li class="menu-item-has-children">
+                    <a href="modelos.html">Modelos de evaluación y RED ▾</a>
+                    <ul class="sub-menu">
+                        <li><a href="seleccionando-modelos.html">Selección de modelos</a></li>
+                        <li><a href="recursos.html">RED</a></li>
+                    </ul>
+                </li>
                 <li><a href="rediseno.html" class="activo">Rediseño</a></li>
                 <li><a href="aplicacion.html">Aplicación del modelo</a></li>
                 <li><a href="referencias.html">Referencias</a></li>
@@ -46,7 +52,6 @@
 
             <h1 class="subpagina-titulo">Rediseño: Modelo LORI-RSL</h1>
 
-            <!-- Modelo LORI-RSL -->
             <section>
                 <h2 class="subpagina-subtitulo">Modelo LORI-RSL</h2>
                 <p>
@@ -60,7 +65,6 @@
                 </p>
             </section>
 
-            <!-- Nuevos indicadores -->
             <section>
                 <h2 class="subpagina-subtitulo">Nuevos indicadores</h2>
                 <table class="tabla-modelos">
@@ -98,7 +102,6 @@
                 </p>
             </section>
 
-            <!-- Diagrama -->
             <section>
                 <h2 class="subpagina-subtitulo">Diagrama del modelo LORI-RSL</h2>
                 <div style="text-align: center; margin: 20px 0;">
@@ -113,7 +116,6 @@
                 </div>
             </section>
 
-            <!-- Justificación -->
             <section>
                 <h2 class="subpagina-subtitulo">Justificación del rediseño</h2>
                 <p>
