@@ -30,7 +30,7 @@ a:hover {
 }
 
 /* ============================================================
-   ENCABEZADO INSTITUCIONAL (SOLO para modelos, aplicacion, etc.)
+   ENCABEZADO INSTITUCIONAL (TODAS las páginas)
    ============================================================ */
 .header-institucional {
     background: #1b5e20;
@@ -70,7 +70,7 @@ a:hover {
 }
 
 /* ============================================================
-   MENÚ DE NAVEGACIÓN PRINCIPAL (TODAS las páginas)
+   MENÚ DE NAVEGACIÓN PRINCIPAL
    ============================================================ */
 .menu-principal {
     background: #2c3e50;
@@ -122,7 +122,7 @@ a:hover {
 }
 
 /* ============================================================
-   PORTADA (index.html) - Centrada y sin banner
+   PORTADA (index.html) - Centrada y con logo ajustado
    ============================================================ */
 .portada {
     max-width: 900px;
@@ -133,7 +133,7 @@ a:hover {
 }
 
 .logo-portada {
-    width: 150px;
+    width: 110px;   /* Reducido de 150 a 110 */
     height: auto;
     margin-bottom: 20px;
     display: inline-block;
@@ -215,7 +215,7 @@ a:hover {
 }
 
 /* ============================================================
-   INTRODUCCIÓN (solo en index viejo, se mantiene por si acaso)
+   INTRODUCCIÓN
    ============================================================ */
 .introduccion {
     margin-top: 30px;
@@ -237,7 +237,7 @@ a:hover {
 }
 
 /* ============================================================
-   TABLAS (modelos, comparativas, etc.)
+   TABLAS
    ============================================================ */
 .tabla-modelos {
     width: 100%;
@@ -273,7 +273,7 @@ a:hover {
 }
 
 /* ============================================================
-   RECURSOS EDUCATIVOS DIGITALES (fichas)
+   RECURSOS EDUCATIVOS DIGITALES
    ============================================================ */
 .red-item {
     background: #fafdfa;
@@ -326,7 +326,7 @@ a:hover {
    ============================================================ */
 .contenedor-video {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     max-width: 100%;
@@ -362,7 +362,7 @@ a:hover {
 }
 
 /* ============================================================
-   RESPONSIVE (ajustes para móviles)
+   RESPONSIVE
    ============================================================ */
 @media (max-width: 768px) {
     .header-institucional__contenido {
@@ -399,7 +399,7 @@ a:hover {
     }
 
     .logo-portada {
-        width: 120px;
+        width: 90px; /* Aún más pequeño en móvil */
     }
 
     .tabla-modelos {
