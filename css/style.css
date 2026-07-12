@@ -415,3 +415,50 @@ section p {
         font-size: 1.3rem;
     }
 }
+/* ===== PORTADA (index.html) ===== */
+body {
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.portada {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    background: #fff;
+    padding: 40px;
+}
+
+.logo-portada {
+    width: 140px;
+    margin-bottom: 25px;
+}
+
+.portada h1 {
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+    margin: 30px 0;
+}
+
+.portada h2 {
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    margin: 40px 0;
+    font-weight: normal;
+}
+
+.portada p {
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    margin: 12px 0;
+}
+
+.pie-pagina {
+    text-align: center;
+    margin-top: 80px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
