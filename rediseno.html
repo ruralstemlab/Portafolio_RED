@@ -4,33 +4,534 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rediseño | Portafolio</title>
-    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- ================================================================
+    CSS EMBEBIDO – ESTILO PREMIUM CON MENÚ MEJORADO
+    ================================================================ -->
+    <style>
+        /* ---------- RESET Y BASE ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background-color: #f4f6f0;
+            color: #1e2b1c;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ---------- ENCABEZADO ---------- */
+        .header-institucional {
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+            color: #fff;
+            padding: 18px 0;
+            border-bottom: 4px solid #f9a825;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        }
+
+        .header-institucional .container {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .header-institucional .logo img {
+            max-height: 70px;
+            width: auto;
+            display: block;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+        }
+
+        .header-institucional .texto {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-institucional .universidad {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .header-institucional .especializacion {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* ---------- MENÚ CON SUBMENÚ MEJORADO ---------- */
+        .menu-principal {
+            background: #1b5e20;
+            border-bottom: 2px solid #f9a825;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .menu-principal ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            padding: 8px 0;
+        }
+
+        .menu-principal ul li {
+            position: relative;
+        }
+
+        .menu-principal ul li a {
+            display: block;
+            padding: 10px 22px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 30px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .menu-principal ul li a:hover {
+            background: #f9a825;
+            color: #1b5e20;
+        }
+
+        .menu-principal ul li a.activo {
+            background: #fff;
+            color: #1b5e20;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Submenú mejorado (sin espacios) */
+        .menu-principal ul li .sub-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #1b5e20;
+            min-width: 220px;
+            border-radius: 12px;
+            padding: 12px 0 8px 0;
+            margin-top: -4px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+            border-top: 3px solid #f9a825;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .menu-principal ul li:hover .sub-menu {
+            display: flex;
+        }
+
+        .menu-principal ul li .sub-menu li {
+            width: 100%;
+        }
+
+        .menu-principal ul li .sub-menu li a {
+            padding: 8px 20px;
+            border-radius: 0;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #e8f5e9;
+        }
+
+        .menu-principal ul li .sub-menu li a:hover {
+            background: #f9a825;
+            color: #1b5e20;
+        }
+
+        .menu-principal ul li .sub-menu li a.activo {
+            background: #fff;
+            color: #1b5e20;
+        }
+
+        /* ---------- CONTENIDO PRINCIPAL ---------- */
+        .contenido-principal {
+            background: #ffffff;
+            padding: 40px 0 60px 0;
+            border-radius: 0 0 24px 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .contenido-principal .container {
+            max-width: 1000px;
+        }
+
+        .pagina-titulo {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #1b5e20;
+            text-align: center;
+            border-bottom: 4px solid #f9a825;
+            padding-bottom: 16px;
+            margin-bottom: 36px;
+            letter-spacing: -0.5px;
+            position: relative;
+        }
+
+        .pagina-titulo::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: #1b5e20;
+            border-radius: 4px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #1b5e20;
+            margin-top: 44px;
+            margin-bottom: 18px;
+            padding-left: 8px;
+            border-left: 6px solid #f9a825;
+            padding-left: 16px;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: #2e7d32;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+            font-size: 1.05rem;
+            color: #2d3a2a;
+        }
+
+        /* ---------- TABLA PREMIUM ---------- */
+        .tabla-wrapper {
+            overflow-x: auto;
+            margin: 28px 0 32px 0;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(27, 94, 32, 0.12);
+            border: 1px solid #e0e8dc;
+        }
+
+        .tabla-modelos {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            background: #fff;
+        }
+
+        .tabla-modelos thead {
+            background: linear-gradient(135deg, #1b5e20, #2e7d32);
+            color: #fff;
+        }
+
+        .tabla-modelos thead th {
+            padding: 14px 18px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border-bottom: 3px solid #f9a825;
+        }
+
+        .tabla-modelos tbody td {
+            padding: 12px 18px;
+            border-bottom: 1px solid #eaf0e6;
+            vertical-align: top;
+            color: #1e2b1c;
+        }
+
+        .tabla-modelos tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tabla-modelos tbody tr:nth-child(even) {
+            background-color: #f8fbf6;
+        }
+
+        .tabla-modelos tbody tr:hover {
+            background-color: #eaf5e6;
+            transition: background 0.25s ease;
+        }
+
+        .tabla-modelos tbody td strong {
+            color: #1b5e20;
+            font-weight: 700;
+        }
+
+        /* ---------- DIAGRAMA ---------- */
+        .diagrama-container {
+            text-align: center;
+            margin: 30px 0 20px 0;
+        }
+
+        .diagrama-container img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #dce8d6;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        .diagrama-container .figcaption {
+            font-size: 0.9rem;
+            color: #556b52;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* ---------- BLOQUE DE JUSTIFICACIÓN ---------- */
+        .justificacion-box {
+            background: #f4f8f1;
+            border-left: 6px solid #f9a825;
+            padding: 24px 28px;
+            border-radius: 12px;
+            margin-top: 20px;
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.03);
+        }
+
+        .justificacion-box p {
+            margin-bottom: 10px;
+        }
+
+        /* ---------- BOTONES DE NAVEGACIÓN ---------- */
+        .navegacion-subpaginas {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #e8f0e4;
+        }
+
+        .botones-navegacion {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .btn-nav {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-nav:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .btn-atras {
+            background: #e8f5e9;
+            color: #1b5e20;
+            border-color: #1b5e20;
+        }
+
+        .btn-atras:hover {
+            background: #1b5e20;
+            color: #fff;
+        }
+
+        .btn-adelante {
+            background: #1b5e20;
+            color: #fff;
+            border-color: #1b5e20;
+        }
+
+        .btn-adelante:hover {
+            background: #f9a825;
+            color: #1b5e20;
+            border-color: #f9a825;
+        }
+
+        /* ---------- PIE ---------- */
+        .pie-pagina {
+            background: linear-gradient(135deg, #1b5e20, #2e7d32);
+            color: #e8f5e9;
+            text-align: center;
+            padding: 24px 0;
+            font-size: 0.95rem;
+            border-top: 4px solid #f9a825;
+        }
+
+        .pie-pagina p {
+            margin-bottom: 4px;
+            text-align: center;
+            color: #e8f5e9;
+        }
+
+        .pie-pagina p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 768px) {
+            .header-institucional .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .header-institucional .logo img {
+                max-height: 60px;
+            }
+
+            .header-institucional .universidad {
+                font-size: 1.1rem;
+            }
+
+            .header-institucional .especializacion {
+                font-size: 0.85rem;
+            }
+
+            .menu-principal ul {
+                justify-content: center;
+            }
+
+            .menu-principal ul li a {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+            }
+
+            .menu-principal ul li .sub-menu {
+                position: static;
+                border-radius: 8px;
+                box-shadow: none;
+                padding: 4px 0 4px 20px;
+                border-top: none;
+                background: rgba(255, 255, 255, 0.05);
+                margin-top: 0;
+            }
+
+            .menu-principal ul li:hover .sub-menu {
+                display: flex;
+            }
+
+            .pagina-titulo {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            p {
+                font-size: 0.98rem;
+            }
+
+            .tabla-modelos {
+                font-size: 0.85rem;
+            }
+
+            .tabla-modelos thead th,
+            .tabla-modelos tbody td {
+                padding: 8px 10px;
+            }
+
+            .justificacion-box {
+                padding: 16px 18px;
+            }
+
+            .botones-navegacion {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn-nav {
+                text-align: center;
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu-principal ul {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 2px;
+            }
+
+            .menu-principal ul li a {
+                border-radius: 8px;
+                text-align: center;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            .pagina-titulo {
+                font-size: 1.4rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                border-left-width: 4px;
+                padding-left: 12px;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            .tabla-modelos {
+                font-size: 0.78rem;
+            }
+
+            .tabla-modelos thead th,
+            .tabla-modelos tbody td {
+                padding: 5px 6px;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <!-- ============================================================
-    ENCABEZADO INSTITUCIONAL
+    ENCABEZADO
     ============================================================ -->
     <header class="header-institucional">
-        <div class="container header-institucional__contenido">
-            <div class="header-institucional__logo">
+        <div class="container">
+            <div class="logo">
                 <img src="img/logo-udes.png" alt="Universidad de Santander" />
             </div>
-            <div class="header-institucional__texto">
-                <p class="header-institucional__universidad">Universidad de Santander</p>
-                <p class="header-institucional__maestria">Especialización en Aplicación de TIC para la Enseñanza – EATICE</p>
+            <div class="texto">
+                <span class="universidad">Universidad de Santander</span>
+                <span class="especializacion">Especialización en Aplicación de TIC para la Enseñanza – EATICE</span>
             </div>
         </div>
     </header>
 
     <!-- ============================================================
-    MENÚ CON SUBMENÚ
+    MENÚ CON SUBMENÚ MEJORADO
     ============================================================ -->
     <nav class="menu-principal">
         <div class="container">
-            <ul class="menu-principal__lista">
+            <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li class="menu-item-has-children">
+                <li>
                     <a href="modelos.html">Modelos de evaluación y RED ▾</a>
                     <ul class="sub-menu">
                         <li><a href="seleccionando-modelos.html">Selección de modelos</a></li>
@@ -45,85 +546,109 @@
     </nav>
 
     <!-- ============================================================
-    CONTENIDO PRINCIPAL
+    CONTENIDO PRINCIPAL – REDISEÑO
     ============================================================ -->
     <main class="contenido-principal">
         <div class="container">
 
-            <h1 class="subpagina-titulo">Rediseño: Modelo LORI-RSL</h1>
+            <h1 class="pagina-titulo">🔄 Rediseño: Modelo LORI-RSL</h1>
 
+            <!-- Modelo LORI-RSL -->
             <section>
-                <h2 class="subpagina-subtitulo">Modelo LORI-RSL</h2>
+                <h2>📘 Modelo LORI-RSL</h2>
                 <p>
-                    La evaluación de los Recursos Educativos Digitales constituye un proceso dinámico que debe responder a las necesidades del contexto educativo en el que serán utilizados. Aunque el modelo LORI (Learning Object Review Instrument) ofrece una evaluación integral de los aspectos pedagógicos y tecnológicos de los recursos digitales, la aplicación realizada en este trabajo permitió identificar algunos elementos que no son considerados de manera explícita dentro de sus criterios originales y que resultan relevantes para evaluar recursos educativos basados en simulaciones y metodologías activas.
+                    La evaluación de los Recursos Educativos Digitales constituye un proceso dinámico que debe responder a las necesidades del contexto educativo en el que serán utilizados. Aunque el modelo <strong>LORI (Learning Object Review Instrument)</strong> ofrece una evaluación integral de los aspectos pedagógicos y tecnológicos de los recursos digitales, la aplicación realizada en este trabajo permitió identificar algunos elementos que no son considerados de manera explícita dentro de sus criterios originales y que resultan relevantes para evaluar recursos educativos basados en simulaciones y metodologías activas.
                 </p>
                 <p>
-                    Durante la evaluación de los simuladores Rural STEAM Lab – Movimiento de Proyectil y PhET Interactive Simulations – Projectile Motion, se evidenció la necesidad de incorporar indicadores que permitan valorar aspectos relacionados con el enfoque STEAM, la contextualización del aprendizaje, el uso de simulaciones interactivas y el desarrollo de competencias del siglo XXI. Por esta razón, se propone la adaptación del modelo LORI, manteniendo su estructura original e incorporando nuevos criterios acordes con las necesidades de la práctica pedagógica.
+                    Durante la evaluación de los simuladores <em>Rural STEAM Lab – Movimiento de Proyectil</em> y <em>PhET Interactive Simulations – Projectile Motion</em>, se evidenció la necesidad de incorporar indicadores que permitan valorar aspectos relacionados con el enfoque STEAM, la contextualización del aprendizaje, el uso de simulaciones interactivas y el desarrollo de competencias del siglo XXI. Por esta razón, se propone la adaptación del modelo LORI, manteniendo su estructura original e incorporando nuevos criterios acordes con las necesidades de la práctica pedagógica.
                 </p>
                 <p>
-                    La propuesta consiste en conservar los nueve criterios originales del modelo LORI, incorporando cinco nuevos criterios que permitan realizar una evaluación más completa de los Recursos Educativos Digitales utilizados en la enseñanza de la Física y otras áreas apoyadas por tecnologías digitales.
+                    La propuesta consiste en conservar los <strong>nueve criterios originales</strong> del modelo LORI, incorporando <strong>cinco nuevos criterios</strong> que permitan realizar una evaluación más completa de los Recursos Educativos Digitales utilizados en la enseñanza de la Física y otras áreas apoyadas por tecnologías digitales.
                 </p>
             </section>
 
+            <!-- Nuevos indicadores -->
             <section>
-                <h2 class="subpagina-subtitulo">Nuevos indicadores</h2>
-                <table class="tabla-modelos">
-                    <thead>
-                        <tr>
-                            <th>Nuevo criterio</th>
-                            <th>Descripción</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Integración del enfoque STEAM</strong></td>
-                            <td>Evalúa si el recurso favorece la integración de las ciencias, la tecnología, la ingeniería, las artes y las matemáticas mediante actividades interdisciplinarias que promuevan la resolución de problemas y el pensamiento crítico.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Contextualización al entorno educativo</strong></td>
-                            <td>Valora el grado en que el recurso puede adaptarse a las características sociales, culturales y académicas del contexto donde será utilizado, especialmente en instituciones educativas rurales.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Calidad de las simulaciones interactivas</strong></td>
-                            <td>Analiza si las simulaciones representan de manera precisa los fenómenos estudiados, permiten modificar variables, experimentar con diferentes escenarios y favorecer el aprendizaje por descubrimiento.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Desarrollo del pensamiento sistémico</strong></td>
-                            <td>Evalúa la capacidad del recurso para promover la comprensión de las relaciones existentes entre diferentes conceptos, procesos y variables, favoreciendo una visión integral de los fenómenos analizados.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Gamificación y participación del estudiante</strong></td>
-                            <td>Valora la incorporación de elementos que incrementen la motivación, la participación y el compromiso del estudiante mediante retos, logros, retroalimentación inmediata u otras estrategias propias de la gamificación.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p style="margin-top:12px;">
+                <h2>📋 Nuevos indicadores</h2>
+                <div class="tabla-wrapper">
+                    <table class="tabla-modelos">
+                        <thead>
+                            <tr>
+                                <th>Nuevo criterio</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Integración del enfoque STEAM</strong></td>
+                                <td>Evalúa si el recurso favorece la integración de las ciencias, la tecnología, la ingeniería, las artes y las matemáticas mediante actividades interdisciplinarias que promuevan la resolución de problemas y el pensamiento crítico.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Contextualización al entorno educativo</strong></td>
+                                <td>Valora el grado en que el recurso puede adaptarse a las características sociales, culturales y académicas del contexto donde será utilizado, especialmente en instituciones educativas rurales.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Calidad de las simulaciones interactivas</strong></td>
+                                <td>Analiza si las simulaciones representan de manera precisa los fenómenos estudiados, permiten modificar variables, experimentar con diferentes escenarios y favorecer el aprendizaje por descubrimiento.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Desarrollo del pensamiento sistémico</strong></td>
+                                <td>Evalúa la capacidad del recurso para promover la comprensión de las relaciones existentes entre diferentes conceptos, procesos y variables, favoreciendo una visión integral de los fenómenos analizados.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Gamificación y participación del estudiante</strong></td>
+                                <td>Valora la incorporación de elementos que incrementen la motivación, la participación y el compromiso del estudiante mediante retos, logros, retroalimentación inmediata u otras estrategias propias de la gamificación.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="margin-top:8px; font-style:italic; color:#556b52; font-size:0.9rem;">
+                    Nota. Elaboración propia a partir del análisis de necesidades identificado durante la evaluación de los RED.
+                </p>
+                <p>
                     La incorporación de estos nuevos criterios responde a las características de los Recursos Educativos Digitales utilizados actualmente en los procesos de enseñanza, los cuales integran simulaciones, aprendizaje activo, metodologías STEAM y experiencias interactivas que no siempre son evaluadas de manera específica por los modelos tradicionales.
                 </p>
             </section>
 
+            <!-- Diagrama -->
             <section>
-                <h2 class="subpagina-subtitulo">Diagrama del modelo LORI-RSL</h2>
-                <div style="text-align: center; margin: 20px 0;">
+                <h2>📊 Diagrama del modelo LORI-RSL</h2>
+                <div class="diagrama-container">
                     <img
                         src="img/diagrama-lori-rsl.png"
                         alt="Diagrama del modelo LORI-RSL"
-                        style="max-width: 100%; border: 2px solid #a5d6a7; border-radius: 4px;"
                     />
-                    <p style="font-size:0.9rem; color:#33691e; margin-top:6px;">
-                        Estructura del modelo LORI-RSL: integración de los nueve indicadores LORI más los cinco nuevos ejes (STEAM, Contextualización, Simulaciones, Pensamiento sistémico, Gamificación).
+                    <p class="figcaption">
+                        Figura 1. Estructura del modelo LORI-RSL: integración de los nueve indicadores LORI más los cinco nuevos ejes (STEAM, Contextualización, Simulaciones, Pensamiento sistémico, Gamificación).
                     </p>
                 </div>
             </section>
 
+            <!-- Justificación -->
             <section>
-                <h2 class="subpagina-subtitulo">Justificación del rediseño</h2>
-                <p>
-                    La propuesta del modelo LORI-RSL constituye una adaptación del instrumento original orientada a enriquecer la evaluación de Recursos Educativos Digitales mediante la incorporación de criterios acordes con las tendencias actuales de la educación digital. En el caso de Rural STEAM Lab, estos indicadores permiten valorar elementos propios de su diseño pedagógico, como la contextualización rural, el uso de simulaciones para la comprensión del movimiento de proyectil y la integración del enfoque STEAM. De igual forma, estos criterios pueden aplicarse a recursos ampliamente utilizados como PhET Interactive Simulations, favoreciendo una evaluación más completa e integral.
-                </p>
-                <p>
-                    En consecuencia, el modelo adaptado, denominado LORI-RSL, conserva las fortalezas del modelo original e incorpora nuevos indicadores que responden a las necesidades actuales de la educación digital, fortaleciendo la evaluación de Recursos Educativos Digitales utilizados en contextos escolares diversos.
-                </p>
+                <h2>📌 Justificación del rediseño</h2>
+                <div class="justificacion-box">
+                    <p>
+                        La propuesta del modelo <strong>LORI-RSL</strong> constituye una adaptación del instrumento original orientada a enriquecer la evaluación de Recursos Educativos Digitales mediante la incorporación de criterios acordes con las tendencias actuales de la educación digital. En el caso de <strong>Rural STEAM Lab</strong>, estos indicadores permiten valorar elementos propios de su diseño pedagógico, como la contextualización rural, el uso de simulaciones para la comprensión del movimiento de proyectil y la integración del enfoque STEAM. De igual forma, estos criterios pueden aplicarse a recursos ampliamente utilizados como <strong>PhET Interactive Simulations</strong>, favoreciendo una evaluación más completa e integral.
+                    </p>
+                    <p>
+                        En consecuencia, el modelo adaptado, denominado <strong>LORI-RSL</strong>, conserva las fortalezas del modelo original e incorpora nuevos indicadores que responden a las necesidades actuales de la educación digital, fortaleciendo la evaluación de Recursos Educativos Digitales utilizados en contextos escolares diversos.
+                    </p>
+                </div>
+            </section>
+
+            <!-- =========================================================
+            NAVEGACIÓN ENTRE PÁGINAS (botones)
+            ========================================================= -->
+            <section class="navegacion-subpaginas">
+                <div class="botones-navegacion">
+                    <a href="recursos.html" class="btn-nav btn-atras">
+                        ← Anterior: Recursos Educativos Digitales
+                    </a>
+                    <a href="aplicacion.html" class="btn-nav btn-adelante">
+                        Siguiente: Aplicación del modelo →
+                    </a>
+                </div>
             </section>
 
         </div>
@@ -135,14 +660,18 @@
     <footer class="pie-pagina">
         <div class="container">
             <p>
-                &copy; 2026 - Nelson Anaya Carvajal - Universidad de Santander
+                &copy; 2026 – Nelson Anaya Carvajal – Universidad de Santander
             </p>
             <p>
                 Especialización en Aplicación de TIC para la Enseñanza – EATICE
             </p>
+            <p style="font-size:0.8rem; opacity:0.8; margin-top:6px;">
+                © 2021 Bajo licencia Creative Commons
+            </p>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+</body>
+</html>
 </body>
 </html>
