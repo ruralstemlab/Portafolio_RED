@@ -6,7 +6,7 @@
     <title>Recursos Educativos Digitales | Portafolio</title>
 
     <!-- ================================================================
-    CSS EMBEBIDO – ESTILO PREMIUM
+    CSS EMBEBIDO – ESTILO PREMIUM CON MENÚ MEJORADO
     ================================================================ -->
     <style>
         /* ---------- RESET Y BASE ---------- */
@@ -69,7 +69,7 @@
             font-weight: 300;
         }
 
-        /* ---------- MENÚ CON SUBMENÚ ---------- */
+        /* ---------- MENÚ CON SUBMENÚ MEJORADO ---------- */
         .menu-principal {
             background: #1b5e20;
             border-bottom: 2px solid #f9a825;
@@ -113,6 +113,7 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         }
 
+        /* Submenú mejorado (sin espacios) */
         .menu-principal ul li .sub-menu {
             display: none;
             position: absolute;
@@ -121,7 +122,8 @@
             background: #1b5e20;
             min-width: 220px;
             border-radius: 12px;
-            padding: 8px 0;
+            padding: 12px 0 8px 0;
+            margin-top: -4px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
             border-top: 3px solid #f9a825;
             flex-direction: column;
@@ -209,10 +211,6 @@
             display: flex;
             align-items: center;
             gap: 12px;
-        }
-
-        h3 .icono-grande {
-            font-size: 2rem;
         }
 
         p {
@@ -478,21 +476,12 @@
             transition: background 0.25s ease;
         }
 
-        .tabla-comparativa .check {
-            color: #1b5e20;
-            font-weight: 700;
-        }
         .tabla-comparativa .check-verde {
             color: #27ae60;
             font-weight: 700;
         }
         .tabla-comparativa .check-amarillo {
             color: #f39c12;
-        }
-
-        .tabla-comparativa .rating {
-            color: #f9a825;
-            letter-spacing: 2px;
         }
 
         /* ---------- CONCLUSIÓN ---------- */
@@ -624,6 +613,7 @@
                 padding: 4px 0 4px 20px;
                 border-top: none;
                 background: rgba(255, 255, 255, 0.05);
+                margin-top: 0;
             }
 
             .menu-principal ul li:hover .sub-menu {
@@ -757,7 +747,7 @@
     </header>
 
     <!-- ============================================================
-    MENÚ CON SUBMENÚ
+    MENÚ CON SUBMENÚ MEJORADO
     ============================================================ -->
     <nav class="menu-principal">
         <div class="container">
@@ -900,7 +890,7 @@
             </div>
 
             <!-- =========================================================
-            RED 2 – PHET
+            RED 2 – PHET (IMAGEN CORREGIDA A .png)
             ========================================================= -->
             <div class="red-card">
                 <div class="red-header">
@@ -910,7 +900,7 @@
 
                 <!-- Imagen -->
                 <div class="red-imagen">
-                    <img src="img/phet-simulations.jpg" alt="PhET Interactive Simulations – Projectile Motion" />
+                    <img src="img/phet-simulations.png" alt="PhET Interactive Simulations – Projectile Motion" />
                     <p class="figcaption">Figura 2. Interfaz de la simulación PhET – Movimiento de Proyectiles. Fuente: PhET Interactive Simulations (2026).</p>
                 </div>
 
