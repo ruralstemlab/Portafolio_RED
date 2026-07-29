@@ -4,31 +4,181 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio | Modelos de Evaluación de RED</title>
-    <!-- CSS general (header, menú, footer) – sin modificar -->
-    <link rel="stylesheet" href="css/style.css" />
 
-    <!-- ============================================================
-    CSS EMBEBIDO – PORTADA COMPLETA
-    ============================================================ -->
+    <!-- ================================================================
+    CSS EMBEBIDO – ESTILO PREMIUM (igual que modelos.html)
+    ================================================================ -->
     <style>
-        /* Contenedor principal: centrado vertical y horizontal */
-        .portada-main {
+        /* ---------- RESET Y BASE ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background-color: #f4f6f0;
+            color: #1e2b1c;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ---------- ENCABEZADO ---------- */
+        .header-institucional {
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+            color: #fff;
+            padding: 18px 0;
+            border-bottom: 4px solid #f9a825;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        }
+
+        .header-institucional .container {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .header-institucional .logo img {
+            max-height: 70px;
+            width: auto;
+            display: block;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+
+        .header-institucional .texto {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-institucional .universidad {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .header-institucional .especializacion {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* ---------- MENÚ CON SUBMENÚ ---------- */
+        .menu-principal {
+            background: #1b5e20;
+            border-bottom: 2px solid #f9a825;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .menu-principal ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            padding: 8px 0;
+        }
+
+        .menu-principal ul li {
+            position: relative;
+        }
+
+        .menu-principal ul li a {
+            display: block;
+            padding: 10px 22px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 30px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .menu-principal ul li a:hover {
+            background: #f9a825;
+            color: #1b5e20;
+        }
+
+        .menu-principal ul li a.activo {
+            background: #fff;
+            color: #1b5e20;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .menu-principal ul li .sub-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #1b5e20;
+            min-width: 220px;
+            border-radius: 12px;
+            padding: 8px 0;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+            border-top: 3px solid #f9a825;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .menu-principal ul li:hover .sub-menu {
+            display: flex;
+        }
+
+        .menu-principal ul li .sub-menu li {
+            width: 100%;
+        }
+
+        .menu-principal ul li .sub-menu li a {
+            padding: 8px 20px;
+            border-radius: 0;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #e8f5e9;
+        }
+
+        .menu-principal ul li .sub-menu li a:hover {
+            background: #f9a825;
+            color: #1b5e20;
+        }
+
+        .menu-principal ul li .sub-menu li a.activo {
+            background: #fff;
+            color: #1b5e20;
+        }
+
+        /* ---------- CONTENIDO PRINCIPAL (PORTADA) ---------- */
+        .contenido-principal {
+            background: #ffffff;
+            padding: 40px 0 60px 0;
+            border-radius: 0 0 24px 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            min-height: calc(100vh - 200px);
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: calc(100vh - 180px);
-            padding: 0;
-            margin: 0;
+        }
+
+        .contenido-principal .container {
+            max-width: 1000px;
+            width: 100%;
         }
 
         .portada-contenido {
             text-align: center;
-            max-width: 800px;
             padding: 20px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        /* Logo mediano */
+        /* Logo centrado (tamaño mediano) */
         .portada-logo {
             max-width: 160px;
             height: auto;
@@ -36,147 +186,234 @@
             margin: 0 auto 35px auto;
         }
 
-        /* Título principal (completo) */
+        /* Título principal */
         .portada-titulo {
-            font-size: 2.4rem;          /* ligeramente más pequeño para que quepa en una línea o dos */
-            font-weight: bold;
+            font-size: 2.6rem;
+            font-weight: 800;
             color: #1b5e20;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin: 0 0 30px 0;
+            margin: 0 0 28px 0;
             line-height: 1.2;
         }
 
         /* Autor */
         .portada-autor {
             font-size: 1.6rem;
-            color: #1e1e1e;
-            margin: 0 0 8px 0;
-            font-weight: normal;
+            color: #1e2b1c;
+            margin: 0 0 6px 0;
+            font-weight: 600;
             text-transform: uppercase;
         }
 
         /* Profesor */
         .portada-profesor {
             font-size: 1.2rem;
-            color: #1e1e1e;
+            color: #1e2b1c;
             margin: 0 0 20px 0;
-            font-weight: normal;
-            text-transform: uppercase;
+            font-weight: 500;
         }
 
         /* Universidad */
         .portada-universidad {
             font-size: 1.3rem;
-            color: #1e1e1e;
-            margin: 0 0 10px 0;
-            font-weight: normal;
+            color: #1e2b1c;
+            margin: 0 0 8px 0;
+            font-weight: 600;
             text-transform: uppercase;
         }
 
         /* Especialización */
         .portada-especializacion {
             font-size: 1.1rem;
-            color: #1e1e1e;
-            margin: 0 0 10px 0;
-            font-weight: normal;
+            color: #1e2b1c;
+            margin: 0 0 8px 0;
+            font-weight: 500;
             text-transform: uppercase;
         }
 
         /* Módulo */
         .portada-modulo {
-            font-size: 1.1rem;
-            color: #1e1e1e;
-            margin: 0 0 10px 0;
-            font-weight: normal;
+            font-size: 1.05rem;
+            color: #1e2b1c;
+            margin: 0 0 8px 0;
+            font-weight: 400;
         }
 
         /* Lugar */
         .portada-lugar {
             font-size: 1.1rem;
-            color: #1e1e1e;
-            margin: 0 0 10px 0;
-            font-weight: normal;
+            color: #1e2b1c;
+            margin: 0 0 8px 0;
+            font-weight: 500;
             text-transform: uppercase;
         }
 
         /* Año */
         .portada-anio {
             font-size: 1.1rem;
-            color: #1e1e1e;
+            color: #1e2b1c;
             margin: 0 0 20px 0;
-            font-weight: normal;
+            font-weight: 500;
         }
 
-        /* Licencia Creative Commons */
+        /* Licencia */
         .portada-licencia {
             font-size: 0.9rem;
-            color: #555;
+            color: #6a7f67;
             margin: 0;
-            font-weight: normal;
+            font-weight: 400;
             letter-spacing: 0.5px;
         }
 
-        /* ============================================================
-           RESPONSIVE
-           ============================================================ */
+        /* ---------- PIE DE PÁGINA ---------- */
+        .pie-pagina {
+            background: linear-gradient(135deg, #1b5e20, #2e7d32);
+            color: #e8f5e9;
+            text-align: center;
+            padding: 24px 0;
+            font-size: 0.95rem;
+            border-top: 4px solid #f9a825;
+        }
+
+        .pie-pagina p {
+            margin-bottom: 4px;
+            text-align: center;
+            color: #e8f5e9;
+        }
+
+        .pie-pagina p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
         @media (max-width: 768px) {
+            .header-institucional .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .header-institucional .logo img {
+                max-height: 60px;
+            }
+
+            .header-institucional .universidad {
+                font-size: 1.1rem;
+            }
+
+            .header-institucional .especializacion {
+                font-size: 0.85rem;
+            }
+
+            .menu-principal ul {
+                justify-content: center;
+            }
+
+            .menu-principal ul li a {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+            }
+
+            .menu-principal ul li .sub-menu {
+                position: static;
+                border-radius: 8px;
+                box-shadow: none;
+                padding: 4px 0 4px 20px;
+                border-top: none;
+                background: rgba(255,255,255,0.05);
+            }
+
+            .menu-principal ul li:hover .sub-menu {
+                display: flex;
+            }
+
+            .contenido-principal {
+                min-height: calc(100vh - 160px);
+                padding: 20px 0 30px 0;
+            }
+
             .portada-titulo {
                 font-size: 1.8rem;
             }
+
             .portada-autor {
                 font-size: 1.3rem;
             }
+
             .portada-profesor {
-                font-size: 1rem;
+                font-size: 1.0rem;
             }
+
             .portada-universidad {
                 font-size: 1.1rem;
             }
+
             .portada-especializacion,
             .portada-modulo,
             .portada-lugar,
             .portada-anio {
                 font-size: 0.95rem;
             }
+
             .portada-logo {
                 max-width: 120px;
                 margin-bottom: 25px;
             }
-            .portada-main {
-                min-height: calc(100vh - 150px);
-            }
         }
 
         @media (max-width: 480px) {
+            .menu-principal ul {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 2px;
+            }
+
+            .menu-principal ul li a {
+                border-radius: 8px;
+                text-align: center;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            .contenido-principal {
+                min-height: calc(100vh - 140px);
+                padding: 16px 0 24px 0;
+            }
+
             .portada-titulo {
                 font-size: 1.4rem;
                 letter-spacing: 0;
             }
+
             .portada-autor {
                 font-size: 1.1rem;
             }
+
             .portada-profesor {
                 font-size: 0.9rem;
             }
+
             .portada-universidad {
                 font-size: 0.95rem;
             }
+
             .portada-especializacion,
             .portada-modulo,
             .portada-lugar,
             .portada-anio {
                 font-size: 0.85rem;
             }
+
             .portada-licencia {
                 font-size: 0.75rem;
             }
+
             .portada-logo {
                 max-width: 100px;
                 margin-bottom: 20px;
-            }
-            .portada-main {
-                min-height: calc(100vh - 140px);
             }
         }
     </style>
@@ -184,28 +421,34 @@
 <body>
 
     <!-- ============================================================
-    ENCABEZADO INSTITUCIONAL (sin cambios)
+    ENCABEZADO INSTITUCIONAL
     ============================================================ -->
     <header class="header-institucional">
-        <div class="container header-institucional__contenido">
-            <div class="header-institucional__logo">
+        <div class="container">
+            <div class="logo">
                 <img src="img/logo-udes.png" alt="Universidad de Santander" />
             </div>
-            <div class="header-institucional__texto">
-                <p class="header-institucional__universidad">Universidad de Santander</p>
-                <p class="header-institucional__maestria">Especialización en Aplicación de TIC para la Enseñanza – EATICE</p>
+            <div class="texto">
+                <span class="universidad">Universidad de Santander</span>
+                <span class="especializacion">Especialización en Aplicación de TIC para la Enseñanza – EATICE</span>
             </div>
         </div>
     </header>
 
     <!-- ============================================================
-    MENÚ HORIZONTAL (sin cambios)
+    MENÚ CON SUBMENÚ
     ============================================================ -->
     <nav class="menu-principal">
         <div class="container">
-            <ul class="menu-principal__lista">
+            <ul>
                 <li><a href="index.html" class="activo">Inicio</a></li>
-                <li><a href="modelos.html">Modelos de evaluación y RED</a></li>
+                <li>
+                    <a href="modelos.html">Modelos de evaluación y RED ▾</a>
+                    <ul class="sub-menu">
+                        <li><a href="seleccionando-modelos.html">Selección de modelos</a></li>
+                        <li><a href="recursos.html">RED</a></li>
+                    </ul>
+                </li>
                 <li><a href="rediseno.html">Rediseño</a></li>
                 <li><a href="aplicacion.html">Aplicación del modelo</a></li>
                 <li><a href="referencias.html">Referencias</a></li>
@@ -214,56 +457,62 @@
     </nav>
 
     <!-- ============================================================
-    CONTENIDO PRINCIPAL – PORTADA COMPLETA
+    CONTENIDO PRINCIPAL – PORTADA
     ============================================================ -->
-    <main class="portada-main">
-        <div class="portada-contenido">
-            <!-- Logo -->
-            <img src="img/logo-udes.png" alt="Universidad de Santander" class="portada-logo" />
+    <main class="contenido-principal">
+        <div class="container">
+            <div class="portada-contenido">
 
-            <!-- Título completo -->
-            <h1 class="portada-titulo">MODELOS DE EVALUACIÓN DE RECURSOS EDUCATIVOS DIGITALES</h1>
+                <!-- Logo centrado -->
+                <img src="img/logo-udes.png" alt="Universidad de Santander" class="portada-logo" />
 
-            <!-- Autor -->
-            <p class="portada-autor">NELSON ANAYA CARVAJAL</p>
+                <!-- Título completo -->
+                <h1 class="portada-titulo">MODELOS DE EVALUACIÓN DE RECURSOS EDUCATIVOS DIGITALES</h1>
 
-            <!-- Profesor -->
-            <p class="portada-profesor">Prof. ÁLVARO RAFAEL CAMPUZANO PINEDA</p>
+                <!-- Autor -->
+                <p class="portada-autor">NELSON ANAYA CARVAJAL</p>
 
-            <!-- Universidad -->
-            <p class="portada-universidad">UNIVERSIDAD DE SANTANDER UDES</p>
+                <!-- Profesor -->
+                <p class="portada-profesor">Prof. ÁLVARO RAFAEL CAMPUZANO PINEDA</p>
 
-            <!-- Especialización -->
-            <p class="portada-especializacion">ESPECIALIZACIÓN EN APLICACIÓN DE TIC PARA LA ENSEÑANZA</p>
+                <!-- Universidad -->
+                <p class="portada-universidad">UNIVERSIDAD DE SANTANDER UDES</p>
 
-            <!-- Módulo -->
-            <p class="portada-modulo">Módulo: Evaluación de Recursos Educativos Digitales - EATICE_ERED_20260629_003</p>
+                <!-- Especialización -->
+                <p class="portada-especializacion">ESPECIALIZACIÓN EN APLICACIÓN DE TIC PARA LA ENSEÑANZA</p>
 
-            <!-- Lugar -->
-            <p class="portada-lugar">BUCARAMANGA – SANTANDER</p>
+                <!-- Módulo -->
+                <p class="portada-modulo">Módulo: Evaluación de Recursos Educativos Digitales - EATICE_ERED_20260629_003</p>
 
-            <!-- Año -->
-            <p class="portada-anio">2026</p>
+                <!-- Lugar -->
+                <p class="portada-lugar">BUCARAMANGA – SANTANDER</p>
 
-            <!-- Licencia -->
-            <p class="portada-licencia">© 2021 Bajo licencia Creative Commons</p>
+                <!-- Año -->
+                <p class="portada-anio">2026</p>
+
+                <!-- Licencia -->
+                <p class="portada-licencia">© 2021 Bajo licencia Creative Commons</p>
+
+            </div>
         </div>
     </main>
 
     <!-- ============================================================
-    PIE DE PÁGINA (sin cambios)
+    PIE DE PÁGINA
     ============================================================ -->
     <footer class="pie-pagina">
         <div class="container">
             <p>
-                &copy; 2026 - Nelson Anaya Carvajal - Universidad de Santander
+                &copy; 2026 – Nelson Anaya Carvajal – Universidad de Santander
             </p>
             <p>
                 Especialización en Aplicación de TIC para la Enseñanza – EATICE
             </p>
+            <p style="font-size:0.8rem; opacity:0.8; margin-top:6px;">
+                © 2021 Bajo licencia Creative Commons
+            </p>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
 </body>
 </html>
