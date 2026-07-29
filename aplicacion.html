@@ -4,33 +4,499 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aplicación del modelo | Portafolio</title>
-    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- ================================================================
+    CSS EMBEBIDO – ESTILO PREMIUM CON MENÚ MEJORADO
+    ================================================================ -->
+    <style>
+        /* ---------- RESET Y BASE ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background-color: #f4f6f0;
+            color: #1e2b1c;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ---------- ENCABEZADO ---------- */
+        .header-institucional {
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+            color: #fff;
+            padding: 18px 0;
+            border-bottom: 4px solid #f9a825;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        }
+
+        .header-institucional .container {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .header-institucional .logo img {
+            max-height: 70px;
+            width: auto;
+            display: block;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+        }
+
+        .header-institucional .texto {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-institucional .universidad {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .header-institucional .especializacion {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* ---------- MENÚ CON SUBMENÚ MEJORADO ---------- */
+        .menu-principal {
+            background: #1b5e20;
+            border-bottom: 2px solid #f9a825;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .menu-principal ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            padding: 8px 0;
+        }
+
+        .menu-principal ul li {
+            position: relative;
+        }
+
+        .menu-principal ul li a {
+            display: block;
+            padding: 10px 22px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 30px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .menu-principal ul li a:hover {
+            background: #f9a825;
+            color: #1b5e20;
+        }
+
+        .menu-principal ul li a.activo {
+            background: #fff;
+            color: #1b5e20;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Submenú mejorado (sin espacios) */
+        .menu-principal ul li .sub-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #1b5e20;
+            min-width: 220px;
+            border-radius: 12px;
+            padding: 12px 0 8px 0;
+            margin-top: -4px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+            border-top: 3px solid #f9a825;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .menu-principal ul li:hover .sub-menu {
+            display: flex;
+        }
+
+        .menu-principal ul li .sub-menu li {
+            width: 100%;
+        }
+
+        .menu-principal ul li .sub-menu li a {
+            padding: 8px 20px;
+            border-radius: 0;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #e8f5e9;
+        }
+
+        .menu-principal ul li .sub-menu li a:hover {
+            background: #f9a825;
+            color: #1b5e20;
+        }
+
+        .menu-principal ul li .sub-menu li a.activo {
+            background: #fff;
+            color: #1b5e20;
+        }
+
+        /* ---------- CONTENIDO PRINCIPAL ---------- */
+        .contenido-principal {
+            background: #ffffff;
+            padding: 40px 0 60px 0;
+            border-radius: 0 0 24px 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .contenido-principal .container {
+            max-width: 1000px;
+        }
+
+        .pagina-titulo {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #1b5e20;
+            text-align: center;
+            border-bottom: 4px solid #f9a825;
+            padding-bottom: 16px;
+            margin-bottom: 36px;
+            letter-spacing: -0.5px;
+            position: relative;
+        }
+
+        .pagina-titulo::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: #1b5e20;
+            border-radius: 4px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #1b5e20;
+            margin-top: 44px;
+            margin-bottom: 18px;
+            padding-left: 8px;
+            border-left: 6px solid #f9a825;
+            padding-left: 16px;
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+            font-size: 1.05rem;
+            color: #2d3a2a;
+        }
+
+        ul {
+            margin: 12px 0 20px 30px;
+            color: #2d3a2a;
+        }
+
+        ul li {
+            margin-bottom: 6px;
+            font-size: 1.02rem;
+        }
+
+        /* ---------- TABLAS PREMIUM ---------- */
+        .tabla-wrapper {
+            overflow-x: auto;
+            margin: 28px 0 32px 0;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(27, 94, 32, 0.12);
+            border: 1px solid #e0e8dc;
+        }
+
+        .tabla-modelos {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            background: #fff;
+        }
+
+        .tabla-modelos thead {
+            background: linear-gradient(135deg, #1b5e20, #2e7d32);
+            color: #fff;
+        }
+
+        .tabla-modelos thead th {
+            padding: 14px 18px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border-bottom: 3px solid #f9a825;
+        }
+
+        .tabla-modelos tbody td {
+            padding: 12px 18px;
+            border-bottom: 1px solid #eaf0e6;
+            vertical-align: top;
+            color: #1e2b1c;
+        }
+
+        .tabla-modelos tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tabla-modelos tbody tr:nth-child(even) {
+            background-color: #f8fbf6;
+        }
+
+        .tabla-modelos tbody tr:hover {
+            background-color: #eaf5e6;
+            transition: background 0.25s ease;
+        }
+
+        .tabla-modelos tbody td strong {
+            color: #1b5e20;
+            font-weight: 700;
+        }
+
+        .tabla-modelos .badge-puntaje {
+            display: inline-block;
+            background: #1b5e20;
+            color: #fff;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        /* ---------- BOTONES DE NAVEGACIÓN ---------- */
+        .navegacion-subpaginas {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #e8f0e4;
+        }
+
+        .botones-navegacion {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .btn-nav {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-nav:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .btn-atras {
+            background: #e8f5e9;
+            color: #1b5e20;
+            border-color: #1b5e20;
+        }
+
+        .btn-atras:hover {
+            background: #1b5e20;
+            color: #fff;
+        }
+
+        .btn-adelante {
+            background: #1b5e20;
+            color: #fff;
+            border-color: #1b5e20;
+        }
+
+        .btn-adelante:hover {
+            background: #f9a825;
+            color: #1b5e20;
+            border-color: #f9a825;
+        }
+
+        /* ---------- PIE ---------- */
+        .pie-pagina {
+            background: linear-gradient(135deg, #1b5e20, #2e7d32);
+            color: #e8f5e9;
+            text-align: center;
+            padding: 24px 0;
+            font-size: 0.95rem;
+            border-top: 4px solid #f9a825;
+        }
+
+        .pie-pagina p {
+            margin-bottom: 4px;
+            text-align: center;
+            color: #e8f5e9;
+        }
+
+        .pie-pagina p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 768px) {
+            .header-institucional .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .header-institucional .logo img {
+                max-height: 60px;
+            }
+
+            .header-institucional .universidad {
+                font-size: 1.1rem;
+            }
+
+            .header-institucional .especializacion {
+                font-size: 0.85rem;
+            }
+
+            .menu-principal ul {
+                justify-content: center;
+            }
+
+            .menu-principal ul li a {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+            }
+
+            .menu-principal ul li .sub-menu {
+                position: static;
+                border-radius: 8px;
+                box-shadow: none;
+                padding: 4px 0 4px 20px;
+                border-top: none;
+                background: rgba(255, 255, 255, 0.05);
+                margin-top: 0;
+            }
+
+            .menu-principal ul li:hover .sub-menu {
+                display: flex;
+            }
+
+            .pagina-titulo {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.98rem;
+            }
+
+            .tabla-modelos {
+                font-size: 0.85rem;
+            }
+
+            .tabla-modelos thead th,
+            .tabla-modelos tbody td {
+                padding: 8px 10px;
+            }
+
+            .botones-navegacion {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn-nav {
+                text-align: center;
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu-principal ul {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 2px;
+            }
+
+            .menu-principal ul li a {
+                border-radius: 8px;
+                text-align: center;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            .pagina-titulo {
+                font-size: 1.4rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                border-left-width: 4px;
+                padding-left: 12px;
+            }
+
+            .tabla-modelos {
+                font-size: 0.78rem;
+            }
+
+            .tabla-modelos thead th,
+            .tabla-modelos tbody td {
+                padding: 5px 6px;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <!-- ============================================================
-    ENCABEZADO INSTITUCIONAL
+    ENCABEZADO
     ============================================================ -->
     <header class="header-institucional">
-        <div class="container header-institucional__contenido">
-            <div class="header-institucional__logo">
+        <div class="container">
+            <div class="logo">
                 <img src="img/logo-udes.png" alt="Universidad de Santander" />
             </div>
-            <div class="header-institucional__texto">
-                <p class="header-institucional__universidad">Universidad de Santander</p>
-                <p class="header-institucional__maestria">Especialización en Aplicación de TIC para la Enseñanza – EATICE</p>
+            <div class="texto">
+                <span class="universidad">Universidad de Santander</span>
+                <span class="especializacion">Especialización en Aplicación de TIC para la Enseñanza – EATICE</span>
             </div>
         </div>
     </header>
 
     <!-- ============================================================
-    MENÚ CON SUBMENÚ
+    MENÚ CON SUBMENÚ MEJORADO
     ============================================================ -->
     <nav class="menu-principal">
         <div class="container">
-            <ul class="menu-principal__lista">
+            <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li class="menu-item-has-children">
+                <li>
                     <a href="modelos.html">Modelos de evaluación y RED ▾</a>
                     <ul class="sub-menu">
                         <li><a href="seleccionando-modelos.html">Selección de modelos</a></li>
@@ -45,116 +511,139 @@
     </nav>
 
     <!-- ============================================================
-    CONTENIDO PRINCIPAL
+    CONTENIDO PRINCIPAL – APLICACIÓN DEL MODELO
     ============================================================ -->
     <main class="contenido-principal">
         <div class="container">
 
-            <h1 class="subpagina-titulo">Aplicación del modelo de evaluación</h1>
+            <h1 class="pagina-titulo">📊 Aplicación del modelo de evaluación</h1>
 
+            <!-- =========================================================
+            SECCIÓN 1 – APLICACIÓN DE CODA, LORI Y REEVES
+            ========================================================= -->
             <section>
-                <h2 class="subpagina-subtitulo">Aplicación de CODA, LORI y Reeves</h2>
+                <h2>📌 Aplicación de CODA, LORI y Reeves</h2>
                 <p>
-                    La aplicación de los modelos CODA, LORI y Reeves a los recursos educativos digitales Rural STEAM Lab – Simulador Interactivo de Movimiento de Proyectil y PhET Interactive Simulations – Projectile Motion permitió obtener una valoración integral desde las dimensiones pedagógica, tecnológica y de diseño instruccional.
+                    La aplicación de los modelos <strong>CODA</strong>, <strong>LORI</strong> y <strong>Reeves</strong> a los recursos educativos digitales <em>Rural STEAM Lab – Simulador Interactivo de Movimiento de Proyectil</em> y <em>PhET Interactive Simulations – Projectile Motion</em> permitió obtener una valoración integral desde las dimensiones pedagógica, tecnológica y de diseño instruccional.
                 </p>
 
-                <table class="tabla-modelos">
-                    <thead>
-                        <tr>
-                            <th>Modelo</th>
-                            <th>Rural STEAM Lab (puntaje)</th>
-                            <th>PhET (puntaje)</th>
-                            <th>Observaciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>CODA</strong></td>
-                            <td>4.7 / 5 (94%)</td>
-                            <td>4.8 / 5 (96%)</td>
-                            <td>Ambos recursos destacan en coherencia pedagógica, calidad científica y usabilidad. Oportunidad de mejora en accesibilidad.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>LORI</strong></td>
-                            <td>4.67 / 5 (93.3%)</td>
-                            <td>4.7 / 5 (94%)</td>
-                            <td>Alta calidad en contenido, motivación y diseño. Limitaciones en retroalimentación personalizada e interoperabilidad.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Reeves</strong></td>
-                            <td>4.78 / 5 (95.6%)</td>
-                            <td>4.78 / 5 (95.6%)</td>
-                            <td>Excelente diseño instruccional y aprendizaje significativo. Se sugiere incorporar más actividades guiadas.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p style="margin-top:12px;">
+                <div class="tabla-wrapper">
+                    <table class="tabla-modelos">
+                        <thead>
+                            <tr>
+                                <th>Modelo</th>
+                                <th>Rural STEAM Lab (puntaje)</th>
+                                <th>PhET (puntaje)</th>
+                                <th>Observaciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>CODA</strong></td>
+                                <td><span class="badge-puntaje">4.7 / 5 (94%)</span></td>
+                                <td><span class="badge-puntaje">4.8 / 5 (96%)</span></td>
+                                <td>Ambos recursos destacan en coherencia pedagógica, calidad científica y usabilidad. Oportunidad de mejora en accesibilidad.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>LORI</strong></td>
+                                <td><span class="badge-puntaje">4.67 / 5 (93.3%)</span></td>
+                                <td><span class="badge-puntaje">4.7 / 5 (94%)</span></td>
+                                <td>Alta calidad en contenido, motivación y diseño. Limitaciones en retroalimentación personalizada e interoperabilidad.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Reeves</strong></td>
+                                <td><span class="badge-puntaje">4.78 / 5 (95.6%)</span></td>
+                                <td><span class="badge-puntaje">4.78 / 5 (95.6%)</span></td>
+                                <td>Excelente diseño instruccional y aprendizaje significativo. Se sugiere incorporar más actividades guiadas.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-style:italic; color:#556b52; font-size:0.9rem; margin-top:8px;">
+                    Nota. Elaboración propia a partir de la aplicación de los modelos CODA, LORI y Reeves a los RED seleccionados.
+                </p>
+                <p>
                     Los resultados evidencian que ambos recursos presentan una alta calidad educativa y constituyen herramientas pertinentes para fortalecer el aprendizaje del movimiento parabólico en estudiantes de grado décimo. Las principales oportunidades de mejora se relacionan con la accesibilidad, la retroalimentación personalizada y la interoperabilidad con plataformas de gestión del aprendizaje.
                 </p>
             </section>
 
+            <!-- =========================================================
+            SECCIÓN 2 – COMPARACIÓN DE MODELOS
+            ========================================================= -->
             <section>
-                <h2 class="subpagina-subtitulo">Comparación de modelos</h2>
-                <table class="tabla-modelos">
-                    <thead>
-                        <tr>
-                            <th>Criterio</th>
-                            <th>CODA</th>
-                            <th>LORI</th>
-                            <th>Reeves</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Enfoque principal</td>
-                            <td>Calidad didáctica y tecnológica</td>
-                            <td>Equilibrio pedagógico-tecnológico</td>
-                            <td>Diseño instruccional y experiencia de aprendizaje</td>
-                        </tr>
-                        <tr>
-                            <td>Número de criterios</td>
-                            <td>10</td>
-                            <td>9</td>
-                            <td>9</td>
-                        </tr>
-                        <tr>
-                            <td>Facilidad de aplicación</td>
-                            <td>Media</td>
-                            <td>Alta</td>
-                            <td>Alta</td>
-                        </tr>
-                        <tr>
-                            <td>Adaptabilidad</td>
-                            <td>Media</td>
-                            <td>Alta</td>
-                            <td>Media</td>
-                        </tr>
-                        <tr>
-                            <td>Énfasis en accesibilidad</td>
-                            <td>Alto</td>
-                            <td>Medio</td>
-                            <td>Bajo</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p style="margin-top:12px;">
+                <h2>📊 Comparación de modelos</h2>
+                <p>
                     El análisis comparativo permitió establecer que los tres modelos son complementarios y ofrecen perspectivas diferentes sobre la calidad de los Recursos Educativos Digitales. Mientras CODA profundiza en los aspectos didácticos y tecnológicos, Reeves enfatiza el diseño instruccional y la experiencia de aprendizaje. LORI integra ambos enfoques, proporcionando una evaluación equilibrada entre la calidad pedagógica, la usabilidad y las características técnicas del recurso.
                 </p>
+
+                <div class="tabla-wrapper">
+                    <table class="tabla-modelos">
+                        <thead>
+                            <tr>
+                                <th>Criterio</th>
+                                <th>CODA</th>
+                                <th>LORI</th>
+                                <th>Reeves</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Enfoque principal</strong></td>
+                                <td>Calidad didáctica y tecnológica</td>
+                                <td>Equilibrio pedagógico-tecnológico</td>
+                                <td>Diseño instruccional y experiencia de aprendizaje</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Número de criterios</strong></td>
+                                <td>10</td>
+                                <td>9</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Facilidad de aplicación</strong></td>
+                                <td>Media</td>
+                                <td>Alta</td>
+                                <td>Alta</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Adaptabilidad</strong></td>
+                                <td>Media</td>
+                                <td>Alta</td>
+                                <td>Media</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Énfasis en accesibilidad</strong></td>
+                                <td>Alto</td>
+                                <td>Medio</td>
+                                <td>Bajo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>
 
+            <!-- =========================================================
+            SECCIÓN 3 – SELECCIÓN DEL MODELO MÁS ADECUADO
+            ========================================================= -->
             <section>
-                <h2 class="subpagina-subtitulo">Selección del modelo más adecuado</h2>
+                <h2>🎯 Selección del modelo más adecuado</h2>
                 <p>
                     Después de aplicar los modelos CODA, LORI y Reeves, se concluyó que el modelo <strong>LORI</strong> es el más adecuado para ser adaptado al contexto de la práctica pedagógica. Esta selección se fundamenta en que LORI ofrece una evaluación integral al combinar criterios pedagógicos, tecnológicos y de usabilidad dentro de un mismo instrumento. Su estructura flexible favorece la incorporación de nuevos indicadores, lo que permitió proponer el modelo <strong>LORI-RSL</strong>.
                 </p>
+                <p>
+                    Esta decisión se alinea con los objetivos del trabajo, ya que se buscaba un modelo que pudiera adaptarse a las necesidades específicas del contexto educativo rural y del enfoque STEAM implementado en el proyecto.
+                </p>
             </section>
 
+            <!-- =========================================================
+            SECCIÓN 4 – APLICACIÓN DE LORI-RSL
+            ========================================================= -->
             <section>
-                <h2 class="subpagina-subtitulo">Aplicación de LORI-RSL</h2>
+                <h2>🔬 Aplicación de LORI-RSL</h2>
                 <p>
-                    Con el propósito de validar la pertinencia del modelo LORI-RSL, se realizó una aplicación piloto a los dos Recursos Educativos Digitales. Los nuevos criterios permitieron destacar fortalezas adicionales:
+                    Con el propósito de validar la pertinencia del modelo <strong>LORI-RSL</strong>, se realizó una aplicación piloto a los dos Recursos Educativos Digitales. Los nuevos criterios permitieron destacar fortalezas adicionales:
                 </p>
-                <ul style="margin: 12px 0 16px 24px;">
+                <ul>
                     <li>
                         <strong>Rural STEAM Lab</strong> obtuvo una alta puntuación en integración STEAM, contextualización rural y calidad de simulaciones. El recurso promueve el pensamiento sistémico y la gamificación, aunque podría fortalecer la retroalimentación personalizada.
                     </li>
@@ -163,8 +652,22 @@
                     </li>
                 </ul>
                 <p>
-                    La implementación del modelo LORI-RSL evidenció que la incorporación de nuevos indicadores fortalece la evaluación de Recursos Educativos Digitales utilizados en la enseñanza de la Física, proporcionando una evaluación más pertinente para los recursos digitales empleados en contextos escolares actuales.
+                    La implementación del modelo <strong>LORI-RSL</strong> evidenció que la incorporación de nuevos indicadores fortalece la evaluación de Recursos Educativos Digitales utilizados en la enseñanza de la Física, proporcionando una evaluación más pertinente para los recursos digitales empleados en contextos escolares actuales.
                 </p>
+            </section>
+
+            <!-- =========================================================
+            NAVEGACIÓN ENTRE PÁGINAS (botones)
+            ========================================================= -->
+            <section class="navegacion-subpaginas">
+                <div class="botones-navegacion">
+                    <a href="rediseno.html" class="btn-nav btn-atras">
+                        ← Anterior: Rediseño del modelo
+                    </a>
+                    <a href="referencias.html" class="btn-nav btn-adelante">
+                        Siguiente: Referencias →
+                    </a>
+                </div>
             </section>
 
         </div>
@@ -176,14 +679,16 @@
     <footer class="pie-pagina">
         <div class="container">
             <p>
-                &copy; 2026 - Nelson Anaya Carvajal - Universidad de Santander
+                &copy; 2026 – Nelson Anaya Carvajal – Universidad de Santander
             </p>
             <p>
                 Especialización en Aplicación de TIC para la Enseñanza – EATICE
             </p>
+            <p style="font-size:0.8rem; opacity:0.8; margin-top:6px;">
+                © 2021 Bajo licencia Creative Commons
+            </p>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
 </body>
 </html>
