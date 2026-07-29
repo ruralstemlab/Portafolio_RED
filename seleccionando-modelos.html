@@ -6,7 +6,7 @@
     <title>Selección de modelos | Portafolio</title>
 
     <!-- ================================================================
-    CSS EMBEBIDO – ESTILO PREMIUM (igual que modelos.html e index.html)
+    CSS EMBEBIDO – ESTILO PREMIUM
     ================================================================ -->
     <style>
         /* ---------- RESET Y BASE ---------- */
@@ -216,14 +216,6 @@
             font-size: 1.6rem;
         }
 
-        h4 {
-            font-size: 1.1rem;
-            color: #1b5e20;
-            margin-top: 18px;
-            margin-bottom: 6px;
-            font-weight: 600;
-        }
-
         p {
             margin-bottom: 16px;
             text-align: justify;
@@ -231,12 +223,14 @@
             color: #2d3a2a;
         }
 
-        ul, ol {
+        ul,
+        ol {
             margin: 12px 0 20px 30px;
             color: #2d3a2a;
         }
 
-        ul li, ol li {
+        ul li,
+        ol li {
             margin-bottom: 6px;
             font-size: 1.02rem;
         }
@@ -304,7 +298,7 @@
             height: 0;
             overflow: hidden;
             border-radius: 16px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
             margin: 30px 0 20px 0;
             border: 1px solid #e0e8dc;
         }
@@ -326,18 +320,69 @@
             margin-top: 8px;
         }
 
-        /* ---------- SECCIÓN DE TRANSICIÓN ---------- */
+        /* ---------- BOTONES DE NAVEGACIÓN ---------- */
+        .navegacion-subpaginas {
+            margin-top: 20px;
+        }
+
         .transicion-box {
             background: #f4f8f1;
             border-left: 6px solid #f9a825;
             padding: 24px 28px;
             border-radius: 12px;
             margin-top: 32px;
-            box-shadow: inset 0 1px 4px rgba(0,0,0,0.03);
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.03);
         }
 
         .transicion-box p {
             margin-bottom: 10px;
+        }
+
+        .botones-navegacion {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 8px;
+        }
+
+        .btn-nav {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-nav:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-atras {
+            background: #e8f5e9;
+            color: #1b5e20;
+            border-color: #1b5e20;
+        }
+
+        .btn-atras:hover {
+            background: #1b5e20;
+            color: #fff;
+        }
+
+        .btn-adelante {
+            background: #1b5e20;
+            color: #fff;
+            border-color: #1b5e20;
+        }
+
+        .btn-adelante:hover {
+            background: #f9a825;
+            color: #1b5e20;
+            border-color: #f9a825;
         }
 
         /* ---------- PIE ---------- */
@@ -395,7 +440,7 @@
                 box-shadow: none;
                 padding: 4px 0 4px 20px;
                 border-top: none;
-                background: rgba(255,255,255,0.05);
+                background: rgba(255, 255, 255, 0.05);
             }
 
             .menu-principal ul li:hover .sub-menu {
@@ -469,6 +514,17 @@
             .tabla-modelos thead th,
             .tabla-modelos tbody td {
                 padding: 5px 6px;
+            }
+
+            .botones-navegacion {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn-nav {
+                text-align: center;
+                padding: 10px 16px;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -752,14 +808,22 @@
             </section>
 
             <!-- =========================================================
-            TRANSICIÓN HACIA LA APLICACIÓN DE LOS MODELOS
+            NAVEGACIÓN ENTRE SUBPÁGINAS (con botones)
             ========================================================= -->
-            <section>
-                <h2>🔜 Transición hacia la aplicación de los modelos</h2>
+            <section class="navegacion-subpaginas">
+                <h2>📌 Navegación entre subpáginas</h2>
                 <div class="transicion-box">
                     <p>
-                        Una vez sustentada la selección de los modelos <strong>CODA</strong>, <strong>LORI</strong> y <strong>Reeves</strong>, el siguiente paso consiste en aplicarlos a los Recursos Educativos Digitales seleccionados para esta investigación. En la siguiente sección se presentan los recursos <em>Rural STEAM Lab – Simulador Interactivo de Movimiento de Proyectil</em> y <em>PhET Interactive Simulations – Projectile Motion</em>, los cuales serán analizados mediante los instrumentos derivados de estos modelos, con el propósito de identificar sus fortalezas, oportunidades de mejora y nivel de calidad pedagógica, tecnológica y de diseño instruccional.
+                        Una vez seleccionados los modelos <strong>CODA</strong>, <strong>LORI</strong> y <strong>Reeves</strong>, el siguiente paso consiste en aplicarlos a los Recursos Educativos Digitales. Utiliza los botones para navegar entre las secciones.
                     </p>
+                    <div class="botones-navegacion">
+                        <a href="modelos.html" class="btn-nav btn-atras">
+                            ← Volver a Modelos de evaluación y RED
+                        </a>
+                        <a href="recursos.html" class="btn-nav btn-adelante">
+                            Siguiente: Recursos Educativos Digitales →
+                        </a>
+                    </div>
                 </div>
             </section>
 
