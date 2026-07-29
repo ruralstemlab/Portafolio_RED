@@ -24,7 +24,7 @@
     </header>
 
     <!-- ============================================================
-    MENÚ CON SUBMENÚ
+    MENÚ PRINCIPAL CON SUBMENÚ
     ============================================================ -->
     <nav class="menu-principal">
         <div class="container">
@@ -34,7 +34,10 @@
                     <a href="modelos.html">Modelos de evaluación y RED ▾</a>
                     <ul class="sub-menu">
                         <li><a href="seleccionando-modelos.html">Selección de modelos</a></li>
-                        <li><a href="recursos.html" class="activo">RED</a></li>
+                        <li><a href="coda.html">Modelo CODA</a></li>
+                        <li><a href="lori.html">Modelo LORI</a></li>
+                        <li><a href="reeves.html">Modelo Reeves</a></li>
+                        <li><a href="recursos.html" class="activo">Recursos Educativos Digitales</a></li>
                     </ul>
                 </li>
                 <li><a href="rediseno.html">Rediseño</a></li>
@@ -50,75 +53,377 @@
     <main class="contenido-principal">
         <div class="container">
 
+            <!-- ============================================================
+            BOTÓN VOLVER ARRIBA
+            ============================================================ -->
+            <button class="btn-volver-arriba" id="btnVolverArriba" title="Volver arriba">⬆</button>
+
             <h1 class="subpagina-titulo">Recursos Educativos Digitales</h1>
 
-            <!-- RED 1 -->
-            <article class="red-item">
-                <h3>RED 1: Rural STEAM Lab – Simulador Interactivo de Movimiento de Proyectil</h3>
-                <p class="red-autor"><strong>Autor:</strong> Ing. Henson Alberto Medina Castillo – Rural STEAM Lab</p>
-                <p class="red-descripcion">
-                    <strong>Descripción:</strong> Recurso educativo digital interactivo diseñado para fortalecer el aprendizaje del movimiento de proyectil mediante simulación. El estudiante puede modificar variables como la velocidad inicial y el ángulo de lanzamiento para analizar la trayectoria, la altura máxima, el alcance horizontal y el tiempo de vuelo, favoreciendo el aprendizaje por experimentación y la comprensión de la cinemática bidimensional.
+            <!-- ============================================================
+            INTRODUCCIÓN
+            ============================================================ -->
+            <section class="red-introduccion">
+                <p>
+                    Los <strong>Recursos Educativos Digitales (RED)</strong> constituyen herramientas fundamentales
+                    para fortalecer los procesos de enseñanza y aprendizaje, al facilitar la comprensión de conceptos
+                    mediante contenidos interactivos, simulaciones y actividades que promueven la participación del
+                    estudiante. Su adecuada selección resulta esencial para garantizar el cumplimiento de los objetivos
+                    de aprendizaje y favorecer el desarrollo de competencias en diferentes áreas del conocimiento.
                 </p>
-                <p class="red-enlace">
-                    <strong>Enlace:</strong>
-                    <a href="https://ruralsteamlab.com/simulators/projectile-motion/" target="_blank">https://ruralsteamlab.com/simulators/projectile-motion/</a>
+                <p>
+                    Para el desarrollo de este trabajo se seleccionaron dos Recursos Educativos Digitales sobre la
+                    temática <strong>Movimiento de Proyectil</strong>, dirigidos a estudiantes de grado décimo en el
+                    área de Física. La elección de ambos recursos permitió realizar una evaluación comparativa
+                    utilizando los modelos CODA, LORI y Reeves, identificando sus fortalezas, limitaciones y calidad
+                    educativa desde diferentes perspectivas.
                 </p>
+            </section>
 
-                <p class="red-caracteristicas">Características y posibilidades de uso:</p>
-                <ul>
-                    <li>Simulación interactiva en tiempo real.</li>
-                    <li>Permite modificar variables del lanzamiento.</li>
-                    <li>Visualización inmediata de la trayectoria parabólica.</li>
-                    <li>Favorece el aprendizaje activo y el aprendizaje basado en simulación.</li>
-                    <li>Compatible con computadores, tabletas y dispositivos móviles.</li>
-                    <li>Puede utilizarse en clases presenciales, virtuales o híbridas.</li>
-                    <li>Facilita actividades de indagación, resolución de problemas y experimentación virtual.</li>
-                </ul>
+            <!-- ============================================================
+            RED 1: RURAL STEAM LAB – TARJETA PREMIUM
+            ============================================================ -->
+            <article class="red-item tarjeta-red-premium">
+                <div class="tarjeta-red-header">
+                    <span class="badge-red">RED 1</span>
+                    <h2>Rural STEAM Lab – Simulador Interactivo de Movimiento de Proyectil</h2>
+                </div>
 
-                <p class="red-limitaciones">Limitaciones:</p>
-                <ul>
-                    <li>Requiere un navegador web moderno.</li>
-                    <li>Algunas funciones pueden depender de la conexión a Internet.</li>
-                    <li>No reemplaza las prácticas experimentales de laboratorio; actúa como recurso de apoyo.</li>
-                </ul>
+                <div class="tarjeta-red-grid">
+                    <!-- Columna izquierda: información -->
+                    <div class="tarjeta-red-info">
+                        <div class="info-item">
+                            <span class="info-icon">📘</span>
+                            <div>
+                                <strong>Nombre del RED</strong>
+                                <p>Rural STEAM Lab – Simulador Interactivo de Movimiento de Proyectil</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📚</span>
+                            <div>
+                                <strong>Área de conocimiento</strong>
+                                <p>Física</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🎯</span>
+                            <div>
+                                <strong>Temática específica</strong>
+                                <p>Movimiento de Proyectil (Movimiento Parabólico)</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🎓</span>
+                            <div>
+                                <strong>Nivel o grado de aplicación</strong>
+                                <p>Educación Media – Grado Décimo (10°)</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">✍️</span>
+                            <div>
+                                <strong>Autor(es)</strong>
+                                <p>Ing. Henson Alberto Medina Castillo – Rural STEAM Lab</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🏛️</span>
+                            <div>
+                                <strong>Institución</strong>
+                                <p>Rural STEAM Lab – Proyecto de innovación educativa originado en la Universidad de Santander (UDES)</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📦</span>
+                            <div>
+                                <strong>Repositorio donde se encuentra alojado</strong>
+                                <p>Repositorio oficial de Rural STEAM Lab en GitHub</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🔗</span>
+                            <div>
+                                <strong>Enlace al repositorio</strong>
+                                <p><a href="https://github.com/ruralstemlab/rural-steam-platform" target="_blank">GitHub – Rural STEAM Platform</a></p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🌐</span>
+                            <div>
+                                <strong>Enlace al RED</strong>
+                                <p><a href="https://ruralsteamlab.com/simulators/projectile-motion/" target="_blank">Simulador de Movimiento de Proyectil – Rural STEAM Lab</a></p>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="red-imagen">
-                    <img src="img/rural-steam-lab.jpg" alt="Rural STEAM Lab – Simulador de Movimiento de Proyectil" />
+                    <!-- Columna derecha: imagen -->
+                    <div class="tarjeta-red-imagen">
+                        <img src="img/rural-steam-lab.jpg" alt="Rural STEAM Lab – Simulador de Movimiento de Proyectil" />
+                        <p class="pie-imagen"><em>Figura 1.</em> Interfaz del simulador Rural STEAM Lab – Movimiento de Proyectil.</p>
+                        <p class="fuente-imagen"><strong>Fuente:</strong> Rural STEAM Lab (2026).</p>
+                    </div>
+                </div>
+
+                <!-- Sección de descripción, características, limitaciones y estándares -->
+                <div class="tarjeta-red-detalles">
+                    <div class="detalle-bloque">
+                        <h3>📝 Descripción del RED</h3>
+                        <p>
+                            Recurso educativo digital interactivo diseñado para fortalecer el aprendizaje del movimiento
+                            de proyectil mediante simulación. El estudiante puede modificar variables como la velocidad
+                            inicial y el ángulo de lanzamiento para analizar la trayectoria, la altura máxima, el alcance
+                            horizontal y el tiempo de vuelo, favoreciendo el aprendizaje por experimentación y la
+                            comprensión de la cinemática bidimensional.
+                        </p>
+                    </div>
+
+                    <div class="detalle-bloque">
+                        <h3>⭐ Características y posibilidades de uso</h3>
+                        <ul>
+                            <li>Simulación interactiva en tiempo real.</li>
+                            <li>Permite modificar variables del lanzamiento.</li>
+                            <li>Visualización inmediata de la trayectoria parabólica.</li>
+                            <li>Favorece el aprendizaje activo y el aprendizaje basado en simulación.</li>
+                            <li>Compatible con computadores, tabletas y dispositivos móviles.</li>
+                            <li>Puede utilizarse en clases presenciales, virtuales o híbridas.</li>
+                            <li>Facilita actividades de indagación, resolución de problemas y experimentación virtual.</li>
+                        </ul>
+                    </div>
+
+                    <div class="detalle-bloque">
+                        <h3>⚠️ Limitaciones del RED</h3>
+                        <ul>
+                            <li>Requiere un navegador web moderno.</li>
+                            <li>Algunas funciones pueden depender de la conexión a Internet.</li>
+                            <li>No reemplaza las prácticas experimentales de laboratorio; actúa como recurso de apoyo para reforzar la comprensión conceptual.</li>
+                        </ul>
+                    </div>
+
+                    <div class="detalle-bloque">
+                        <h3>✅ Verificación de estándares en el RED</h3>
+                        <ul>
+                            <li>Desarrollado con HTML5, CSS3 y JavaScript.</li>
+                            <li>Diseño adaptable (Responsive).</li>
+                            <li>Interactividad en tiempo real.</li>
+                            <li>Recurso reutilizable.</li>
+                            <li>Compatible con navegadores modernos.</li>
+                            <li>Favorece la accesibilidad desde diferentes dispositivos.</li>
+                            <li>Integrable en ambientes virtuales de aprendizaje mediante enlace web.</li>
+                        </ul>
+                    </div>
                 </div>
             </article>
 
-            <!-- RED 2 -->
-            <article class="red-item">
-                <h3>RED 2: PhET Interactive Simulations – Projectile Motion</h3>
-                <p class="red-autor"><strong>Autor:</strong> Equipo PhET Interactive Simulations – Universidad de Colorado Boulder</p>
-                <p class="red-descripcion">
-                    <strong>Descripción:</strong> Es una simulación interactiva que permite estudiar el movimiento de proyectiles mediante la manipulación de variables como ángulo, velocidad inicial, masa y gravedad. Facilita la comprensión de conceptos físicos a través de la experimentación virtual.
-                </p>
-                <p class="red-enlace">
-                    <strong>Enlace:</strong>
-                    <a href="https://phet.colorado.edu/es/simulation/projectile-motion" target="_blank">https://phet.colorado.edu/es/simulation/projectile-motion</a>
-                </p>
+            <!-- ============================================================
+            RED 2: PHET – TARJETA PREMIUM
+            ============================================================ -->
+            <article class="red-item tarjeta-red-premium">
+                <div class="tarjeta-red-header">
+                    <span class="badge-red">RED 2</span>
+                    <h2>PhET Interactive Simulations – Projectile Motion</h2>
+                </div>
 
-                <p class="red-caracteristicas">Características y posibilidades de uso:</p>
-                <ul>
-                    <li>Interfaz interactiva y fácil de usar.</li>
-                    <li>Permite modificar variables en tiempo real.</li>
-                    <li>Visualización gráfica del movimiento.</li>
-                    <li>Ideal para aprendizaje por descubrimiento.</li>
-                    <li>Se puede usar para experimentación, análisis y resolución de problemas en clase.</li>
-                </ul>
+                <div class="tarjeta-red-grid">
+                    <!-- Columna izquierda: información -->
+                    <div class="tarjeta-red-info">
+                        <div class="info-item">
+                            <span class="info-icon">📘</span>
+                            <div>
+                                <strong>Nombre del RED</strong>
+                                <p>Simulación interactiva "Movimiento de proyectiles" (PhET)</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📚</span>
+                            <div>
+                                <strong>Área de conocimiento</strong>
+                                <p>Física</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🎯</span>
+                            <div>
+                                <strong>Temática específica</strong>
+                                <p>Movimiento de Proyectil (Movimiento Parabólico)</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🎓</span>
+                            <div>
+                                <strong>Nivel o grado de aplicación</strong>
+                                <p>Educación Media – Grado Décimo (10°)</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">✍️</span>
+                            <div>
+                                <strong>Autor(es)</strong>
+                                <p>Equipo PhET Interactive Simulations – Universidad de Colorado Boulder</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🏛️</span>
+                            <div>
+                                <strong>Institución</strong>
+                                <p>Universidad de Colorado Boulder</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🌐</span>
+                            <div>
+                                <strong>Sitio oficial</strong>
+                                <p><a href="https://phet.colorado.edu/es/" target="_blank">PhET Interactive Simulations</a></p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🔗</span>
+                            <div>
+                                <strong>Enlace al RED</strong>
+                                <p><a href="https://phet.colorado.edu/es/simulations/projectile-motion" target="_blank">Simulación Movimiento de Proyectiles</a></p>
+                            </div>
+                        </div>
+                    </div>
 
-                <p class="red-limitaciones">Limitaciones:</p>
-                <ul>
-                    <li>Requiere acceso a internet o dispositivo digital.</li>
-                    <li>No reemplaza completamente la experimentación real.</li>
-                    <li>Puede requerir orientación docente para su adecuado uso.</li>
-                </ul>
+                    <!-- Columna derecha: imagen -->
+                    <div class="tarjeta-red-imagen">
+                        <img src="img/phet-simulations.png" alt="PhET Interactive Simulations – Projectile Motion" />
+                        <p class="pie-imagen"><em>Figura 2.</em> Interfaz de la simulación PhET – Movimiento de Proyectiles.</p>
+                        <p class="fuente-imagen"><strong>Fuente:</strong> PhET Interactive Simulations (2026).</p>
+                    </div>
+                </div>
 
-                <div class="red-imagen">
-                    <img src="img/phet-simulations.png" alt="PhET Interactive Simulations – Projectile Motion" />
+                <!-- Sección de descripción, características, limitaciones y estándares -->
+                <div class="tarjeta-red-detalles">
+                    <div class="detalle-bloque">
+                        <h3>📝 Descripción del RED</h3>
+                        <p>
+                            Es una simulación interactiva que permite estudiar el movimiento de proyectiles mediante la
+                            manipulación de variables como ángulo, velocidad inicial, masa y gravedad. Facilita la
+                            comprensión de conceptos físicos a través de la experimentación virtual.
+                        </p>
+                    </div>
+
+                    <div class="detalle-bloque">
+                        <h3>⭐ Características y posibilidades de uso</h3>
+                        <ul>
+                            <li>Interfaz interactiva y fácil de usar.</li>
+                            <li>Permite modificar variables en tiempo real.</li>
+                            <li>Visualización gráfica del movimiento.</li>
+                            <li>Ideal para aprendizaje por descubrimiento.</li>
+                            <li>Se puede usar para experimentación, análisis y resolución de problemas en clase.</li>
+                        </ul>
+                    </div>
+
+                    <div class="detalle-bloque">
+                        <h3>⚠️ Limitaciones del RED</h3>
+                        <ul>
+                            <li>Requiere acceso a internet o dispositivo digital.</li>
+                            <li>No reemplaza completamente la experimentación real.</li>
+                            <li>Puede requerir orientación docente para su adecuado uso.</li>
+                        </ul>
+                    </div>
+
+                    <div class="detalle-bloque">
+                        <h3>✅ Verificación de estándares en el RED</h3>
+                        <ul>
+                            <li>Interactividad (LORI).</li>
+                            <li>Usabilidad y diseño (CODA).</li>
+                            <li>Impacto en el aprendizaje y motivación (Reeves).</li>
+                            <li>Pertinencia pedagógica en la enseñanza de conceptos físicos.</li>
+                        </ul>
+                    </div>
                 </div>
             </article>
+
+            <!-- ============================================================
+            TABLA COMPARATIVA
+            ============================================================ -->
+            <section class="red-comparacion">
+                <h2>📊 Comparación entre ambos recursos</h2>
+
+                <div class="tabla-responsive">
+                    <table class="tabla-comparativa">
+                        <thead>
+                            <tr>
+                                <th>Aspecto</th>
+                                <th>Rural STEAM Lab</th>
+                                <th>PhET Interactive Simulations</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Contextualización rural</strong></td>
+                                <td><span class="check">✔</span> Alta</td>
+                                <td><span class="check">◐</span> Parcial</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Interactividad</strong></td>
+                                <td><span class="check">✔</span> Excelente</td>
+                                <td><span class="check">✔</span> Excelente</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Accesibilidad</strong></td>
+                                <td><span class="check">✔</span> Alta</td>
+                                <td><span class="check">✔</span> Muy alta</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Uso en aula</strong></td>
+                                <td><span class="check">✔</span> Excelente</td>
+                                <td><span class="check">✔</span> Excelente</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Reconocimiento internacional</strong></td>
+                                <td><span class="check">◐</span> En desarrollo</td>
+                                <td><span class="check">✔</span> Muy alto</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Enfoque STEAM</strong></td>
+                                <td><span class="check">✔</span> Integrado</td>
+                                <td><span class="check">◐</span> Implícito</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Código abierto / Personalizable</strong></td>
+                                <td><span class="check">✔</span> Sí</td>
+                                <td><span class="check">✖</span> No</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Idiomas disponibles</strong></td>
+                                <td><span class="check">◐</span> Español / Inglés</td>
+                                <td><span class="check">✔</span> Múltiples idiomas</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- CONCLUSIÓN DE LA COMPARACIÓN -->
+                <div class="comparacion-conclusion">
+                    <h3>🔍 Conclusión de la comparación</h3>
+                    <p>
+                        La selección de estos Recursos Educativos Digitales permitió disponer de dos simuladores
+                        con características complementarias para desarrollar la evaluación mediante los modelos
+                        <strong>CODA</strong>, <strong>LORI</strong> y <strong>Reeves</strong>. Ambos recursos
+                        presentan fortalezas pedagógicas y tecnológicas que facilitan el aprendizaje del movimiento
+                        de proyectil, constituyendo una base adecuada para la aplicación de los instrumentos de
+                        evaluación desarrollados en este trabajo.
+                    </p>
+                    <p>
+                        <em>Rural STEAM Lab</em> ofrece una valiosa contextualización para el entorno rural colombiano
+                        y un enfoque STEAM explícito, mientras que <em>PhET</em> proporciona una plataforma consolidada
+                        con reconocimiento global y una amplia gama de recursos complementarios. La combinación de
+                        ambos recursos permite atender diferentes necesidades educativas y estilos de aprendizaje,
+                        enriqueciendo el proceso de enseñanza-aprendizaje de la Física.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ============================================================
+            BOTONES DE NAVEGACIÓN
+            ============================================================ -->
+            <div class="navegacion-paginas">
+                <a href="reeves.html" class="btn-nav anterior">⬅ Anterior</a>
+                <a href="rediseno.html" class="btn-nav siguiente">Siguiente ➡</a>
+            </div>
 
         </div>
     </main>
@@ -137,6 +442,44 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <!-- ============================================================
+    JAVASCRIPT PARA EL BOTÓN VOLVER ARRIBA
+    ============================================================ -->
+    <script>
+        // ============================================================
+        // BOTÓN VOLVER ARRIBA
+        // ============================================================
+        (function() {
+            'use strict';
+
+            const btn = document.getElementById('btnVolverArriba');
+
+            if (!btn) return;
+
+            // Mostrar/ocultar el botón según el scroll
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    btn.style.display = 'flex';
+                } else {
+                    btn.style.display = 'none';
+                }
+            });
+
+            // Al hacer clic, volver arriba con animación suave
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Ocultar inicialmente si está arriba
+            if (window.scrollY <= 300) {
+                btn.style.display = 'none';
+            }
+
+        })();
+    </script>
+
 </body>
 </html>
