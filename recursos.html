@@ -453,7 +453,6 @@
 
             if (!btn) return;
 
-            // Mostrar/ocultar el botón según el scroll
             window.addEventListener('scroll', function() {
                 if (window.scrollY > 300) {
                     btn.style.display = 'flex';
@@ -462,7 +461,6 @@
                 }
             });
 
-            // Al hacer clic, volver arriba con animación suave
             btn.addEventListener('click', function() {
                 window.scrollTo({
                     top: 0,
@@ -470,7 +468,6 @@
                 });
             });
 
-            // Ocultar inicialmente si está arriba
             if (window.scrollY <= 300) {
                 btn.style.display = 'none';
             }
