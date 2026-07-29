@@ -4,7 +4,141 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio | Modelos de Evaluación de RED</title>
+    <!-- CSS general (header, menú, footer) – no modificar -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- ============================================================
+    CSS EXCLUSIVO PARA LA PORTADA (embebido)
+    ============================================================ -->
+    <style>
+        /* Contenedor principal: ocupa el espacio restante y centra */
+        .portada-main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 180px); /* header + menú + footer aprox */
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Caja que agrupa todos los elementos de la portada */
+        .portada-contenido {
+            text-align: center;
+            max-width: 800px;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        /* Logo pequeño y centrado */
+        .portada-logo {
+            max-width: 120px;
+            height: auto;
+            display: block;
+            margin: 0 auto 30px auto;
+        }
+
+        /* Título principal */
+        .portada-titulo {
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: #1b5e20;          /* verde oscuro institucional */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0 0 30px 0;
+            line-height: 1.2;
+        }
+
+        /* Nombre */
+        .portada-nombre {
+            font-size: 1.8rem;
+            color: #1e1e1e;
+            margin: 0 0 20px 0;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+
+        /* Universidad */
+        .portada-universidad {
+            font-size: 1.3rem;
+            color: #1e1e1e;
+            margin: 0 0 10px 0;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+
+        /* Especialización */
+        .portada-especializacion {
+            font-size: 1.1rem;
+            color: #1e1e1e;
+            margin: 0 0 10px 0;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+
+        /* Lugar */
+        .portada-lugar {
+            font-size: 1.1rem;
+            color: #1e1e1e;
+            margin: 0 0 10px 0;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+
+        /* Año */
+        .portada-anio {
+            font-size: 1.1rem;
+            color: #1e1e1e;
+            margin: 15px 0 0 0;
+            font-weight: normal;
+        }
+
+        /* ============================================================
+           RESPONSIVE – para pantallas pequeñas
+           ============================================================ */
+        @media (max-width: 768px) {
+            .portada-titulo {
+                font-size: 2rem;
+            }
+            .portada-nombre {
+                font-size: 1.4rem;
+            }
+            .portada-universidad,
+            .portada-especializacion,
+            .portada-lugar,
+            .portada-anio {
+                font-size: 1rem;
+            }
+            .portada-logo {
+                max-width: 90px;
+            }
+            .portada-main {
+                min-height: calc(100vh - 150px); /* ajuste para móviles */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .portada-titulo {
+                font-size: 1.6rem;
+                letter-spacing: 1px;
+            }
+            .portada-nombre {
+                font-size: 1.1rem;
+            }
+            .portada-universidad,
+            .portada-especializacion,
+            .portada-lugar,
+            .portada-anio {
+                font-size: 0.9rem;
+            }
+            .portada-logo {
+                max-width: 70px;
+                margin-bottom: 20px;
+            }
+            .portada-main {
+                min-height: calc(100vh - 140px);
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -41,28 +175,28 @@
     <!-- ============================================================
     CONTENIDO PRINCIPAL – PORTADA EXACTA
     ============================================================ -->
-    <main class="contenido-principal portada-inicio">
-        <div class="portada-contenedor">
+    <main class="portada-main">
+        <div class="portada-contenido">
             <!-- Logo pequeño centrado -->
-            <img src="img/logo-udes.png" alt="Universidad de Santander" class="logo-portada" />
+            <img src="img/logo-udes.png" alt="Universidad de Santander" class="portada-logo" />
 
             <!-- Título -->
-            <h1 class="titulo-portada">MODELOS DE EVALUACIÓN DE RED</h1>
+            <h1 class="portada-titulo">MODELOS DE EVALUACIÓN DE RED</h1>
 
             <!-- Nombre -->
-            <p class="nombre-portada">NELSON ANAYA CARVAJAL</p>
+            <p class="portada-nombre">NELSON ANAYA CARVAJAL</p>
 
             <!-- Universidad -->
-            <p class="universidad-portada">UNIVERSIDAD DE SANTANDER UDES</p>
+            <p class="portada-universidad">UNIVERSIDAD DE SANTANDER UDES</p>
 
             <!-- Especialización -->
-            <p class="especializacion-portada">ESPECIALIZACIÓN EN APLICACIÓN DE TIC PARA LA ENSEÑANZA</p>
+            <p class="portada-especializacion">ESPECIALIZACIÓN EN APLICACIÓN DE TIC PARA LA ENSEÑANZA</p>
 
             <!-- Lugar -->
-            <p class="lugar-portada">BUCARAMANGA – SANTANDER</p>
+            <p class="portada-lugar">BUCARAMANGA – SANTANDER</p>
 
             <!-- Año -->
-            <p class="anio-portada">2026</p>
+            <p class="portada-anio">2026</p>
         </div>
     </main>
 
