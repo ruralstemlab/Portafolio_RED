@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Selección de modelos | Portafolio</title>
 
-    <!-- ================================================================
-    CSS EMBEBIDO – ESTILO PREMIUM
-    ================================================================ -->
     <style>
         /* ---------- RESET Y BASE ---------- */
         * {
@@ -35,7 +32,7 @@
             color: #fff;
             padding: 18px 0;
             border-bottom: 4px solid #f9a825;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
         }
 
         .header-institucional .container {
@@ -49,7 +46,7 @@
             max-height: 70px;
             width: auto;
             display: block;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
         }
 
         .header-institucional .texto {
@@ -69,11 +66,11 @@
             font-weight: 300;
         }
 
-        /* ---------- MENÚ CON SUBMENÚ ---------- */
+        /* ---------- MENÚ CON SUBMENÚ MEJORADO ---------- */
         .menu-principal {
             background: #1b5e20;
             border-bottom: 2px solid #f9a825;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -110,7 +107,7 @@
         .menu-principal ul li a.activo {
             background: #fff;
             color: #1b5e20;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         }
 
         .menu-principal ul li .sub-menu {
@@ -121,8 +118,9 @@
             background: #1b5e20;
             min-width: 220px;
             border-radius: 12px;
-            padding: 8px 0;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+            padding: 12px 0 8px 0;
+            margin-top: -4px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
             border-top: 3px solid #f9a825;
             flex-direction: column;
             gap: 2px;
@@ -159,7 +157,7 @@
             background: #ffffff;
             padding: 40px 0 60px 0;
             border-radius: 0 0 24px 24px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
         }
 
         .contenido-principal .container {
@@ -223,14 +221,12 @@
             color: #2d3a2a;
         }
 
-        ul,
-        ol {
+        ul, ol {
             margin: 12px 0 20px 30px;
             color: #2d3a2a;
         }
 
-        ul li,
-        ol li {
+        ul li, ol li {
             margin-bottom: 6px;
             font-size: 1.02rem;
         }
@@ -322,28 +318,16 @@
 
         /* ---------- BOTONES DE NAVEGACIÓN ---------- */
         .navegacion-subpaginas {
-            margin-top: 20px;
-        }
-
-        .transicion-box {
-            background: #f4f8f1;
-            border-left: 6px solid #f9a825;
-            padding: 24px 28px;
-            border-radius: 12px;
-            margin-top: 32px;
-            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.03);
-        }
-
-        .transicion-box p {
-            margin-bottom: 10px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #e8f0e4;
         }
 
         .botones-navegacion {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-between;
             gap: 16px;
-            margin-top: 8px;
         }
 
         .btn-nav {
@@ -359,7 +343,7 @@
 
         .btn-nav:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
         }
 
         .btn-atras {
@@ -441,6 +425,7 @@
                 padding: 4px 0 4px 20px;
                 border-top: none;
                 background: rgba(255, 255, 255, 0.05);
+                margin-top: 0;
             }
 
             .menu-principal ul li:hover .sub-menu {
@@ -472,8 +457,15 @@
                 padding: 8px 10px;
             }
 
-            .transicion-box {
-                padding: 16px 18px;
+            .botones-navegacion {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn-nav {
+                text-align: center;
+                padding: 10px 16px;
+                font-size: 0.9rem;
             }
         }
 
@@ -515,17 +507,6 @@
             .tabla-modelos tbody td {
                 padding: 5px 6px;
             }
-
-            .botones-navegacion {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .btn-nav {
-                text-align: center;
-                padding: 10px 16px;
-                font-size: 0.9rem;
-            }
         }
     </style>
 </head>
@@ -547,7 +528,7 @@
     </header>
 
     <!-- ============================================================
-    MENÚ CON SUBMENÚ
+    MENÚ CON SUBMENÚ MEJORADO
     ============================================================ -->
     <nav class="menu-principal">
         <div class="container">
@@ -575,9 +556,7 @@
 
             <h1 class="pagina-titulo">🎯 2.1. Seleccionando modelos de evaluación</h1>
 
-            <!-- =========================================================
-            INTRODUCCIÓN
-            ========================================================= -->
+            <!-- INTRODUCCIÓN -->
             <section>
                 <h2>📌 Introducción</h2>
                 <p>
@@ -588,9 +567,7 @@
                 </p>
             </section>
 
-            <!-- =========================================================
-            METODOLOGÍA
-            ========================================================= -->
+            <!-- METODOLOGÍA -->
             <section>
                 <h2>📋 Metodología para la selección de los modelos</h2>
                 <p>
@@ -601,9 +578,7 @@
                 </p>
             </section>
 
-            <!-- =========================================================
-            CRITERIOS CONSIDERADOS
-            ========================================================= -->
+            <!-- CRITERIOS -->
             <section>
                 <h2>🔍 Criterios considerados durante la selección</h2>
                 <p>
@@ -659,9 +634,7 @@
                 </p>
             </section>
 
-            <!-- =========================================================
-            PROCESO DE SELECCIÓN
-            ========================================================= -->
+            <!-- PROCESO -->
             <section>
                 <h2>📌 Proceso de selección</h2>
                 <p>
@@ -679,9 +652,7 @@
                 </p>
             </section>
 
-            <!-- =========================================================
-            JUSTIFICACIÓN DE LA SELECCIÓN
-            ========================================================= -->
+            <!-- JUSTIFICACIÓN -->
             <section>
                 <h2>📝 Justificación de la selección de los modelos</h2>
                 <p>
@@ -713,9 +684,7 @@
                 </p>
             </section>
 
-            <!-- =========================================================
-            COMPARACIÓN DE LOS MODELOS SELECCIONADOS
-            ========================================================= -->
+            <!-- COMPARACIÓN -->
             <section>
                 <h2>📊 Comparación de los modelos seleccionados</h2>
 
@@ -752,9 +721,7 @@
                 </p>
             </section>
 
-            <!-- =========================================================
-            MODELOS NO SELECCIONADOS
-            ========================================================= -->
+            <!-- MODELOS NO SELECCIONADOS -->
             <section>
                 <h2>🚫 Modelos no seleccionados</h2>
                 <p>
@@ -765,9 +732,7 @@
                 </p>
             </section>
 
-            <!-- =========================================================
-            CONCLUSIONES DE LA SELECCIÓN
-            ========================================================= -->
+            <!-- CONCLUSIONES -->
             <section>
                 <h2>📌 Conclusiones de la selección</h2>
                 <p>
@@ -778,9 +743,7 @@
                 </p>
             </section>
 
-            <!-- =========================================================
-            VIDEO COMPLEMENTARIO
-            ========================================================= -->
+            <!-- VIDEO -->
             <section>
                 <h2>🎥 Video complementario: Selección de modelos de evaluación de Recursos Educativos Digitales</h2>
                 <p>
@@ -808,22 +771,16 @@
             </section>
 
             <!-- =========================================================
-            NAVEGACIÓN ENTRE SUBPÁGINAS (con botones)
+            NAVEGACIÓN ENTRE SUBPÁGINAS (botones)
             ========================================================= -->
             <section class="navegacion-subpaginas">
-                <h2>📌 Navegación entre subpáginas</h2>
-                <div class="transicion-box">
-                    <p>
-                        Una vez seleccionados los modelos <strong>CODA</strong>, <strong>LORI</strong> y <strong>Reeves</strong>, el siguiente paso consiste en aplicarlos a los Recursos Educativos Digitales. Utiliza los botones para navegar entre las secciones.
-                    </p>
-                    <div class="botones-navegacion">
-                        <a href="modelos.html" class="btn-nav btn-atras">
-                            ← Volver a Modelos de evaluación y RED
-                        </a>
-                        <a href="recursos.html" class="btn-nav btn-adelante">
-                            Siguiente: Recursos Educativos Digitales →
-                        </a>
-                    </div>
+                <div class="botones-navegacion">
+                    <a href="modelos.html" class="btn-nav btn-atras">
+                        ← Volver a Modelos de evaluación y RED
+                    </a>
+                    <a href="recursos.html" class="btn-nav btn-adelante">
+                        Siguiente: Recursos Educativos Digitales →
+                    </a>
                 </div>
             </section>
 
