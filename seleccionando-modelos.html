@@ -4,34 +4,501 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Selección de modelos | Portafolio</title>
-    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- ================================================================
+    CSS EMBEBIDO – ESTILO PREMIUM (igual que modelos.html e index.html)
+    ================================================================ -->
+    <style>
+        /* ---------- RESET Y BASE ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background-color: #f4f6f0;
+            color: #1e2b1c;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ---------- ENCABEZADO ---------- */
+        .header-institucional {
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+            color: #fff;
+            padding: 18px 0;
+            border-bottom: 4px solid #f9a825;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        }
+
+        .header-institucional .container {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .header-institucional .logo img {
+            max-height: 70px;
+            width: auto;
+            display: block;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+
+        .header-institucional .texto {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-institucional .universidad {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .header-institucional .especializacion {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* ---------- MENÚ CON SUBMENÚ ---------- */
+        .menu-principal {
+            background: #1b5e20;
+            border-bottom: 2px solid #f9a825;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .menu-principal ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            padding: 8px 0;
+        }
+
+        .menu-principal ul li {
+            position: relative;
+        }
+
+        .menu-principal ul li a {
+            display: block;
+            padding: 10px 22px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 30px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .menu-principal ul li a:hover {
+            background: #f9a825;
+            color: #1b5e20;
+        }
+
+        .menu-principal ul li a.activo {
+            background: #fff;
+            color: #1b5e20;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .menu-principal ul li .sub-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #1b5e20;
+            min-width: 220px;
+            border-radius: 12px;
+            padding: 8px 0;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+            border-top: 3px solid #f9a825;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .menu-principal ul li:hover .sub-menu {
+            display: flex;
+        }
+
+        .menu-principal ul li .sub-menu li {
+            width: 100%;
+        }
+
+        .menu-principal ul li .sub-menu li a {
+            padding: 8px 20px;
+            border-radius: 0;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #e8f5e9;
+        }
+
+        .menu-principal ul li .sub-menu li a:hover {
+            background: #f9a825;
+            color: #1b5e20;
+        }
+
+        .menu-principal ul li .sub-menu li a.activo {
+            background: #fff;
+            color: #1b5e20;
+        }
+
+        /* ---------- CONTENIDO PRINCIPAL ---------- */
+        .contenido-principal {
+            background: #ffffff;
+            padding: 40px 0 60px 0;
+            border-radius: 0 0 24px 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .contenido-principal .container {
+            max-width: 1000px;
+        }
+
+        .pagina-titulo {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #1b5e20;
+            text-align: center;
+            border-bottom: 4px solid #f9a825;
+            padding-bottom: 16px;
+            margin-bottom: 36px;
+            letter-spacing: -0.5px;
+            position: relative;
+        }
+
+        .pagina-titulo::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: #1b5e20;
+            border-radius: 4px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #1b5e20;
+            margin-top: 44px;
+            margin-bottom: 18px;
+            padding-left: 8px;
+            border-left: 6px solid #f9a825;
+            padding-left: 16px;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: #2e7d32;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h3 .icono {
+            font-size: 1.6rem;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            color: #1b5e20;
+            margin-top: 18px;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+            font-size: 1.05rem;
+            color: #2d3a2a;
+        }
+
+        ul, ol {
+            margin: 12px 0 20px 30px;
+            color: #2d3a2a;
+        }
+
+        ul li, ol li {
+            margin-bottom: 6px;
+            font-size: 1.02rem;
+        }
+
+        /* ---------- TABLA PREMIUM ---------- */
+        .tabla-wrapper {
+            overflow-x: auto;
+            margin: 28px 0 32px 0;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(27, 94, 32, 0.12);
+            border: 1px solid #e0e8dc;
+        }
+
+        .tabla-modelos {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+            background: #fff;
+        }
+
+        .tabla-modelos thead {
+            background: linear-gradient(135deg, #1b5e20, #2e7d32);
+            color: #fff;
+        }
+
+        .tabla-modelos thead th {
+            padding: 14px 16px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border-bottom: 3px solid #f9a825;
+        }
+
+        .tabla-modelos tbody td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #eaf0e6;
+            vertical-align: top;
+            color: #1e2b1c;
+        }
+
+        .tabla-modelos tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tabla-modelos tbody tr:nth-child(even) {
+            background-color: #f8fbf6;
+        }
+
+        .tabla-modelos tbody tr:hover {
+            background-color: #eaf5e6;
+            transition: background 0.25s ease;
+        }
+
+        .tabla-modelos tbody td strong {
+            color: #1b5e20;
+            font-weight: 700;
+        }
+
+        /* ---------- VIDEO ---------- */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            margin: 30px 0 20px 0;
+            border: 1px solid #e0e8dc;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #556b52;
+            font-style: italic;
+            margin-top: 8px;
+        }
+
+        /* ---------- SECCIÓN DE TRANSICIÓN ---------- */
+        .transicion-box {
+            background: #f4f8f1;
+            border-left: 6px solid #f9a825;
+            padding: 24px 28px;
+            border-radius: 12px;
+            margin-top: 32px;
+            box-shadow: inset 0 1px 4px rgba(0,0,0,0.03);
+        }
+
+        .transicion-box p {
+            margin-bottom: 10px;
+        }
+
+        /* ---------- PIE ---------- */
+        .pie-pagina {
+            background: linear-gradient(135deg, #1b5e20, #2e7d32);
+            color: #e8f5e9;
+            text-align: center;
+            padding: 24px 0;
+            font-size: 0.95rem;
+            border-top: 4px solid #f9a825;
+        }
+
+        .pie-pagina p {
+            margin-bottom: 4px;
+            text-align: center;
+            color: #e8f5e9;
+        }
+
+        .pie-pagina p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 768px) {
+            .header-institucional .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .header-institucional .logo img {
+                max-height: 60px;
+            }
+
+            .header-institucional .universidad {
+                font-size: 1.1rem;
+            }
+
+            .header-institucional .especializacion {
+                font-size: 0.85rem;
+            }
+
+            .menu-principal ul {
+                justify-content: center;
+            }
+
+            .menu-principal ul li a {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+            }
+
+            .menu-principal ul li .sub-menu {
+                position: static;
+                border-radius: 8px;
+                box-shadow: none;
+                padding: 4px 0 4px 20px;
+                border-top: none;
+                background: rgba(255,255,255,0.05);
+            }
+
+            .menu-principal ul li:hover .sub-menu {
+                display: flex;
+            }
+
+            .pagina-titulo {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            p {
+                font-size: 0.98rem;
+            }
+
+            .tabla-modelos {
+                font-size: 0.82rem;
+            }
+
+            .tabla-modelos thead th,
+            .tabla-modelos tbody td {
+                padding: 8px 10px;
+            }
+
+            .transicion-box {
+                padding: 16px 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu-principal ul {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 2px;
+            }
+
+            .menu-principal ul li a {
+                border-radius: 8px;
+                text-align: center;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            .pagina-titulo {
+                font-size: 1.4rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                border-left-width: 4px;
+                padding-left: 12px;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            .tabla-modelos {
+                font-size: 0.72rem;
+            }
+
+            .tabla-modelos thead th,
+            .tabla-modelos tbody td {
+                padding: 5px 6px;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <!-- ============================================================
-    ENCABEZADO INSTITUCIONAL
+    ENCABEZADO
     ============================================================ -->
     <header class="header-institucional">
-        <div class="container header-institucional__contenido">
-            <div class="header-institucional__logo">
+        <div class="container">
+            <div class="logo">
                 <img src="img/logo-udes.png" alt="Universidad de Santander" />
             </div>
-            <div class="header-institucional__texto">
-                <p class="header-institucional__universidad">Universidad de Santander</p>
-                <p class="header-institucional__maestria">Especialización en Aplicación de TIC para la Enseñanza – EATICE</p>
+            <div class="texto">
+                <span class="universidad">Universidad de Santander</span>
+                <span class="especializacion">Especialización en Aplicación de TIC para la Enseñanza – EATICE</span>
             </div>
         </div>
     </header>
 
     <!-- ============================================================
-    MENÚ PRINCIPAL CON SUBMENÚ
+    MENÚ CON SUBMENÚ
     ============================================================ -->
     <nav class="menu-principal">
         <div class="container">
-            <ul class="menu-principal__lista">
+            <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li class="menu-item-has-children">
-                    <a href="modelos.html">Modelos de evaluación y RED ▾</a>
+                <li>
+                    <a href="modelos.html" class="activo">Modelos de evaluación y RED ▾</a>
                     <ul class="sub-menu">
                         <li><a href="seleccionando-modelos.html" class="activo">Selección de modelos</a></li>
                         <li><a href="recursos.html">RED</a></li>
@@ -45,230 +512,256 @@
     </nav>
 
     <!-- ============================================================
-    CONTENIDO PRINCIPAL
+    CONTENIDO PRINCIPAL – SELECCIÓN DE MODELOS
     ============================================================ -->
     <main class="contenido-principal">
         <div class="container">
 
-            <button class="btn-volver-arriba" id="btnVolverArriba" title="Volver arriba">⬆</button>
+            <h1 class="pagina-titulo">🎯 2.1. Seleccionando modelos de evaluación</h1>
 
-            <h1 class="subpagina-titulo">Selección de modelos de evaluación</h1>
-
-            <section class="modelos-introduccion">
+            <!-- =========================================================
+            INTRODUCCIÓN
+            ========================================================= -->
+            <section>
+                <h2>📌 Introducción</h2>
                 <p>
-                    La evaluación de los <strong>Recursos Educativos Digitales (RED)</strong> constituye un proceso
-                    fundamental para determinar su calidad pedagógica, tecnológica y funcional, garantizando que
-                    respondan a las necesidades de los procesos de enseñanza y aprendizaje. A lo largo de los últimos
-                    años se han desarrollado diversos modelos de evaluación que permiten valorar diferentes dimensiones
-                    de los recursos digitales, considerando aspectos como la calidad de los contenidos, la usabilidad,
-                    la accesibilidad, el diseño instruccional, la interoperabilidad y el cumplimiento de estándares
-                    de calidad.
+                    La evaluación de los Recursos Educativos Digitales (RED) requiere la utilización de instrumentos que permitan valorar de manera objetiva la calidad pedagógica, tecnológica y funcional de los recursos que serán implementados en los procesos de enseñanza y aprendizaje. Aunque en la literatura científica existen numerosos modelos de evaluación, cada uno responde a enfoques metodológicos diferentes y prioriza dimensiones específicas de la calidad educativa. Por esta razón, la selección del modelo de evaluación constituye una etapa metodológica fundamental, ya que de ella depende la pertinencia y confiabilidad de los resultados obtenidos durante el proceso de valoración.
                 </p>
                 <p>
-                    Con el propósito de identificar el modelo más adecuado para evaluar los Recursos Educativos
-                    Digitales seleccionados en este trabajo, se realizó una revisión bibliográfica de seis modelos
-                    ampliamente reconocidos en el ámbito de la tecnología educativa y la ingeniería del software.
-                    Cada uno de estos modelos aporta criterios específicos para valorar la calidad de los recursos
-                    digitales desde diferentes perspectivas, constituyendo una base sólida para la posterior
-                    selección y aplicación de los instrumentos de evaluación.
+                    En este trabajo se realizó un proceso sistemático de análisis comparativo de los seis modelos de evaluación presentados en la sección anterior: <strong>LORI</strong>, <strong>Reeves</strong>, <strong>CODA</strong>, <strong>Norma UNE 71362</strong>, <strong>FURPS</strong> y <strong>McCall</strong>. El propósito fue identificar aquellos modelos que ofrecieran una mejor correspondencia con las características de los Recursos Educativos Digitales seleccionados para esta investigación, específicamente el simulador <em>Rural STEAM Lab – Movimiento de Proyectil</em> y el simulador <em>PhET Interactive Simulations – Projectile Motion</em>. La selección se fundamentó en criterios académicos, pedagógicos y tecnológicos, buscando garantizar una evaluación integral de ambos recursos.
                 </p>
             </section>
 
-            <!-- TABLA DE MODELOS ANALIZADOS -->
-            <section class="modelos-tabla">
-                <h2>Modelos de evaluación analizados</h2>
-                <div class="tabla-responsive">
+            <!-- =========================================================
+            METODOLOGÍA
+            ========================================================= -->
+            <section>
+                <h2>📋 Metodología para la selección de los modelos</h2>
+                <p>
+                    La selección de los modelos de evaluación se desarrolló mediante un análisis documental de carácter comparativo. Inicialmente se realizó una revisión bibliográfica especializada sobre modelos utilizados para la evaluación de Recursos Educativos Digitales, identificando sus fundamentos conceptuales, dimensiones de análisis, criterios de evaluación, instrumentos y ámbitos de aplicación. Posteriormente, se compararon los modelos con respecto a las necesidades específicas del proyecto, considerando que los recursos objeto de estudio corresponden a simuladores interactivos orientados a la enseñanza de la Física.
+                </p>
+                <p>
+                    El análisis permitió establecer un conjunto de criterios que orientaron la selección de los modelos más adecuados para la investigación. Estos criterios fueron definidos a partir de la naturaleza de los recursos educativos digitales, de los objetivos del estudio y de las características propias del aprendizaje mediado por simulaciones.
+                </p>
+            </section>
+
+            <!-- =========================================================
+            CRITERIOS CONSIDERADOS
+            ========================================================= -->
+            <section>
+                <h2>🔍 Criterios considerados durante la selección</h2>
+                <p>
+                    Para garantizar que la elección de los modelos estuviera sustentada metodológicamente, se establecieron los siguientes criterios de análisis:
+                </p>
+
+                <div class="tabla-wrapper">
                     <table class="tabla-modelos">
                         <thead>
                             <tr>
-                                <th>Modelo de evaluación</th>
-                                <th>¿Qué evalúa?</th>
-                                <th>Escala</th>
-                                <th>Instrumento</th>
+                                <th>Criterio</th>
+                                <th>Justificación</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>LORI</strong> (Learning Object Review Instrument)</td>
-                                <td>Calidad pedagógica y tecnológica de los Recursos Educativos Digitales.</td>
-                                <td>1 a 5</td>
-                                <td>Rúbrica LORI</td>
+                                <td><strong>Calidad pedagógica</strong></td>
+                                <td>Valorar la capacidad del recurso para favorecer el aprendizaje significativo.</td>
                             </tr>
                             <tr>
-                                <td><strong>Reeves</strong></td>
-                                <td>Diseño instruccional y experiencia de aprendizaje.</td>
-                                <td>1 a 5</td>
-                                <td>Matriz de Reeves</td>
+                                <td><strong>Calidad tecnológica</strong></td>
+                                <td>Analizar estabilidad, funcionamiento y desempeño técnico.</td>
                             </tr>
                             <tr>
-                                <td><strong>CODA</strong> (Calidad de Objetos Digitales de Aprendizaje)</td>
-                                <td>Calidad didáctica y tecnológica de los objetos de aprendizaje.</td>
-                                <td>1 a 5</td>
-                                <td>Plantilla CODA</td>
+                                <td><strong>Diseño instruccional</strong></td>
+                                <td>Verificar la coherencia entre objetivos, contenidos, actividades y evaluación.</td>
                             </tr>
                             <tr>
-                                <td><strong>Norma UNE 71362</strong></td>
-                                <td>Calidad de materiales educativos digitales según estándares.</td>
-                                <td>Cumplimiento de indicadores</td>
-                                <td>Lista de verificación</td>
+                                <td><strong>Interactividad</strong></td>
+                                <td>Evaluar el grado de participación activa del estudiante.</td>
                             </tr>
                             <tr>
-                                <td><strong>FURPS</strong> (Funcionalidad, Usabilidad, Confiabilidad, Rendimiento y Soporte)</td>
-                                <td>Calidad del software: funcionalidad, usabilidad, confiabilidad y rendimiento.</td>
-                                <td>Cumplimiento de atributos</td>
-                                <td>Lista de chequeo</td>
+                                <td><strong>Usabilidad</strong></td>
+                                <td>Determinar la facilidad de navegación y utilización del recurso.</td>
                             </tr>
                             <tr>
-                                <td><strong>McCall</strong></td>
-                                <td>Calidad del software mediante factores internos y externos.</td>
-                                <td>Cumplimiento de factores</td>
-                                <td>Lista de verificación</td>
+                                <td><strong>Accesibilidad</strong></td>
+                                <td>Garantizar que el recurso pueda ser utilizado por diferentes tipos de usuarios.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Reutilización</strong></td>
+                                <td>Analizar la posibilidad de emplearlo en distintos escenarios educativos.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Interoperabilidad</strong></td>
+                                <td>Valorar la compatibilidad con plataformas y estándares tecnológicos.</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <p class="nota-tabla"><em>Nota.</em> Elaboración propia a partir de los modelos LORI, Reeves, CODA, UNE 71362, FURPS y McCall.</p>
+                <p style="font-style:italic; color:#556b52; font-size:0.9rem;">
+                    Nota. Elaboración propia a partir de la literatura sobre evaluación de RED.
+                </p>
             </section>
 
-            <!-- DESCRIPCIÓN DETALLADA DE CADA MODELO -->
-            <section class="modelos-descripcion">
-                <h2>Descripción detallada de los modelos</h2>
-
-                <div class="modelo-detalle tarjeta-modelo" id="lori">
-                    <h3>Modelo LORI (Learning Object Review Instrument)</h3>
-                    <p>
-                        Es uno de los instrumentos más utilizados para la evaluación de objetos de aprendizaje.
-                        Su principal fortaleza radica en que integra criterios pedagógicos y tecnológicos,
-                        permitiendo valorar aspectos como la calidad de los contenidos, la coherencia de los
-                        objetivos de aprendizaje, la retroalimentación, la motivación, la usabilidad, la
-                        accesibilidad y el cumplimiento de estándares (Nesbit et al., 2002).
-                    </p>
-                </div>
-
-                <div class="modelo-detalle tarjeta-modelo" id="coda">
-                    <h3>Modelo CODA</h3>
-                    <p>
-                        Fue diseñado específicamente para evaluar la calidad de los objetos de aprendizaje,
-                        considerando tanto dimensiones pedagógicas como tecnológicas. Sus criterios permiten
-                        analizar la coherencia didáctica, la calidad de los contenidos, la interactividad, la
-                        motivación, el diseño, la usabilidad, la accesibilidad, la reutilización y la
-                        interoperabilidad de los recursos educativos digitales (Universidad Complutense de Madrid, 2013).
-                    </p>
-                </div>
-
-                <div class="modelo-detalle tarjeta-modelo" id="reeves">
-                    <h3>Modelo Reeves</h3>
-                    <p>
-                        Orienta la evaluación hacia el diseño instruccional y la experiencia de aprendizaje del
-                        estudiante. Este modelo analiza aspectos relacionados con el aprendizaje significativo,
-                        la interacción, la motivación, la flexibilidad del recurso y su integración dentro del
-                        currículo, proporcionando una visión centrada en la efectividad pedagógica del recurso
-                        educativo (Reeves, 2000).
-                    </p>
-                </div>
-
-                <div class="modelo-detalle tarjeta-modelo">
-                    <h3>Norma UNE 71362</h3>
-                    <p>
-                        Establece un conjunto de criterios normalizados para evaluar la calidad de los materiales
-                        educativos digitales, incorporando indicadores relacionados con la calidad didáctica, la
-                        accesibilidad, la interoperabilidad y la reutilización de los recursos (Asociación Española
-                        de Normalización, 2022).
-                    </p>
-                </div>
-
-                <div class="modelo-detalle tarjeta-modelo">
-                    <h3>Modelo FURPS</h3>
-                    <p>
-                        Evalúa la calidad del software mediante cinco dimensiones fundamentales: funcionalidad,
-                        usabilidad, confiabilidad, rendimiento y facilidad de mantenimiento. Aunque su origen
-                        corresponde a la ingeniería del software, sus criterios pueden aplicarse al análisis
-                        técnico de Recursos Educativos Digitales (Grady, 1992).
-                    </p>
-                </div>
-
-                <div class="modelo-detalle tarjeta-modelo">
-                    <h3>Modelo McCall</h3>
-                    <p>
-                        Constituye uno de los referentes clásicos en la evaluación de la calidad del software,
-                        considerando factores como la corrección, confiabilidad, eficiencia, mantenibilidad,
-                        flexibilidad y portabilidad. Si bien su enfoque es eminentemente técnico, proporciona
-                        criterios útiles para valorar la calidad estructural de aplicaciones educativas digitales
-                        (McCall et al., 1977).
-                    </p>
-                </div>
-            </section>
-
-            <!-- SELECCIÓN DE MODELOS -->
-            <section class="modelos-seleccion">
-                <h2>Selección de los modelos de evaluación (CODA, LORI y Reeves)</h2>
+            <!-- =========================================================
+            PROCESO DE SELECCIÓN
+            ========================================================= -->
+            <section>
+                <h2>📌 Proceso de selección</h2>
                 <p>
-                    Después de realizar la revisión de los seis modelos de evaluación de Recursos Educativos
-                    Digitales, se seleccionaron los modelos <strong>CODA, LORI y Reeves</strong> para su aplicación
-                    en los recursos educativos digitales <em>Rural STEAM Lab – Simulador Interactivo de Movimiento
-                    de Proyectil</em> y <em>PhET Interactive Simulations – Projectile Motion</em>.
+                    El procedimiento metodológico seguido durante la selección puede resumirse en las siguientes etapas:
+                </p>
+                <ol>
+                    <li>Revisión bibliográfica de los modelos de evaluación.</li>
+                    <li>Identificación de las dimensiones evaluadas por cada modelo.</li>
+                    <li>Comparación de fortalezas y limitaciones.</li>
+                    <li>Análisis de la pertinencia para la evaluación de simuladores educativos.</li>
+                    <li>Selección de los modelos con mayor correspondencia respecto a los objetivos de la investigación.</li>
+                </ol>
+                <p>
+                    Este procedimiento permitió garantizar que la elección no obedeciera únicamente al reconocimiento académico de los modelos, sino a su capacidad para valorar integralmente los Recursos Educativos Digitales objeto del estudio.
+                </p>
+            </section>
+
+            <!-- =========================================================
+            JUSTIFICACIÓN DE LA SELECCIÓN
+            ========================================================= -->
+            <section>
+                <h2>📝 Justificación de la selección de los modelos</h2>
+                <p>
+                    Después de realizar la revisión de los seis modelos de evaluación de Recursos Educativos Digitales, se seleccionaron los modelos <strong>CODA</strong>, <strong>LORI</strong> y <strong>Reeves</strong> para su aplicación en los recursos educativos digitales <em>Rural STEAM Lab – Simulador Interactivo de Movimiento de Proyectil</em> y <em>PhET Interactive Simulations – Projectile Motion</em>.
                 </p>
 
-                <div class="seleccion-razones">
-                    <div class="razon-item">
-                        <h4>Selección del modelo CODA</h4>
-                        <p>
-                            Se fundamentó en que fue desarrollado específicamente para evaluar la calidad de los
-                            objetos de aprendizaje y los Recursos Educativos Digitales desde una perspectiva
-                            didáctica y tecnológica. Este modelo analiza de manera estructurada la coherencia de
-                            los objetivos de aprendizaje, la calidad de los contenidos, la capacidad para promover
-                            la reflexión, la interactividad, la motivación, el diseño, la usabilidad, la
-                            accesibilidad, la reutilización y la interoperabilidad, aspectos esenciales para
-                            valorar simuladores educativos utilizados en la enseñanza de la Física.
-                        </p>
-                    </div>
+                <h3><span class="icono">📗</span> Selección del modelo CODA</h3>
+                <p>
+                    La selección del modelo <strong>CODA (Calidad de Objetos Digitales de Aprendizaje)</strong> se fundamentó en que fue diseñado específicamente para evaluar la calidad de los objetos de aprendizaje y de los Recursos Educativos Digitales desde una perspectiva didáctica y tecnológica. Este modelo permite analizar de manera estructurada aspectos relacionados con la coherencia de los objetivos de aprendizaje, la calidad de los contenidos, la capacidad para promover procesos de reflexión, la interactividad, la motivación del estudiante, el diseño de la interfaz, la usabilidad, la accesibilidad, la reutilización y la interoperabilidad.
+                </p>
+                <p>
+                    Estas características resultan especialmente relevantes para la evaluación de simuladores educativos utilizados en la enseñanza de la Física, ya que permiten valorar no solo el funcionamiento del recurso, sino también su capacidad para favorecer procesos de aprendizaje activo mediante la experimentación y la manipulación de variables.
+                </p>
 
-                    <div class="razon-item">
-                        <h4>Selección del modelo LORI</h4>
-                        <p>
-                            Fue seleccionado por ser uno de los instrumentos de evaluación más reconocidos a nivel
-                            internacional para valorar la calidad de los Recursos Educativos Digitales. Su enfoque
-                            integra dimensiones pedagógicas y tecnológicas, evaluando la calidad del contenido, la
-                            coherencia de los objetivos de aprendizaje, la retroalimentación, la motivación, el
-                            diseño de la interfaz, la usabilidad, la accesibilidad, la reutilización y el
-                            cumplimiento de estándares. Gracias a esta visión integral, constituye una herramienta
-                            adecuada para analizar recursos educativos interactivos.
-                        </p>
-                    </div>
+                <h3><span class="icono">📘</span> Selección del modelo LORI</h3>
+                <p>
+                    El modelo <strong>LORI (Learning Object Review Instrument)</strong> fue seleccionado por ser uno de los instrumentos de evaluación de Recursos Educativos Digitales más reconocidos en el ámbito internacional. Su principal fortaleza radica en integrar criterios pedagógicos y tecnológicos dentro de un mismo instrumento, permitiendo realizar una valoración equilibrada de la calidad de los contenidos, la coherencia de los objetivos de aprendizaje, la retroalimentación ofrecida al estudiante, la motivación, el diseño de la interfaz, la usabilidad, la accesibilidad, la reutilización y el cumplimiento de estándares internacionales.
+                </p>
+                <p>
+                    La amplitud de dimensiones consideradas por LORI proporciona una visión integral de la calidad del recurso educativo, razón por la cual constituye una herramienta particularmente pertinente para analizar simuladores interactivos destinados a fortalecer la comprensión conceptual del movimiento de proyectil.
+                </p>
 
-                    <div class="razon-item">
-                        <h4>Selección del modelo Reeves</h4>
-                        <p>
-                            Fue elegido porque centra su evaluación en el diseño instruccional y en la experiencia
-                            de aprendizaje del estudiante. Sus criterios permiten valorar la promoción del
-                            aprendizaje significativo, la interacción, la motivación, la flexibilidad del proceso
-                            de enseñanza y la integración curricular. Estas características resultan especialmente
-                            pertinentes para evaluar simuladores educativos que favorecen el aprendizaje mediante
-                            la experimentación virtual.
-                        </p>
-                    </div>
+                <h3><span class="icono">📕</span> Selección del modelo Reeves</h3>
+                <p>
+                    El modelo <strong>Reeves</strong> fue elegido debido a que centra su proceso de evaluación en el diseño instruccional y en la experiencia de aprendizaje del estudiante. Sus criterios permiten valorar la promoción del aprendizaje significativo, el nivel de interacción que ofrece el recurso, la motivación del usuario, la flexibilidad del proceso de enseñanza y la integración curricular de los contenidos.
+                </p>
+                <p>
+                    En el caso de los simuladores educativos analizados, este enfoque adquiere especial importancia porque el aprendizaje se desarrolla mediante procesos de exploración, experimentación y construcción activa del conocimiento, aspectos que constituyen elementos fundamentales dentro de la enseñanza de la Física basada en simulaciones.
+                </p>
+            </section>
+
+            <!-- =========================================================
+            COMPARACIÓN DE LOS MODELOS SELECCIONADOS
+            ========================================================= -->
+            <section>
+                <h2>📊 Comparación de los modelos seleccionados</h2>
+
+                <div class="tabla-wrapper">
+                    <table class="tabla-modelos">
+                        <thead>
+                            <tr>
+                                <th>Modelo</th>
+                                <th>Principal fortaleza</th>
+                                <th>Razón de selección</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>CODA</strong></td>
+                                <td>Calidad didáctica y tecnológica</td>
+                                <td>Evalúa específicamente objetos de aprendizaje y Recursos Educativos Digitales.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>LORI</strong></td>
+                                <td>Evaluación integral</td>
+                                <td>Combina dimensiones pedagógicas y tecnológicas ampliamente reconocidas.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Reeves</strong></td>
+                                <td>Diseño instruccional</td>
+                                <td>Analiza la experiencia de aprendizaje y la efectividad pedagógica del recurso.</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+                <p style="font-style:italic; color:#556b52; font-size:0.9rem;">
+                    Nota. Elaboración propia a partir del análisis comparativo de los modelos seleccionados.
+                </p>
+            </section>
 
-                <div class="seleccion-conclusion">
+            <!-- =========================================================
+            MODELOS NO SELECCIONADOS
+            ========================================================= -->
+            <section>
+                <h2>🚫 Modelos no seleccionados</h2>
+                <p>
+                    Durante el análisis comparativo también se estudiaron los modelos <strong>Norma UNE 71362</strong>, <strong>FURPS</strong> y <strong>McCall</strong>, los cuales constituyen referentes importantes para la evaluación de la calidad de recursos digitales y del software educativo. Sin embargo, su orientación metodológica se concentra principalmente en aspectos normativos, técnicos y propios de la ingeniería del software.
+                </p>
+                <p>
+                    Aunque estos modelos aportan criterios relacionados con la funcionalidad, la confiabilidad, la mantenibilidad, el rendimiento y el cumplimiento de estándares, no desarrollan con la misma profundidad dimensiones asociadas a la calidad pedagógica, la interacción educativa, la motivación del estudiante y la experiencia de aprendizaje. En consecuencia, se consideró que su aplicación aislada no permitía responder de manera suficiente a los objetivos planteados en esta investigación.
+                </p>
+            </section>
+
+            <!-- =========================================================
+            CONCLUSIONES DE LA SELECCIÓN
+            ========================================================= -->
+            <section>
+                <h2>📌 Conclusiones de la selección</h2>
+                <p>
+                    El análisis comparativo permitió concluir que la combinación de los modelos <strong>CODA</strong>, <strong>LORI</strong> y <strong>Reeves</strong> ofrece una evaluación más completa e integral de los Recursos Educativos Digitales utilizados en este estudio. Mientras CODA proporciona una valoración detallada de la calidad didáctica y tecnológica, LORI integra dimensiones pedagógicas, tecnológicas y de usabilidad ampliamente reconocidas en la literatura especializada, y Reeves complementa el análisis desde la perspectiva del diseño instruccional y de la experiencia de aprendizaje del estudiante.
+                </p>
+                <p>
+                    La complementariedad de estos tres modelos garantiza una evaluación equilibrada de los simuladores seleccionados y constituye el fundamento metodológico para la fase de aplicación presentada en la siguiente sección del portafolio, donde cada recurso educativo digital será analizado utilizando los instrumentos derivados de estos modelos. De esta manera, la selección realizada no solo responde a criterios teóricos, sino también a las necesidades específicas del contexto educativo y de los objetivos de la investigación.
+                </p>
+            </section>
+
+            <!-- =========================================================
+            VIDEO COMPLEMENTARIO
+            ========================================================= -->
+            <section>
+                <h2>🎥 Video complementario: Selección de modelos de evaluación de Recursos Educativos Digitales</h2>
+                <p>
+                    Con el propósito de fortalecer la comprensión de los conceptos desarrollados en esta sección, se presenta el siguiente recurso audiovisual, el cual explica los principales modelos de evaluación de Recursos Educativos Digitales, sus características, criterios de aplicación y la importancia de seleccionar el instrumento más adecuado de acuerdo con los objetivos del proceso de evaluación.
+                </p>
+                <p>
+                    El contenido del video complementa el análisis realizado en este trabajo y permite visualizar de manera didáctica los fundamentos teóricos que sustentan la selección de los modelos <strong>CODA</strong>, <strong>LORI</strong> y <strong>Reeves</strong>, utilizados posteriormente para evaluar los Recursos Educativos Digitales objeto de estudio.
+                </p>
+                <p>
+                    La incorporación de este recurso multimedia responde a los principios del aprendizaje multimodal, favoreciendo la comprensión mediante la integración de información textual y audiovisual, y proporcionando al lector una perspectiva más amplia sobre la evaluación de recursos educativos digitales.
+                </p>
+
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/N4dfMeYrnUw"
+                        title="Modelos de evaluación de Recursos Educativos Digitales"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="video-caption">
+                    <strong>Fuente:</strong> YouTube – <a href="https://www.youtube.com/watch?v=N4dfMeYrnUw" target="_blank" style="color:#1b5e20;">https://www.youtube.com/watch?v=N4dfMeYrnUw</a>
+                </p>
+            </section>
+
+            <!-- =========================================================
+            TRANSICIÓN HACIA LA APLICACIÓN DE LOS MODELOS
+            ========================================================= -->
+            <section>
+                <h2>🔜 Transición hacia la aplicación de los modelos</h2>
+                <div class="transicion-box">
                     <p>
-                        Aunque los modelos Norma UNE 71362, FURPS y McCall representan referentes importantes para
-                        la evaluación de la calidad de recursos digitales y software educativo, su enfoque se orienta
-                        principalmente hacia aspectos normativos, técnicos y de ingeniería del software. Si bien
-                        aportan criterios relacionados con la funcionalidad, la confiabilidad, la mantenibilidad y
-                        el cumplimiento de estándares, no profundizan en la evaluación pedagógica y en la experiencia
-                        de aprendizaje con el mismo nivel de detalle que ofrecen los modelos seleccionados. En
-                        consecuencia, se determinó que la combinación de CODA, LORI y Reeves proporciona una
-                        evaluación más completa de los Recursos Educativos Digitales, al integrar dimensiones
-                        pedagógicas, tecnológicas y de diseño instruccional.
+                        Una vez sustentada la selección de los modelos <strong>CODA</strong>, <strong>LORI</strong> y <strong>Reeves</strong>, el siguiente paso consiste en aplicarlos a los Recursos Educativos Digitales seleccionados para esta investigación. En la siguiente sección se presentan los recursos <em>Rural STEAM Lab – Simulador Interactivo de Movimiento de Proyectil</em> y <em>PhET Interactive Simulations – Projectile Motion</em>, los cuales serán analizados mediante los instrumentos derivados de estos modelos, con el propósito de identificar sus fortalezas, oportunidades de mejora y nivel de calidad pedagógica, tecnológica y de diseño instruccional.
                     </p>
                 </div>
             </section>
-
-            <!-- BOTONES DE NAVEGACIÓN -->
-            <div class="navegacion-paginas">
-                <a href="modelos.html" class="btn-nav anterior">⬅ Anterior</a>
-                <a href="recursos.html" class="btn-nav siguiente">Siguiente ➡</a>
-            </div>
 
         </div>
     </main>
@@ -279,14 +772,16 @@
     <footer class="pie-pagina">
         <div class="container">
             <p>
-                &copy; 2026 - Nelson Anaya Carvajal - Universidad de Santander
+                &copy; 2026 – Nelson Anaya Carvajal – Universidad de Santander
             </p>
             <p>
                 Especialización en Aplicación de TIC para la Enseñanza – EATICE
             </p>
+            <p style="font-size:0.8rem; opacity:0.8; margin-top:6px;">
+                © 2021 Bajo licencia Creative Commons
+            </p>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
 </body>
 </html>
