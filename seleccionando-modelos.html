@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seleccionando modelos | Portafolio</title>
+    <title>Selección de modelos | Portafolio</title>
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -24,7 +24,7 @@
     </header>
 
     <!-- ============================================================
-    MENÚ CON SUBMENÚ
+    MENÚ PRINCIPAL CON SUBMENÚ
     ============================================================ -->
     <nav class="menu-principal">
         <div class="container">
@@ -50,52 +50,225 @@
     <main class="contenido-principal">
         <div class="container">
 
-            <h1 class="subpagina-titulo">Seleccionando modelos</h1>
+            <button class="btn-volver-arriba" id="btnVolverArriba" title="Volver arriba">⬆</button>
 
-            <!-- Justificación -->
-            <section>
-                <h2 class="subpagina-subtitulo">Justificación de selección</h2>
-                <p>
-                    Después de realizar la revisión de los seis modelos de evaluación de Recursos Educativos Digitales, se seleccionaron los modelos <strong>CODA</strong>, <strong>LORI</strong> y <strong>Reeves</strong> para su aplicación en los recursos educativos digitales Rural STEAM Lab – Simulador Interactivo de Movimiento de Proyectil y PhET Interactive Simulations – Projectile Motion.
-                </p>
+            <h1 class="subpagina-titulo">Selección de modelos de evaluación</h1>
 
-                <h3 style="color:#1b5e20; margin-top:20px;">CODA</h3>
+            <section class="modelos-introduccion">
                 <p>
-                    La selección del modelo CODA se fundamentó en que fue desarrollado específicamente para evaluar la calidad de los objetos de aprendizaje y los Recursos Educativos Digitales desde una perspectiva didáctica y tecnológica. Este modelo analiza de manera estructurada la coherencia de los objetivos de aprendizaje, la calidad de los contenidos, la capacidad para promover la reflexión, la interactividad, la motivación, el diseño, la usabilidad, la accesibilidad, la reutilización y la interoperabilidad, aspectos esenciales para valorar simuladores educativos utilizados en la enseñanza de la Física.
-                </p>
-
-                <h3 style="color:#1b5e20; margin-top:18px;">LORI</h3>
-                <p>
-                    El modelo LORI fue seleccionado por ser uno de los instrumentos de evaluación más reconocidos a nivel internacional para valorar la calidad de los Recursos Educativos Digitales. Su enfoque integra dimensiones pedagógicas y tecnológicas, evaluando la calidad del contenido, la coherencia de los objetivos de aprendizaje, la retroalimentación, la motivación, el diseño de la interfaz, la usabilidad, la accesibilidad, la reutilización y el cumplimiento de estándares. Gracias a esta visión integral, constituye una herramienta adecuada para analizar recursos educativos interactivos.
-                </p>
-
-                <h3 style="color:#1b5e20; margin-top:18px;">Reeves</h3>
-                <p>
-                    El modelo Reeves fue elegido porque centra su evaluación en el diseño instruccional y en la experiencia de aprendizaje del estudiante. Sus criterios permiten valorar la promoción del aprendizaje significativo, la interacción, la motivación, la flexibilidad del proceso de enseñanza y la integración curricular. Estas características resultan especialmente pertinentes para evaluar simuladores educativos que favorecen el aprendizaje mediante la experimentación virtual.
+                    La evaluación de los <strong>Recursos Educativos Digitales (RED)</strong> constituye un proceso
+                    fundamental para determinar su calidad pedagógica, tecnológica y funcional, garantizando que
+                    respondan a las necesidades de los procesos de enseñanza y aprendizaje. A lo largo de los últimos
+                    años se han desarrollado diversos modelos de evaluación que permiten valorar diferentes dimensiones
+                    de los recursos digitales, considerando aspectos como la calidad de los contenidos, la usabilidad,
+                    la accesibilidad, el diseño instruccional, la interoperabilidad y el cumplimiento de estándares
+                    de calidad.
                 </p>
                 <p>
-                    Aunque los modelos Norma UNE 71362, FURPS y McCall representan referentes importantes para la evaluación de la calidad de recursos digitales y software educativo, su enfoque se orienta principalmente hacia aspectos normativos, técnicos y de ingeniería del software. Si bien aportan criterios relacionados con la funcionalidad, la confiabilidad, la mantenibilidad y el cumplimiento de estándares, no profundizan en la evaluación pedagógica y en la experiencia de aprendizaje con el mismo nivel de detalle que ofrecen los modelos seleccionados.
-                </p>
-                <p>
-                    En consecuencia, se determinó que la combinación de CODA, LORI y Reeves proporciona una evaluación más completa de los Recursos Educativos Digitales, al integrar dimensiones pedagógicas, tecnológicas y de diseño instruccional.
+                    Con el propósito de identificar el modelo más adecuado para evaluar los Recursos Educativos
+                    Digitales seleccionados en este trabajo, se realizó una revisión bibliográfica de seis modelos
+                    ampliamente reconocidos en el ámbito de la tecnología educativa y la ingeniería del software.
+                    Cada uno de estos modelos aporta criterios específicos para valorar la calidad de los recursos
+                    digitales desde diferentes perspectivas, constituyendo una base sólida para la posterior
+                    selección y aplicación de los instrumentos de evaluación.
                 </p>
             </section>
 
-            <!-- Video -->
-            <section>
-                <h2 class="subpagina-subtitulo">Video de sustentación</h2>
-                <div class="contenedor-video">
-                    <iframe
-                        src="https://www.youtube.com/embed/N4dfMeYrnUw"
-                        title="Video de sustentación del Entregable 1"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
+            <!-- TABLA DE MODELOS ANALIZADOS -->
+            <section class="modelos-tabla">
+                <h2>Modelos de evaluación analizados</h2>
+                <div class="tabla-responsive">
+                    <table class="tabla-modelos">
+                        <thead>
+                            <tr>
+                                <th>Modelo de evaluación</th>
+                                <th>¿Qué evalúa?</th>
+                                <th>Escala</th>
+                                <th>Instrumento</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>LORI</strong> (Learning Object Review Instrument)</td>
+                                <td>Calidad pedagógica y tecnológica de los Recursos Educativos Digitales.</td>
+                                <td>1 a 5</td>
+                                <td>Rúbrica LORI</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Reeves</strong></td>
+                                <td>Diseño instruccional y experiencia de aprendizaje.</td>
+                                <td>1 a 5</td>
+                                <td>Matriz de Reeves</td>
+                            </tr>
+                            <tr>
+                                <td><strong>CODA</strong> (Calidad de Objetos Digitales de Aprendizaje)</td>
+                                <td>Calidad didáctica y tecnológica de los objetos de aprendizaje.</td>
+                                <td>1 a 5</td>
+                                <td>Plantilla CODA</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Norma UNE 71362</strong></td>
+                                <td>Calidad de materiales educativos digitales según estándares.</td>
+                                <td>Cumplimiento de indicadores</td>
+                                <td>Lista de verificación</td>
+                            </tr>
+                            <tr>
+                                <td><strong>FURPS</strong> (Funcionalidad, Usabilidad, Confiabilidad, Rendimiento y Soporte)</td>
+                                <td>Calidad del software: funcionalidad, usabilidad, confiabilidad y rendimiento.</td>
+                                <td>Cumplimiento de atributos</td>
+                                <td>Lista de chequeo</td>
+                            </tr>
+                            <tr>
+                                <td><strong>McCall</strong></td>
+                                <td>Calidad del software mediante factores internos y externos.</td>
+                                <td>Cumplimiento de factores</td>
+                                <td>Lista de verificación</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <p style="margin-top:8px; font-size:0.95rem; color:#33691e;">
-                    Video de sustentación del Entregable 1 – Modelos de evaluación de RED
-                </p>
+                <p class="nota-tabla"><em>Nota.</em> Elaboración propia a partir de los modelos LORI, Reeves, CODA, UNE 71362, FURPS y McCall.</p>
             </section>
+
+            <!-- DESCRIPCIÓN DETALLADA DE CADA MODELO -->
+            <section class="modelos-descripcion">
+                <h2>Descripción detallada de los modelos</h2>
+
+                <div class="modelo-detalle tarjeta-modelo" id="lori">
+                    <h3>Modelo LORI (Learning Object Review Instrument)</h3>
+                    <p>
+                        Es uno de los instrumentos más utilizados para la evaluación de objetos de aprendizaje.
+                        Su principal fortaleza radica en que integra criterios pedagógicos y tecnológicos,
+                        permitiendo valorar aspectos como la calidad de los contenidos, la coherencia de los
+                        objetivos de aprendizaje, la retroalimentación, la motivación, la usabilidad, la
+                        accesibilidad y el cumplimiento de estándares (Nesbit et al., 2002).
+                    </p>
+                </div>
+
+                <div class="modelo-detalle tarjeta-modelo" id="coda">
+                    <h3>Modelo CODA</h3>
+                    <p>
+                        Fue diseñado específicamente para evaluar la calidad de los objetos de aprendizaje,
+                        considerando tanto dimensiones pedagógicas como tecnológicas. Sus criterios permiten
+                        analizar la coherencia didáctica, la calidad de los contenidos, la interactividad, la
+                        motivación, el diseño, la usabilidad, la accesibilidad, la reutilización y la
+                        interoperabilidad de los recursos educativos digitales (Universidad Complutense de Madrid, 2013).
+                    </p>
+                </div>
+
+                <div class="modelo-detalle tarjeta-modelo" id="reeves">
+                    <h3>Modelo Reeves</h3>
+                    <p>
+                        Orienta la evaluación hacia el diseño instruccional y la experiencia de aprendizaje del
+                        estudiante. Este modelo analiza aspectos relacionados con el aprendizaje significativo,
+                        la interacción, la motivación, la flexibilidad del recurso y su integración dentro del
+                        currículo, proporcionando una visión centrada en la efectividad pedagógica del recurso
+                        educativo (Reeves, 2000).
+                    </p>
+                </div>
+
+                <div class="modelo-detalle tarjeta-modelo">
+                    <h3>Norma UNE 71362</h3>
+                    <p>
+                        Establece un conjunto de criterios normalizados para evaluar la calidad de los materiales
+                        educativos digitales, incorporando indicadores relacionados con la calidad didáctica, la
+                        accesibilidad, la interoperabilidad y la reutilización de los recursos (Asociación Española
+                        de Normalización, 2022).
+                    </p>
+                </div>
+
+                <div class="modelo-detalle tarjeta-modelo">
+                    <h3>Modelo FURPS</h3>
+                    <p>
+                        Evalúa la calidad del software mediante cinco dimensiones fundamentales: funcionalidad,
+                        usabilidad, confiabilidad, rendimiento y facilidad de mantenimiento. Aunque su origen
+                        corresponde a la ingeniería del software, sus criterios pueden aplicarse al análisis
+                        técnico de Recursos Educativos Digitales (Grady, 1992).
+                    </p>
+                </div>
+
+                <div class="modelo-detalle tarjeta-modelo">
+                    <h3>Modelo McCall</h3>
+                    <p>
+                        Constituye uno de los referentes clásicos en la evaluación de la calidad del software,
+                        considerando factores como la corrección, confiabilidad, eficiencia, mantenibilidad,
+                        flexibilidad y portabilidad. Si bien su enfoque es eminentemente técnico, proporciona
+                        criterios útiles para valorar la calidad estructural de aplicaciones educativas digitales
+                        (McCall et al., 1977).
+                    </p>
+                </div>
+            </section>
+
+            <!-- SELECCIÓN DE MODELOS -->
+            <section class="modelos-seleccion">
+                <h2>Selección de los modelos de evaluación (CODA, LORI y Reeves)</h2>
+                <p>
+                    Después de realizar la revisión de los seis modelos de evaluación de Recursos Educativos
+                    Digitales, se seleccionaron los modelos <strong>CODA, LORI y Reeves</strong> para su aplicación
+                    en los recursos educativos digitales <em>Rural STEAM Lab – Simulador Interactivo de Movimiento
+                    de Proyectil</em> y <em>PhET Interactive Simulations – Projectile Motion</em>.
+                </p>
+
+                <div class="seleccion-razones">
+                    <div class="razon-item">
+                        <h4>Selección del modelo CODA</h4>
+                        <p>
+                            Se fundamentó en que fue desarrollado específicamente para evaluar la calidad de los
+                            objetos de aprendizaje y los Recursos Educativos Digitales desde una perspectiva
+                            didáctica y tecnológica. Este modelo analiza de manera estructurada la coherencia de
+                            los objetivos de aprendizaje, la calidad de los contenidos, la capacidad para promover
+                            la reflexión, la interactividad, la motivación, el diseño, la usabilidad, la
+                            accesibilidad, la reutilización y la interoperabilidad, aspectos esenciales para
+                            valorar simuladores educativos utilizados en la enseñanza de la Física.
+                        </p>
+                    </div>
+
+                    <div class="razon-item">
+                        <h4>Selección del modelo LORI</h4>
+                        <p>
+                            Fue seleccionado por ser uno de los instrumentos de evaluación más reconocidos a nivel
+                            internacional para valorar la calidad de los Recursos Educativos Digitales. Su enfoque
+                            integra dimensiones pedagógicas y tecnológicas, evaluando la calidad del contenido, la
+                            coherencia de los objetivos de aprendizaje, la retroalimentación, la motivación, el
+                            diseño de la interfaz, la usabilidad, la accesibilidad, la reutilización y el
+                            cumplimiento de estándares. Gracias a esta visión integral, constituye una herramienta
+                            adecuada para analizar recursos educativos interactivos.
+                        </p>
+                    </div>
+
+                    <div class="razon-item">
+                        <h4>Selección del modelo Reeves</h4>
+                        <p>
+                            Fue elegido porque centra su evaluación en el diseño instruccional y en la experiencia
+                            de aprendizaje del estudiante. Sus criterios permiten valorar la promoción del
+                            aprendizaje significativo, la interacción, la motivación, la flexibilidad del proceso
+                            de enseñanza y la integración curricular. Estas características resultan especialmente
+                            pertinentes para evaluar simuladores educativos que favorecen el aprendizaje mediante
+                            la experimentación virtual.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="seleccion-conclusion">
+                    <p>
+                        Aunque los modelos Norma UNE 71362, FURPS y McCall representan referentes importantes para
+                        la evaluación de la calidad de recursos digitales y software educativo, su enfoque se orienta
+                        principalmente hacia aspectos normativos, técnicos y de ingeniería del software. Si bien
+                        aportan criterios relacionados con la funcionalidad, la confiabilidad, la mantenibilidad y
+                        el cumplimiento de estándares, no profundizan en la evaluación pedagógica y en la experiencia
+                        de aprendizaje con el mismo nivel de detalle que ofrecen los modelos seleccionados. En
+                        consecuencia, se determinó que la combinación de CODA, LORI y Reeves proporciona una
+                        evaluación más completa de los Recursos Educativos Digitales, al integrar dimensiones
+                        pedagógicas, tecnológicas y de diseño instruccional.
+                    </p>
+                </div>
+            </section>
+
+            <!-- BOTONES DE NAVEGACIÓN -->
+            <div class="navegacion-paginas">
+                <a href="modelos.html" class="btn-nav anterior">⬅ Anterior</a>
+                <a href="recursos.html" class="btn-nav siguiente">Siguiente ➡</a>
+            </div>
 
         </div>
     </main>
