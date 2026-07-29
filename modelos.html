@@ -3,37 +3,423 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modelos de evaluación | Portafolio</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>Seleccionando modelos | Portafolio</title>
+
+    <!-- ================================================================
+    CSS EMBEBIDO – ESTILO PREMIUM
+    ================================================================ -->
+    <style>
+        /* ---------- RESET Y BASE ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background-color: #f4f6f0;
+            color: #1e2b1c;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ---------- ENCABEZADO ---------- */
+        .header-institucional {
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+            color: #fff;
+            padding: 18px 0;
+            border-bottom: 4px solid #f9a825;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        }
+
+        .header-institucional .container {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .header-institucional .logo img {
+            max-height: 70px;
+            width: auto;
+            display: block;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+
+        .header-institucional .texto {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-institucional .universidad {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .header-institucional .especializacion {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* ---------- MENÚ CON SUBMENÚ ---------- */
+        .menu-principal {
+            background: #1b5e20;
+            border-bottom: 2px solid #f9a825;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .menu-principal ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            padding: 8px 0;
+        }
+
+        .menu-principal ul li {
+            position: relative;
+        }
+
+        .menu-principal ul li a {
+            display: block;
+            padding: 10px 22px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 30px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .menu-principal ul li a:hover {
+            background: #f9a825;
+            color: #1b5e20;
+        }
+
+        .menu-principal ul li a.activo {
+            background: #fff;
+            color: #1b5e20;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        /* Submenú */
+        .menu-principal ul li .sub-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #1b5e20;
+            min-width: 220px;
+            border-radius: 12px;
+            padding: 8px 0;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+            border-top: 3px solid #f9a825;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .menu-principal ul li:hover .sub-menu {
+            display: flex;
+        }
+
+        .menu-principal ul li .sub-menu li {
+            width: 100%;
+        }
+
+        .menu-principal ul li .sub-menu li a {
+            padding: 8px 20px;
+            border-radius: 0;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #e8f5e9;
+        }
+
+        .menu-principal ul li .sub-menu li a:hover {
+            background: #f9a825;
+            color: #1b5e20;
+        }
+
+        .menu-principal ul li .sub-menu li a.activo {
+            background: #fff;
+            color: #1b5e20;
+        }
+
+        /* ---------- CONTENIDO ---------- */
+        .contenido-principal {
+            background: #ffffff;
+            padding: 40px 0 60px 0;
+            border-radius: 0 0 24px 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .contenido-principal .container {
+            max-width: 1000px;
+        }
+
+        .pagina-titulo {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #1b5e20;
+            text-align: center;
+            border-bottom: 4px solid #f9a825;
+            padding-bottom: 16px;
+            margin-bottom: 36px;
+            letter-spacing: -0.5px;
+            position: relative;
+        }
+
+        .pagina-titulo::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: #1b5e20;
+            border-radius: 4px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #1b5e20;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            padding-left: 8px;
+            border-left: 6px solid #f9a825;
+            padding-left: 16px;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: #2e7d32;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h3 .icono {
+            font-size: 1.6rem;
+        }
+
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+            font-size: 1.05rem;
+            color: #2d3a2a;
+        }
+
+        ul {
+            margin: 12px 0 20px 30px;
+            color: #2d3a2a;
+        }
+
+        ul li {
+            margin-bottom: 6px;
+            font-size: 1.02rem;
+        }
+
+        /* Video */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            margin: 30px 0 20px 0;
+            border: 1px solid #e0e8dc;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #556b52;
+            font-style: italic;
+            margin-top: 8px;
+        }
+
+        /* Enlace de regreso */
+        .volver-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #1b5e20;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 8px 20px;
+            border: 2px solid #1b5e20;
+            border-radius: 30px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .volver-link:hover {
+            background: #1b5e20;
+            color: #fff;
+        }
+
+        /* ---------- PIE ---------- */
+        .pie-pagina {
+            background: linear-gradient(135deg, #1b5e20, #2e7d32);
+            color: #e8f5e9;
+            text-align: center;
+            padding: 24px 0;
+            font-size: 0.95rem;
+            border-top: 4px solid #f9a825;
+        }
+
+        .pie-pagina p {
+            margin-bottom: 4px;
+            text-align: center;
+            color: #e8f5e9;
+        }
+
+        .pie-pagina p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 768px) {
+            .header-institucional .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .header-institucional .logo img {
+                max-height: 60px;
+            }
+
+            .header-institucional .universidad {
+                font-size: 1.1rem;
+            }
+
+            .header-institucional .especializacion {
+                font-size: 0.85rem;
+            }
+
+            .menu-principal ul {
+                justify-content: center;
+            }
+
+            .menu-principal ul li a {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+            }
+
+            .menu-principal ul li .sub-menu {
+                position: static;
+                border-radius: 8px;
+                box-shadow: none;
+                padding: 4px 0 4px 20px;
+                border-top: none;
+                background: rgba(255,255,255,0.05);
+            }
+
+            .menu-principal ul li:hover .sub-menu {
+                display: flex;
+            }
+
+            .pagina-titulo {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            p {
+                font-size: 0.98rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu-principal ul {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 2px;
+            }
+
+            .menu-principal ul li a {
+                border-radius: 8px;
+                text-align: center;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            .pagina-titulo {
+                font-size: 1.4rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                border-left-width: 4px;
+                padding-left: 12px;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <!-- ============================================================
-    ENCABEZADO INSTITUCIONAL
+    ENCABEZADO
     ============================================================ -->
     <header class="header-institucional">
-        <div class="container header-institucional__contenido">
-            <div class="header-institucional__logo">
+        <div class="container">
+            <div class="logo">
                 <img src="img/logo-udes.png" alt="Universidad de Santander" />
             </div>
-            <div class="header-institucional__texto">
-                <p class="header-institucional__universidad">Universidad de Santander</p>
-                <p class="header-institucional__maestria">Especialización en Aplicación de TIC para la Enseñanza – EATICE</p>
+            <div class="texto">
+                <span class="universidad">Universidad de Santander</span>
+                <span class="especializacion">Especialización en Aplicación de TIC para la Enseñanza – EATICE</span>
             </div>
         </div>
     </header>
 
     <!-- ============================================================
-    MENÚ PRINCIPAL CON SUBMENÚ
+    MENÚ CON SUBMENÚ
     ============================================================ -->
     <nav class="menu-principal">
         <div class="container">
-            <ul class="menu-principal__lista">
+            <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li class="menu-item-has-children">
+                <li>
                     <a href="modelos.html" class="activo">Modelos de evaluación y RED ▾</a>
                     <ul class="sub-menu">
-                        <li><a href="seleccionando-modelos.html">Selección de modelos</a></li>
+                        <li><a href="seleccionando-modelos.html" class="activo">Selección de modelos</a></li>
                         <li><a href="recursos.html">RED</a></li>
                     </ul>
                 </li>
@@ -45,64 +431,65 @@
     </nav>
 
     <!-- ============================================================
-    CONTENIDO PRINCIPAL
+    CONTENIDO – SELECCIÓN DE MODELOS
     ============================================================ -->
     <main class="contenido-principal">
         <div class="container">
 
-            <h1 class="subpagina-titulo">Modelos de evaluación de Recursos Educativos Digitales</h1>
+            <h1 class="pagina-titulo">🎯 Selección de modelos de evaluación</h1>
 
-            <section class="modelos-introduccion">
+            <section>
+                <h2>📌 Justificación de selección</h2>
                 <p>
-                    En el ámbito de la tecnología educativa, la evaluación de los Recursos Educativos Digitales (RED)
-                    se ha consolidado como un proceso esencial para garantizar su calidad, pertinencia y efectividad
-                    en los procesos de enseñanza y aprendizaje. Existen diversos modelos que, desde diferentes
-                    perspectivas, permiten valorar aspectos pedagógicos, tecnológicos, de usabilidad y de diseño
-                    instruccional.
+                    Después de realizar la revisión de los seis modelos de evaluación de Recursos Educativos Digitales, se seleccionaron los modelos <strong>CODA</strong>, <strong>LORI</strong> y <strong>Reeves</strong> para su aplicación en los recursos educativos digitales <em>Rural STEAM Lab – Simulador Interactivo de Movimiento de Proyectil</em> y <em>PhET Interactive Simulations – Projectile Motion</em>.
                 </p>
+
+                <h3><span class="icono">📗</span> Selección del modelo CODA</h3>
                 <p>
-                    Este portafolio presenta un análisis detallado de los modelos <strong>CODA</strong>,
-                    <strong>LORI</strong> y <strong>Reeves</strong>, los cuales fueron seleccionados para evaluar
-                    dos Recursos Educativos Digitales sobre la temática <em>Movimiento de Proyectil</em>.
+                    La selección del modelo CODA se fundamentó en que fue desarrollado específicamente para evaluar la calidad de los objetos de aprendizaje y los Recursos Educativos Digitales desde una perspectiva didáctica y tecnológica. Este modelo analiza de manera estructurada la coherencia de los objetivos de aprendizaje, la calidad de los contenidos, la capacidad para promover la reflexión, la interactividad, la motivación, el diseño, la usabilidad, la accesibilidad, la reutilización y la interoperabilidad, aspectos esenciales para valorar simuladores educativos utilizados en la enseñanza de la Física.
+                </p>
+
+                <h3><span class="icono">📘</span> Selección del modelo LORI</h3>
+                <p>
+                    El modelo LORI fue seleccionado por ser uno de los instrumentos de evaluación más reconocidos a nivel internacional para valorar la calidad de los Recursos Educativos Digitales. Su enfoque integra dimensiones pedagógicas y tecnológicas, evaluando la calidad del contenido, la coherencia de los objetivos de aprendizaje, la retroalimentación, la motivación, el diseño de la interfaz, la usabilidad, la accesibilidad, la reutilización y el cumplimiento de estándares. Gracias a esta visión integral, constituye una herramienta adecuada para analizar recursos educativos interactivos.
+                </p>
+
+                <h3><span class="icono">📕</span> Selección del modelo Reeves</h3>
+                <p>
+                    El modelo Reeves fue elegido porque centra su evaluación en el diseño instruccional y en la experiencia de aprendizaje del estudiante. Sus criterios permiten valorar la promoción del aprendizaje significativo, la interacción, la motivación, la flexibilidad del proceso de enseñanza y la integración curricular. Estas características resultan especialmente pertinentes para evaluar simuladores educativos que favorecen el aprendizaje mediante la experimentación virtual.
+                </p>
+
+                <p>
+                    Aunque los modelos Norma UNE 71362, FURPS y McCall representan referentes importantes para la evaluación de la calidad de recursos digitales y software educativo, su enfoque se orienta principalmente hacia aspectos normativos, técnicos y de ingeniería del software. Si bien aportan criterios relacionados con la funcionalidad, la confiabilidad, la mantenibilidad y el cumplimiento de estándares, no profundizan en la evaluación pedagógica y en la experiencia de aprendizaje con el mismo nivel de detalle que ofrecen los modelos seleccionados.
+                </p>
+
+                <p>
+                    En consecuencia, se determinó que la combinación de <strong>CODA</strong>, <strong>LORI</strong> y <strong>Reeves</strong> proporciona una evaluación más completa de los Recursos Educativos Digitales, al integrar dimensiones pedagógicas, tecnológicas y de diseño instruccional.
                 </p>
             </section>
 
-            <div class="modelos-tarjetas">
-                <article class="tarjeta-modelo">
-                    <h3>📊 Modelo CODA</h3>
-                    <p>
-                        <strong>Calidad de Objetos Digitales de Aprendizaje.</strong> Evalúa la calidad didáctica
-                        y tecnológica de los objetos de aprendizaje mediante dimensiones como coherencia didáctica,
-                        interactividad, motivación, usabilidad y accesibilidad.
-                    </p>
-                    <a href="seleccionando-modelos.html#coda" class="btn-tarjeta">Ver más</a>
-                </article>
+            <!-- Video -->
+            <section>
+                <h2>🎥 Video de sustentación</h2>
+                <p>
+                    A continuación se presenta el video de sustentación del Entregable 1, donde se resume el proceso de selección y aplicación de los modelos de evaluación.
+                </p>
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/N4dfMeYrnUw"
+                        title="Sustentación Evaluación de RED"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="video-caption">
+                    Video de sustentación del Entregable 1 – Selección de modelos de evaluación de RED.
+                </p>
+            </section>
 
-                <article class="tarjeta-modelo">
-                    <h3>📋 Modelo LORI</h3>
-                    <p>
-                        <strong>Learning Object Review Instrument.</strong> Integra criterios pedagógicos y
-                        tecnológicos para evaluar la calidad de los contenidos, la coherencia de los objetivos,
-                        la retroalimentación, la motivación, la usabilidad y la accesibilidad.
-                    </p>
-                    <a href="seleccionando-modelos.html#lori" class="btn-tarjeta">Ver más</a>
-                </article>
-
-                <article class="tarjeta-modelo">
-                    <h3>🎯 Modelo Reeves</h3>
-                    <p>
-                        Enfoque centrado en el diseño instruccional y la experiencia de aprendizaje. Analiza el
-                        aprendizaje significativo, la interacción, la motivación y la flexibilidad del recurso
-                        educativo.
-                    </p>
-                    <a href="seleccionando-modelos.html#reeves" class="btn-tarjeta">Ver más</a>
-                </article>
-            </div>
-
-            <div class="navegacion-paginas">
-                <a href="index.html" class="btn-nav anterior">⬅ Anterior</a>
-                <a href="seleccionando-modelos.html" class="btn-nav siguiente">Siguiente ➡</a>
-            </div>
+            <!-- Enlace de regreso -->
+            <a href="modelos.html" class="volver-link">← Volver a Modelos de evaluación y RED</a>
 
         </div>
     </main>
@@ -113,14 +500,16 @@
     <footer class="pie-pagina">
         <div class="container">
             <p>
-                &copy; 2026 - Nelson Anaya Carvajal - Universidad de Santander
+                &copy; 2026 – Nelson Anaya Carvajal – Universidad de Santander
             </p>
             <p>
                 Especialización en Aplicación de TIC para la Enseñanza – EATICE
             </p>
+            <p style="font-size:0.8rem; opacity:0.8; margin-top:6px;">
+                © 2021 Bajo licencia Creative Commons
+            </p>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
 </body>
 </html>
