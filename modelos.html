@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seleccionando modelos | Portafolio</title>
+    <title>Modelos de evaluación y RED | Portafolio</title>
 
     <!-- ================================================================
     CSS EMBEBIDO – ESTILO PREMIUM
@@ -113,7 +113,6 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
 
-        /* Submenú */
         .menu-principal ul li .sub-menu {
             display: none;
             position: absolute;
@@ -194,8 +193,8 @@
         h2 {
             font-size: 1.8rem;
             color: #1b5e20;
-            margin-top: 40px;
-            margin-bottom: 16px;
+            margin-top: 44px;
+            margin-bottom: 18px;
             padding-left: 8px;
             border-left: 6px solid #f9a825;
             padding-left: 16px;
@@ -217,6 +216,14 @@
             font-size: 1.6rem;
         }
 
+        h4 {
+            font-size: 1.1rem;
+            color: #1b5e20;
+            margin-top: 18px;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
         p {
             margin-bottom: 16px;
             text-align: justify;
@@ -224,17 +231,73 @@
             color: #2d3a2a;
         }
 
-        ul {
+        ul, ol {
             margin: 12px 0 20px 30px;
             color: #2d3a2a;
         }
 
-        ul li {
+        ul li, ol li {
             margin-bottom: 6px;
             font-size: 1.02rem;
         }
 
-        /* Video */
+        /* ---------- TABLA PREMIUM ---------- */
+        .tabla-wrapper {
+            overflow-x: auto;
+            margin: 28px 0 32px 0;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(27, 94, 32, 0.12);
+            border: 1px solid #e0e8dc;
+        }
+
+        .tabla-modelos {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+            background: #fff;
+        }
+
+        .tabla-modelos thead {
+            background: linear-gradient(135deg, #1b5e20, #2e7d32);
+            color: #fff;
+        }
+
+        .tabla-modelos thead th {
+            padding: 14px 16px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border-bottom: 3px solid #f9a825;
+        }
+
+        .tabla-modelos tbody td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #eaf0e6;
+            vertical-align: top;
+            color: #1e2b1c;
+        }
+
+        .tabla-modelos tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tabla-modelos tbody tr:nth-child(even) {
+            background-color: #f8fbf6;
+        }
+
+        .tabla-modelos tbody tr:hover {
+            background-color: #eaf5e6;
+            transition: background 0.25s ease;
+        }
+
+        .tabla-modelos tbody td strong {
+            color: #1b5e20;
+            font-weight: 700;
+        }
+
+        /* ---------- VIDEO ---------- */
         .video-wrapper {
             position: relative;
             padding-bottom: 56.25%;
@@ -263,22 +326,18 @@
             margin-top: 8px;
         }
 
-        /* Enlace de regreso */
-        .volver-link {
-            display: inline-block;
-            margin-top: 30px;
-            color: #1b5e20;
-            font-weight: 600;
-            text-decoration: none;
-            padding: 8px 20px;
-            border: 2px solid #1b5e20;
-            border-radius: 30px;
-            transition: background 0.3s, color 0.3s;
+        /* ---------- CONCLUSIÓN ---------- */
+        .conclusion-box {
+            background: #f4f8f1;
+            border-left: 6px solid #f9a825;
+            padding: 24px 28px;
+            border-radius: 12px;
+            margin-top: 32px;
+            box-shadow: inset 0 1px 4px rgba(0,0,0,0.03);
         }
 
-        .volver-link:hover {
-            background: #1b5e20;
-            color: #fff;
+        .conclusion-box p {
+            margin-bottom: 10px;
         }
 
         /* ---------- PIE ---------- */
@@ -358,6 +417,19 @@
             p {
                 font-size: 0.98rem;
             }
+
+            .tabla-modelos {
+                font-size: 0.82rem;
+            }
+
+            .tabla-modelos thead th,
+            .tabla-modelos tbody td {
+                padding: 8px 10px;
+            }
+
+            .conclusion-box {
+                padding: 16px 18px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -389,6 +461,15 @@
             h3 {
                 font-size: 1rem;
             }
+
+            .tabla-modelos {
+                font-size: 0.72rem;
+            }
+
+            .tabla-modelos thead th,
+            .tabla-modelos tbody td {
+                padding: 5px 6px;
+            }
         }
     </style>
 </head>
@@ -419,7 +500,7 @@
                 <li>
                     <a href="modelos.html" class="activo">Modelos de evaluación y RED ▾</a>
                     <ul class="sub-menu">
-                        <li><a href="seleccionando-modelos.html" class="activo">Selección de modelos</a></li>
+                        <li><a href="seleccionando-modelos.html">Selección de modelos</a></li>
                         <li><a href="recursos.html">RED</a></li>
                     </ul>
                 </li>
@@ -431,65 +512,511 @@
     </nav>
 
     <!-- ============================================================
-    CONTENIDO – SELECCIÓN DE MODELOS
+    CONTENIDO PRINCIPAL – TODA LA TEORÍA EXTENSA
     ============================================================ -->
     <main class="contenido-principal">
         <div class="container">
 
-            <h1 class="pagina-titulo">🎯 Selección de modelos de evaluación</h1>
+            <h1 class="pagina-titulo">📋 Modelos de evaluación y Recursos Educativos Digitales</h1>
 
+            <!-- =========================================================
+            SECCIÓN 1 – INTRODUCCIÓN
+            ========================================================= -->
             <section>
-                <h2>📌 Justificación de selección</h2>
+                <h2>1. Introducción</h2>
                 <p>
-                    Después de realizar la revisión de los seis modelos de evaluación de Recursos Educativos Digitales, se seleccionaron los modelos <strong>CODA</strong>, <strong>LORI</strong> y <strong>Reeves</strong> para su aplicación en los recursos educativos digitales <em>Rural STEAM Lab – Simulador Interactivo de Movimiento de Proyectil</em> y <em>PhET Interactive Simulations – Projectile Motion</em>.
+                    La evaluación de los Recursos Educativos Digitales (RED) constituye un proceso fundamental en el ámbito educativo actual, pues permite determinar la calidad, pertinencia y efectividad de estos recursos antes de ser incorporados a los procesos de enseñanza y aprendizaje. En un contexto donde la tecnología avanza rápidamente y las instituciones educativas adoptan cada vez más herramientas digitales, la selección de recursos de calidad se convierte en un factor crítico para el éxito de las experiencias educativas.
                 </p>
-
-                <h3><span class="icono">📗</span> Selección del modelo CODA</h3>
                 <p>
-                    La selección del modelo CODA se fundamentó en que fue desarrollado específicamente para evaluar la calidad de los objetos de aprendizaje y los Recursos Educativos Digitales desde una perspectiva didáctica y tecnológica. Este modelo analiza de manera estructurada la coherencia de los objetivos de aprendizaje, la calidad de los contenidos, la capacidad para promover la reflexión, la interactividad, la motivación, el diseño, la usabilidad, la accesibilidad, la reutilización y la interoperabilidad, aspectos esenciales para valorar simuladores educativos utilizados en la enseñanza de la Física.
-                </p>
-
-                <h3><span class="icono">📘</span> Selección del modelo LORI</h3>
-                <p>
-                    El modelo LORI fue seleccionado por ser uno de los instrumentos de evaluación más reconocidos a nivel internacional para valorar la calidad de los Recursos Educativos Digitales. Su enfoque integra dimensiones pedagógicas y tecnológicas, evaluando la calidad del contenido, la coherencia de los objetivos de aprendizaje, la retroalimentación, la motivación, el diseño de la interfaz, la usabilidad, la accesibilidad, la reutilización y el cumplimiento de estándares. Gracias a esta visión integral, constituye una herramienta adecuada para analizar recursos educativos interactivos.
-                </p>
-
-                <h3><span class="icono">📕</span> Selección del modelo Reeves</h3>
-                <p>
-                    El modelo Reeves fue elegido porque centra su evaluación en el diseño instruccional y en la experiencia de aprendizaje del estudiante. Sus criterios permiten valorar la promoción del aprendizaje significativo, la interacción, la motivación, la flexibilidad del proceso de enseñanza y la integración curricular. Estas características resultan especialmente pertinentes para evaluar simuladores educativos que favorecen el aprendizaje mediante la experimentación virtual.
-                </p>
-
-                <p>
-                    Aunque los modelos Norma UNE 71362, FURPS y McCall representan referentes importantes para la evaluación de la calidad de recursos digitales y software educativo, su enfoque se orienta principalmente hacia aspectos normativos, técnicos y de ingeniería del software. Si bien aportan criterios relacionados con la funcionalidad, la confiabilidad, la mantenibilidad y el cumplimiento de estándares, no profundizan en la evaluación pedagógica y en la experiencia de aprendizaje con el mismo nivel de detalle que ofrecen los modelos seleccionados.
-                </p>
-
-                <p>
-                    En consecuencia, se determinó que la combinación de <strong>CODA</strong>, <strong>LORI</strong> y <strong>Reeves</strong> proporciona una evaluación más completa de los Recursos Educativos Digitales, al integrar dimensiones pedagógicas, tecnológicas y de diseño instruccional.
+                    Los RED han transformado la manera en que los docentes diseñan sus clases y los estudiantes acceden al conocimiento. Sin embargo, no todos los recursos digitales cumplen con los estándares pedagógicos, técnicos y de usabilidad necesarios para garantizar un aprendizaje significativo. Por ello, la evaluación sistemática de estos recursos se ha convertido en una práctica indispensable para docentes, diseñadores instruccionales e instituciones educativas.
                 </p>
             </section>
 
-            <!-- Video -->
+            <!-- =========================================================
+            SECCIÓN 2 – ¿QUÉ SON LOS RED?
+            ========================================================= -->
             <section>
-                <h2>🎥 Video de sustentación</h2>
+                <h2>2. ¿Qué son los Recursos Educativos Digitales (RED)?</h2>
                 <p>
-                    A continuación se presenta el video de sustentación del Entregable 1, donde se resume el proceso de selección y aplicación de los modelos de evaluación.
+                    Los Recursos Educativos Digitales (RED) son materiales didácticos diseñados y presentados en formato digital que tienen como propósito facilitar los procesos de enseñanza y aprendizaje. Estos recursos pueden adoptar diversas formas: simulaciones interactivas, videos educativos, objetos de aprendizaje, aplicaciones móviles, plataformas educativas, juegos serios, infografías interactivas, entre otros.
+                </p>
+                <p>Según la Universidad de Santander (2026), los RED se caracterizan por:</p>
+                <ul>
+                    <li><strong>Ser reutilizables</strong>: pueden utilizarse en diferentes contextos educativos sin necesidad de modificaciones sustanciales.</li>
+                    <li><strong>Ser interactivos</strong>: permiten la participación activa del estudiante en el proceso de aprendizaje.</li>
+                    <li><strong>Estar basados en estándares</strong>: cumplen con especificaciones técnicas que facilitan su integración y distribución.</li>
+                    <li><strong>Tener un propósito educativo claro</strong>: están diseñados para alcanzar objetivos de aprendizaje específicos.</li>
+                </ul>
+                <h3>¿Por qué es importante evaluarlos?</h3>
+                <p>
+                    La evaluación de los RED es crucial porque permite garantizar que estos recursos cumplan con los requisitos pedagógicos, tecnológicos y funcionales necesarios para apoyar eficazmente el aprendizaje. Sin una evaluación rigurosa, se corre el riesgo de utilizar materiales de baja calidad que pueden desmotivar a los estudiantes, generar confusión o incluso perjudicar el proceso de enseñanza-aprendizaje.
+                </p>
+                <h3>Importancia de la calidad pedagógica, tecnológica y funcional</h3>
+                <ul>
+                    <li><strong>Calidad pedagógica</strong>: asegura que el recurso esté alineado con los objetivos de aprendizaje, promueva el pensamiento crítico y facilite la construcción de conocimiento.</li>
+                    <li><strong>Calidad tecnológica</strong>: garantiza que el recurso funcione correctamente en diferentes dispositivos y plataformas, con una interfaz intuitiva y un rendimiento óptimo.</li>
+                    <li><strong>Calidad funcional</strong>: verifica que el recurso cumpla con su propósito educativo, sea fácil de usar, accesible y que ofrezca una experiencia satisfactoria al usuario.</li>
+                </ul>
+                <p>
+                    Estos tres pilares son interdependientes: un recurso con excelente contenido pedagógico pero con una interfaz deficiente o problemas técnicos puede no lograr su objetivo educativo. Por ello, los modelos de evaluación deben considerar estas dimensiones de manera integral.
+                </p>
+            </section>
+
+            <!-- =========================================================
+            SECCIÓN 3 – ¿QUÉ ES UN MODELO DE EVALUACIÓN?
+            ========================================================= -->
+            <section>
+                <h2>3. ¿Qué es un modelo de evaluación de RED?</h2>
+                <p>
+                    Un <strong>modelo de evaluación de Recursos Educativos Digitales</strong> es un conjunto estructurado de criterios, dimensiones e indicadores que permiten valorar la calidad de un recurso educativo digital desde diferentes perspectivas. Estos modelos proporcionan un marco sistemático para analizar aspectos como la calidad del contenido, el diseño instruccional, la usabilidad, la accesibilidad, la interactividad, la motivación y el cumplimiento de estándares.
+                </p>
+
+                <h3>Definición</h3>
+                <p>
+                    Un modelo de evaluación es una representación formal de los aspectos que deben considerarse al juzgar la calidad de un RED. Incluye un conjunto de criterios (qué se evalúa), indicadores (cómo se mide) e instrumentos (herramientas para recoger la información).
+                </p>
+
+                <h3>Objetivos</h3>
+                <ul>
+                    <li>Proporcionar una valoración objetiva y fundamentada de la calidad del recurso.</li>
+                    <li>Identificar fortalezas y áreas de mejora.</li>
+                    <li>Facilitar la comparación entre diferentes recursos.</li>
+                    <li>Orientar la toma de decisiones sobre la selección, uso o rediseño de recursos.</li>
+                    <li>Garantizar que los recursos utilizados en el aula cumplan con estándares de calidad.</li>
+                </ul>
+
+                <h3>Componentes de un modelo de evaluación</h3>
+                <ul>
+                    <li><strong>Criterios</strong>: las dimensiones o aspectos que se evalúan (ej. calidad del contenido, usabilidad, interactividad).</li>
+                    <li><strong>Indicadores</strong>: elementos observables que permiten medir cada criterio (ej. para usabilidad: facilidad de navegación, claridad de las instrucciones).</li>
+                    <li><strong>Escala de valoración</strong>: sistema de puntuación (numérico, cualitativo, cumplimiento/no cumplimiento).</li>
+                    <li><strong>Instrumento</strong>: herramienta concreta para aplicar el modelo (rúbrica, lista de verificación, matriz, plantilla).</li>
+                    <li><strong>Procedimiento</strong>: pasos a seguir para aplicar el modelo y analizar los resultados.</li>
+                </ul>
+
+                <h3>Beneficios de utilizar un modelo de evaluación</h3>
+                <ul>
+                    <li><strong>Objetividad</strong>: reduce la subjetividad al basarse en criterios definidos.</li>
+                    <li><strong>Consistencia</strong>: permite obtener resultados comparables entre diferentes evaluadores y momentos.</li>
+                    <li><strong>Transparencia</strong>: facilita la comunicación de los resultados a los interesados.</li>
+                    <li><strong>Mejora continua</strong>: identifica aspectos específicos que pueden ser optimizados.</li>
+                    <li><strong>Fundamentación pedagógica</strong>: asegura que los recursos estén alineados con teorías y enfoques educativos.</li>
+                </ul>
+            </section>
+
+            <!-- =========================================================
+            SECCIÓN 4 – ¿PARA QUÉ SIRVEN?
+            ========================================================= -->
+            <section>
+                <h2>4. ¿Para qué sirven los modelos de evaluación de RED?</h2>
+                <p>Los modelos de evaluación cumplen múltiples funciones en el ámbito educativo. A continuación se explican las principales:</p>
+
+                <h3>Seleccionar recursos</h3>
+                <p>
+                    Permiten a los docentes e instituciones identificar los recursos más adecuados para sus necesidades educativas, evitando la inversión en materiales de baja calidad. Al aplicar un modelo de evaluación, se pueden comparar diferentes opciones y elegir aquellas que mejor se ajusten a los objetivos curriculares, el nivel de los estudiantes y el contexto de aprendizaje.
+                </p>
+
+                <h3>Comparar recursos</h3>
+                <p>
+                    Proporcionan un marco común para comparar diferentes recursos de manera objetiva. Esto es especialmente útil cuando existen múltiples alternativas para un mismo tema o área de conocimiento. La comparación sistemática facilita la toma de decisiones informadas y el aprovechamiento óptimo de los recursos disponibles.
+                </p>
+
+                <h3>Mejorar recursos</h3>
+                <p>
+                    Al identificar fortalezas y debilidades, los modelos de evaluación orientan procesos de rediseño y optimización. Los desarrolladores de recursos educativos pueden utilizar los resultados de la evaluación para corregir errores, mejorar la usabilidad, enriquecer los contenidos o ajustar el diseño instruccional.
+                </p>
+
+                <h3>Garantizar calidad</h3>
+                <p>
+                    Contribuyen a asegurar que los recursos utilizados en entornos educativos cumplan con estándares mínimos de calidad pedagógica, técnica y funcional. Esto es especialmente relevante en contextos de educación formal, donde la calidad de los materiales incide directamente en los resultados de aprendizaje.
+                </p>
+
+                <h3>Favorecer el aprendizaje</h3>
+                <p>
+                    Al evaluar aspectos como la motivación, la interactividad y la adecuación al estudiante, los modelos ayudan a seleccionar recursos que realmente promuevan el aprendizaje significativo y el desarrollo de competencias.
+                </p>
+
+                <h3>Apoyar la toma de decisiones</h3>
+                <p>
+                    Los resultados de la evaluación proporcionan evidencia sólida para la toma de decisiones a nivel institucional, como la adopción de plataformas educativas, la inversión en desarrollo de recursos o la definición de políticas de calidad.
+                </p>
+            </section>
+
+            <!-- =========================================================
+            SECCIÓN 5 – CARACTERÍSTICAS DE UN BUEN MODELO
+            ========================================================= -->
+            <section>
+                <h2>5. Características de un buen modelo de evaluación</h2>
+                <p>
+                    Un modelo de evaluación de RED debe cumplir con ciertas características para ser efectivo y confiable. La siguiente tabla resume las principales:
+                </p>
+
+                <div class="tabla-wrapper">
+                    <table class="tabla-modelos">
+                        <thead>
+                            <tr>
+                                <th>Característica</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Objetividad</strong></td>
+                                <td>Evalúa mediante criterios claros y medibles, minimizando la subjetividad del evaluador.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Validez</strong></td>
+                                <td>Mide realmente lo que pretende evaluar: la calidad del recurso educativo digital.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fiabilidad</strong></td>
+                                <td>Produce resultados consistentes cuando es aplicado por diferentes evaluadores o en diferentes momentos.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Flexibilidad</strong></td>
+                                <td>Se adapta a diferentes tipos de recursos, contextos educativos y propósitos de evaluación.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Integralidad</strong></td>
+                                <td>Considera múltiples dimensiones: pedagógica, tecnológica, usabilidad, accesibilidad, etc.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Facilidad de aplicación</strong></td>
+                                <td>Utiliza instrumentos claros y procedimientos bien definidos, que no requieren una formación excesiva.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pertinencia</strong></td>
+                                <td>Está alineado con las teorías pedagógicas y las tendencias actuales en tecnología educativa.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Transparencia</strong></td>
+                                <td>Los criterios e indicadores son explícitos y comprensibles para todos los implicados.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-style:italic; color:#556b52; font-size:0.9rem;">
+                    Nota. Elaboración propia a partir de la literatura sobre evaluación de recursos educativos digitales.
+                </p>
+            </section>
+
+            <!-- =========================================================
+            SECCIÓN 6 – PRINCIPALES MODELOS DE EVALUACIÓN
+            ========================================================= -->
+            <section>
+                <h2>6. Principales modelos de evaluación de RED</h2>
+                <p>
+                    A continuación se presentan los seis modelos de evaluación más representativos, con su historia, autores, objetivos, criterios, ventajas y limitaciones.
+                </p>
+
+                <!-- MODELO LORI -->
+                <h3><span class="icono">📘</span> 6.1. Modelo LORI (Learning Object Review Instrument)</h3>
+                <p>
+                    <strong>Historia y autor:</strong> Desarrollado por Nesbit, Belfer y Leacock (2002) en el marco de la red de investigación E-Learning Research and Assessment Network. Es uno de los instrumentos más utilizados a nivel internacional para evaluar objetos de aprendizaje y RED.
+                </p>
+                <p>
+                    <strong>Objetivo:</strong> Proporcionar una evaluación integral de la calidad de los recursos educativos digitales, considerando aspectos pedagógicos, tecnológicos y de usabilidad.
+                </p>
+                <p>
+                    <strong>¿Qué evalúa?</strong> Evalúa nueve criterios: calidad de los contenidos, adecuación de los objetivos de aprendizaje, feedback y adaptabilidad, motivación, diseño y presentación, usabilidad, accesibilidad, reusabilidad y cumplimiento de estándares.
+                </p>
+                <p>
+                    <strong>Criterios detallados:</strong>
+                </p>
+                <ul>
+                    <li><strong>Calidad de los contenidos:</strong> Veracidad, exactitud, presentación equilibrada de ideas y nivel adecuado de detalle.</li>
+                    <li><strong>Adecuación de los objetivos:</strong> Coherencia entre objetivos, actividades, evaluaciones y perfil del alumnado.</li>
+                    <li><strong>Feedback y adaptabilidad:</strong> Contenido adaptativo o feedback dirigido en función de la respuesta del estudiante.</li>
+                    <li><strong>Motivación:</strong> Capacidad de motivar y generar interés en el grupo de estudiantes.</li>
+                    <li><strong>Diseño y presentación:</strong> El diseño audiovisual favorece el procesamiento de la información.</li>
+                    <li><strong>Usabilidad:</strong> Facilidad de navegación, interfaz predictiva y calidad de la ayuda.</li>
+                    <li><strong>Accesibilidad:</strong> Adaptación para personas con discapacidad y dispositivos móviles.</li>
+                    <li><strong>Reusabilidad:</strong> Capacidad para usarse en distintos escenarios y con diferentes estudiantes.</li>
+                    <li><strong>Cumplimiento de estándares:</strong> Adecuación a especificaciones internacionales.</li>
+                </ul>
+                <p>
+                    <strong>Ventajas:</strong> Enfoque integral, ampliamente reconocido, flexible y adaptable a diferentes tipos de recursos. Su estructura permite una evaluación equilibrada.
+                </p>
+                <p>
+                    <strong>Limitaciones:</strong> Algunos criterios dependen del juicio del evaluador, no profundiza en aspectos técnicos específicos del software y requiere experiencia en evaluación de RED.
+                </p>
+
+                <!-- MODELO REEVES -->
+                <h3><span class="icono">📕</span> 6.2. Modelo Reeves</h3>
+                <p>
+                    <strong>Historia y autor:</strong> Propuesto por Thomas C. Reeves (2000), profesor de la Universidad de Georgia, como una herramienta para evaluar la calidad de recursos educativos digitales centrada en el diseño instruccional y la experiencia de aprendizaje.
+                </p>
+                <p>
+                    <strong>Objetivo:</strong> Valorar la efectividad pedagógica del recurso, considerando cómo favorece el aprendizaje significativo, la interacción y la motivación.
+                </p>
+                <p>
+                    <strong>¿Qué evalúa?</strong> Evalúa nueve criterios: aprendizaje significativo, diseño instruccional, motivación e interés, interactividad, flexibilidad del aprendizaje, facilidad de uso, retroalimentación, integración con el currículo y valor educativo global.
+                </p>
+                <p>
+                    <strong>Criterios detallados:</strong>
+                </p>
+                <ul>
+                    <li><strong>Aprendizaje significativo:</strong> Grado en que el recurso promueve la construcción de conocimiento y su transferencia.</li>
+                    <li><strong>Diseño instruccional:</strong> Coherencia entre objetivos, estrategias y actividades.</li>
+                    <li><strong>Motivación e interés:</strong> Capacidad para despertar y mantener el interés del estudiante.</li>
+                    <li><strong>Interactividad:</strong> Posibilidad de participación activa del estudiante.</li>
+                    <li><strong>Flexibilidad:</strong> Adaptabilidad a diferentes ritmos, estilos y necesidades.</li>
+                    <li><strong>Facilidad de uso:</strong> Usabilidad y navegación intuitiva.</li>
+                    <li><strong>Retroalimentación:</strong> Mecanismos de feedback y seguimiento del progreso.</li>
+                    <li><strong>Integración curricular:</strong> Grado de articulación con los contenidos y competencias del currículo.</li>
+                    <li><strong>Valor educativo global:</strong> Contribución general al proceso de enseñanza-aprendizaje.</li>
+                </ul>
+                <p>
+                    <strong>Ventajas:</strong> Enfoque centrado en el diseño instruccional y la experiencia de aprendizaje, considera la integración curricular y la efectividad pedagógica.
+                </p>
+                <p>
+                    <strong>Limitaciones:</strong> Dependencia de la interpretación del evaluador, no profundiza en aspectos técnicos como accesibilidad o interoperabilidad.
+                </p>
+
+                <!-- MODELO CODA -->
+                <h3><span class="icono">📗</span> 6.3. Modelo CODA (Calidad de Objetos Digitales de Aprendizaje)</h3>
+                <p>
+                    <strong>Historia y autor:</strong> Desarrollado por la Universidad Complutense de Madrid (2013) como una herramienta específica para evaluar la calidad de los objetos de aprendizaje y los RED desde una perspectiva integral.
+                </p>
+                <p>
+                    <strong>Objetivo:</strong> Evaluar la calidad de los objetos de aprendizaje considerando dimensiones pedagógicas y tecnológicas, con un enfoque estructurado y sistemático.
+                </p>
+                <p>
+                    <strong>¿Qué evalúa?</strong> Evalúa diez criterios: objetivos y coherencia didáctica, calidad de los contenidos, capacidad de generar reflexión, interactividad y adaptabilidad, motivación, formato y diseño, usabilidad, accesibilidad, reusabilidad e interoperabilidad.
+                </p>
+                <p>
+                    <strong>Criterios detallados:</strong>
+                </p>
+                <ul>
+                    <li><strong>Objetivos y coherencia didáctica:</strong> Claridad y pertinencia de los objetivos y su coherencia con las actividades.</li>
+                    <li><strong>Calidad de los contenidos:</strong> Rigurosidad científica, actualización, claridad y nivel de detalle.</li>
+                    <li><strong>Capacidad de generar reflexión:</strong> Grado en que el recurso promueve el pensamiento crítico y la creatividad.</li>
+                    <li><strong>Interactividad y adaptabilidad:</strong> Posibilidad de interacción y adaptación a diferentes ritmos y estilos.</li>
+                    <li><strong>Motivación:</strong> Capacidad para generar interés y engagement.</li>
+                    <li><strong>Formato y diseño:</strong> Calidad estética, organización de la información y adecuación al público.</li>
+                    <li><strong>Usabilidad:</strong> Facilidad de uso, navegación intuitiva y experiencia de usuario satisfactoria.</li>
+                    <li><strong>Accesibilidad:</strong> Adaptación para personas con discapacidad y compatibilidad con diferentes dispositivos.</li>
+                    <li><strong>Reusabilidad:</strong> Posibilidad de utilizar el recurso en diferentes contextos y propósitos.</li>
+                    <li><strong>Interoperabilidad:</strong> Capacidad para integrarse con otros sistemas y plataformas educativas.</li>
+                </ul>
+                <p>
+                    <strong>Ventajas:</strong> Enfoque estructurado y sistemático, integra aspectos pedagógicos y tecnológicos, facilita la comparación entre recursos.
+                </p>
+                <p>
+                    <strong>Limitaciones:</strong> Dependencia del criterio del evaluador, no profundiza en aspectos técnicos específicos, requiere tiempo y conocimiento previo.
+                </p>
+
+                <!-- NORMA UNE 71362 -->
+                <h3><span class="icono">📙</span> 6.4. Norma UNE 71362</h3>
+                <p>
+                    <strong>Historia y autor:</strong> Estándar español desarrollado por la Asociación Española de Normalización (2022) para establecer criterios de calidad de los materiales educativos digitales.
+                </p>
+                <p>
+                    <strong>Objetivo:</strong> Proporcionar un marco de referencia común para garantizar la calidad de los materiales educativos digitales, facilitando su certificación.
+                </p>
+                <p>
+                    <strong>¿Qué evalúa?</strong> Evalúa seis criterios: calidad didáctica, calidad técnica, accesibilidad, interoperabilidad, reutilización y actualización.
+                </p>
+                <p>
+                    <strong>Criterios detallados:</strong>
+                </p>
+                <ul>
+                    <li><strong>Calidad didáctica:</strong> Claridad de los objetivos, pertinencia de los contenidos, coherencia metodológica y adecuación al nivel.</li>
+                    <li><strong>Calidad técnica:</strong> Funcionalidad, usabilidad, compatibilidad y rendimiento.</li>
+                    <li><strong>Accesibilidad:</strong> Cumplimiento de pautas de accesibilidad para personas con discapacidad.</li>
+                    <li><strong>Interoperabilidad:</strong> Capacidad para ser utilizado en diferentes plataformas y sistemas.</li>
+                    <li><strong>Reutilización:</strong> Posibilidad de usar el material en diferentes contextos y propósitos.</li>
+                    <li><strong>Actualización:</strong> Mecanismos para mantener el material actualizado y vigente.</li>
+                </ul>
+                <p>
+                    <strong>Ventajas:</strong> Marco normativo reconocido y estandarizado, proporciona criterios claros y objetivos, facilita la certificación de calidad.
+                </p>
+                <p>
+                    <strong>Limitaciones:</strong> Enfoque más técnico que pedagógico, puede resultar rígido para evaluar recursos innovadores, no profundiza en la experiencia de aprendizaje.
+                </p>
+
+                <!-- MODELO FURPS -->
+                <h3><span class="icono">📘</span> 6.5. Modelo FURPS</h3>
+                <p>
+                    <strong>Historia y autor:</strong> Propuesto por Grady (1992) como un modelo de calidad de software que puede aplicarse a la evaluación de RED.
+                </p>
+                <p>
+                    <strong>Objetivo:</strong> Evaluar la calidad del software desde cinco dimensiones fundamentales, proporcionando una visión técnica de la calidad del recurso.
+                </p>
+                <p>
+                    <strong>¿Qué evalúa?</strong> Evalúa cinco dimensiones: funcionalidad, usabilidad, confiabilidad, rendimiento y soporte.
+                </p>
+                <p>
+                    <strong>Criterios detallados:</strong>
+                </p>
+                <ul>
+                    <li><strong>Funcionalidad:</strong> Conjunto de características y capacidades del software, incluyendo exactitud, idoneidad, interoperabilidad y seguridad.</li>
+                    <li><strong>Usabilidad:</strong> Facilidad de uso, aprendizaje, operación y satisfacción del usuario.</li>
+                    <li><strong>Confiabilidad:</strong> Capacidad para mantener su nivel de rendimiento bajo condiciones establecidas.</li>
+                    <li><strong>Rendimiento:</strong> Eficiencia en el uso de recursos, tiempo de respuesta y capacidad de procesamiento.</li>
+                    <li><strong>Soporte:</strong> Capacidad de mantenimiento, adaptabilidad, instalación y documentación.</li>
+                </ul>
+                <p>
+                    <strong>Ventajas:</strong> Enfoque sistemático y bien estructurado, considera aspectos técnicos fundamentales del software.
+                </p>
+                <p>
+                    <strong>Limitaciones:</strong> Enfoque eminentemente técnico, con menor énfasis en aspectos pedagógicos, requiere conocimientos de ingeniería del software.
+                </p>
+
+                <!-- MODELO MCCALL -->
+                <h3><span class="icono">📓</span> 6.6. Modelo McCall</h3>
+                <p>
+                    <strong>Historia y autor:</strong> Desarrollado por McCall, Richards y Walters (1977), constituye uno de los referentes clásicos en la evaluación de la calidad del software.
+                </p>
+                <p>
+                    <strong>Objetivo:</strong> Evaluar la calidad del software considerando factores internos y externos, desde una perspectiva que combina aspectos técnicos y de uso.
+                </p>
+                <p>
+                    <strong>¿Qué evalúa?</strong> Evalúa seis factores de calidad: corrección, confiabilidad, eficiencia, mantenibilidad, flexibilidad y portabilidad.
+                </p>
+                <p>
+                    <strong>Factores detallados:</strong>
+                </p>
+                <ul>
+                    <li><strong>Corrección:</strong> Capacidad para cumplir con las especificaciones y satisfacer los requisitos del usuario.</li>
+                    <li><strong>Confiabilidad:</strong> Capacidad para operar sin fallos durante un período determinado.</li>
+                    <li><strong>Eficiencia:</strong> Uso óptimo de recursos (tiempo, memoria, etc.).</li>
+                    <li><strong>Mantenibilidad:</strong> Facilidad para realizar modificaciones y correcciones.</li>
+                    <li><strong>Flexibilidad:</strong> Capacidad para adaptarse a cambios en el entorno o los requisitos.</li>
+                    <li><strong>Portabilidad:</strong> Capacidad para ser transferido a diferentes plataformas o entornos.</li>
+                </ul>
+                <p>
+                    <strong>Ventajas:</strong> Modelo clásico y ampliamente reconocido, considera aspectos internos y externos de la calidad del software.
+                </p>
+                <p>
+                    <strong>Limitaciones:</strong> Enfoque eminentemente técnico, no considera aspectos pedagógicos ni educativos, su aplicación requiere conocimientos especializados.
+                </p>
+            </section>
+
+            <!-- =========================================================
+            SECCIÓN 7 – TABLA COMPARATIVA COMPLETA
+            ========================================================= -->
+            <section>
+                <h2>7. Tabla comparativa completa de los seis modelos</h2>
+                <p>
+                    La siguiente tabla resume las características principales de cada modelo, facilitando una visión global y comparativa.
+                </p>
+
+                <div class="tabla-wrapper">
+                    <table class="tabla-modelos">
+                        <thead>
+                            <tr>
+                                <th>Modelo</th>
+                                <th>Autor(es)</th>
+                                <th>Año</th>
+                                <th>¿Qué evalúa?</th>
+                                <th>Instrumento</th>
+                                <th>Escala</th>
+                                <th>Principales características</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>LORI</strong></td>
+                                <td>Nesbit, Belfer &amp; Leacock</td>
+                                <td>2002</td>
+                                <td>Calidad pedagógica y tecnológica de RED</td>
+                                <td>Rúbrica</td>
+                                <td>1 a 5</td>
+                                <td>9 criterios, enfoque integral, flexible, ampliamente reconocido</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Reeves</strong></td>
+                                <td>Thomas C. Reeves</td>
+                                <td>2000</td>
+                                <td>Diseño instruccional y experiencia de aprendizaje</td>
+                                <td>Matriz</td>
+                                <td>1 a 5</td>
+                                <td>9 criterios, centrado en el estudiante, integración curricular</td>
+                            </tr>
+                            <tr>
+                                <td><strong>CODA</strong></td>
+                                <td>Universidad Complutense de Madrid</td>
+                                <td>2013</td>
+                                <td>Calidad didáctica y tecnológica de objetos de aprendizaje</td>
+                                <td>Plantilla</td>
+                                <td>1 a 5</td>
+                                <td>10 criterios, estructurado, sistemático, pedagógico-tecnológico</td>
+                            </tr>
+                            <tr>
+                                <td><strong>UNE 71362</strong></td>
+                                <td>Asociación Española de Normalización</td>
+                                <td>2022</td>
+                                <td>Calidad de materiales educativos digitales según estándares</td>
+                                <td>Lista de verificación</td>
+                                <td>Cumple / No cumple</td>
+                                <td>6 criterios, normativo, estandarizado, orientado a certificación</td>
+                            </tr>
+                            <tr>
+                                <td><strong>FURPS</strong></td>
+                                <td>Grady</td>
+                                <td>1992</td>
+                                <td>Calidad del software (funcionalidad, usabilidad, confiabilidad, rendimiento, soporte)</td>
+                                <td>Lista de chequeo</td>
+                                <td>Cumplimiento de atributos</td>
+                                <td>5 dimensiones, enfoque técnico, sistemático</td>
+                            </tr>
+                            <tr>
+                                <td><strong>McCall</strong></td>
+                                <td>McCall, Richards &amp; Walters</td>
+                                <td>1977</td>
+                                <td>Calidad del software mediante factores internos y externos</td>
+                                <td>Lista de verificación</td>
+                                <td>Cumplimiento de factores</td>
+                                <td>6 factores, clásico, técnico, considera aspectos internos y externos</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-style:italic; color:#556b52; font-size:0.9rem;">
+                    Nota. Elaboración propia a partir de la literatura sobre modelos de evaluación de RED.
+                </p>
+            </section>
+
+            <!-- =========================================================
+            SECCIÓN 8 – VIDEO EXPLICATIVO
+            ========================================================= -->
+            <section>
+                <h2>8. Video: Modelos de evaluación de Recursos Educativos Digitales</h2>
+                <p>
+                    El siguiente video complementa los conceptos presentados en esta sección y explica la importancia de los modelos de evaluación de Recursos Educativos Digitales, sus principales características y su aplicación en contextos educativos.
                 </p>
                 <div class="video-wrapper">
                     <iframe
                         src="https://www.youtube.com/embed/N4dfMeYrnUw"
-                        title="Sustentación Evaluación de RED"
+                        title="Modelos de evaluación de Recursos Educativos Digitales"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin"
                         allowfullscreen>
                     </iframe>
                 </div>
                 <p class="video-caption">
-                    Video de sustentación del Entregable 1 – Selección de modelos de evaluación de RED.
+                    Video explicativo sobre los modelos de evaluación de RED – Fuente: YouTube.
                 </p>
             </section>
 
-            <!-- Enlace de regreso -->
-            <a href="modelos.html" class="volver-link">← Volver a Modelos de evaluación y RED</a>
+            <!-- =========================================================
+            SECCIÓN 9 – CONCLUSIÓN
+            ========================================================= -->
+            <section>
+                <h2>9. Conclusión</h2>
+                <div class="conclusion-box">
+                    <p>
+                        Una vez analizados los principales modelos de evaluación de Recursos Educativos Digitales, el siguiente paso consiste en determinar cuáles de ellos ofrecen los criterios más adecuados para evaluar los recursos seleccionados en este trabajo. En la siguiente sección se presenta el proceso de selección y la justificación de los modelos elegidos para la evaluación.
+                    </p>
+                    <p>
+                        La revisión realizada evidencia que cada modelo aporta una perspectiva particular y que la elección del modelo más adecuado depende del tipo de recurso, el contexto educativo y los objetivos de la evaluación. Los modelos LORI, CODA y Reeves destacan por su enfoque integral y su capacidad para evaluar dimensiones pedagógicas, tecnológicas y de diseño instruccional, lo que los convierte en candidatos idóneos para el análisis de los recursos educativos digitales seleccionados en este trabajo.
+                    </p>
+                    <p>
+                        La combinación de estos tres modelos permitirá obtener una valoración completa y fundamentada, identificando fortalezas y oportunidades de mejora que contribuyan al fortalecimiento de las prácticas educativas mediadas por tecnologías digitales.
+                    </p>
+                </div>
+            </section>
 
         </div>
     </main>
