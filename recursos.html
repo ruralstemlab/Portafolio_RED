@@ -4,34 +4,767 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recursos Educativos Digitales | Portafolio</title>
-    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- ================================================================
+    CSS EMBEBIDO – ESTILO PREMIUM
+    ================================================================ -->
+    <style>
+        /* ---------- RESET Y BASE ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background-color: #f4f6f0;
+            color: #1e2b1c;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ---------- ENCABEZADO ---------- */
+        .header-institucional {
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+            color: #fff;
+            padding: 18px 0;
+            border-bottom: 4px solid #f9a825;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        }
+
+        .header-institucional .container {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .header-institucional .logo img {
+            max-height: 70px;
+            width: auto;
+            display: block;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+        }
+
+        .header-institucional .texto {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-institucional .universidad {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .header-institucional .especializacion {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* ---------- MENÚ CON SUBMENÚ ---------- */
+        .menu-principal {
+            background: #1b5e20;
+            border-bottom: 2px solid #f9a825;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .menu-principal ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            padding: 8px 0;
+        }
+
+        .menu-principal ul li {
+            position: relative;
+        }
+
+        .menu-principal ul li a {
+            display: block;
+            padding: 10px 22px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 30px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .menu-principal ul li a:hover {
+            background: #f9a825;
+            color: #1b5e20;
+        }
+
+        .menu-principal ul li a.activo {
+            background: #fff;
+            color: #1b5e20;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .menu-principal ul li .sub-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #1b5e20;
+            min-width: 220px;
+            border-radius: 12px;
+            padding: 8px 0;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+            border-top: 3px solid #f9a825;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .menu-principal ul li:hover .sub-menu {
+            display: flex;
+        }
+
+        .menu-principal ul li .sub-menu li {
+            width: 100%;
+        }
+
+        .menu-principal ul li .sub-menu li a {
+            padding: 8px 20px;
+            border-radius: 0;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #e8f5e9;
+        }
+
+        .menu-principal ul li .sub-menu li a:hover {
+            background: #f9a825;
+            color: #1b5e20;
+        }
+
+        .menu-principal ul li .sub-menu li a.activo {
+            background: #fff;
+            color: #1b5e20;
+        }
+
+        /* ---------- CONTENIDO PRINCIPAL ---------- */
+        .contenido-principal {
+            background: #ffffff;
+            padding: 40px 0 60px 0;
+            border-radius: 0 0 24px 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .contenido-principal .container {
+            max-width: 1000px;
+        }
+
+        .pagina-titulo {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #1b5e20;
+            text-align: center;
+            border-bottom: 4px solid #f9a825;
+            padding-bottom: 16px;
+            margin-bottom: 36px;
+            letter-spacing: -0.5px;
+            position: relative;
+        }
+
+        .pagina-titulo::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: #1b5e20;
+            border-radius: 4px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #1b5e20;
+            margin-top: 44px;
+            margin-bottom: 18px;
+            padding-left: 8px;
+            border-left: 6px solid #f9a825;
+            padding-left: 16px;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #1b5e20;
+            margin: 28px 0 12px 0;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h3 .icono-grande {
+            font-size: 2rem;
+        }
+
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+            font-size: 1.05rem;
+            color: #2d3a2a;
+        }
+
+        .intro-texto {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #2d3a2a;
+            max-width: 900px;
+            margin: 0 auto 30px auto;
+            text-align: center;
+        }
+
+        /* ---------- TARJETA DE RECURSO (RED) ---------- */
+        .red-card {
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(27, 94, 32, 0.08);
+            border: 1px solid #e8f0e4;
+            padding: 30px;
+            margin-bottom: 50px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .red-card:hover {
+            box-shadow: 0 12px 40px rgba(27, 94, 32, 0.12);
+        }
+
+        .red-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eaf0e6;
+            padding-bottom: 16px;
+        }
+
+        .red-header h3 {
+            margin: 0;
+            font-size: 1.6rem;
+            color: #1b5e20;
+        }
+
+        .red-header .badge-red {
+            background: #1b5e20;
+            color: #fff;
+            padding: 4px 16px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .red-imagen {
+            margin: 20px 0 24px 0;
+            text-align: center;
+        }
+
+        .red-imagen img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 14px;
+            border: 1px solid #dce8d6;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        .red-imagen .figcaption {
+            font-size: 0.85rem;
+            color: #6a7f67;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* ---------- FICHA TÉCNICA (tabla elegante) ---------- */
+        .ficha-tecnica {
+            width: 100%;
+            border-collapse: collapse;
+            background: #f8fbf6;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 20px 0 24px 0;
+            border: 1px solid #e0e8dc;
+        }
+
+        .ficha-tecnica td {
+            padding: 12px 18px;
+            border-bottom: 1px solid #eaf0e6;
+            vertical-align: top;
+        }
+
+        .ficha-tecnica tr:last-child td {
+            border-bottom: none;
+        }
+
+        .ficha-tecnica .etiqueta {
+            font-weight: 700;
+            color: #1b5e20;
+            width: 30%;
+            background: #f0f7ec;
+            white-space: nowrap;
+        }
+
+        .ficha-tecnica .valor {
+            color: #1e2b1c;
+        }
+
+        .ficha-tecnica .valor a {
+            color: #1b5e20;
+            text-decoration: underline;
+        }
+
+        .ficha-tecnica .valor a:hover {
+            color: #f9a825;
+        }
+
+        /* ---------- BLOQUES DE CARACTERÍSTICAS ---------- */
+        .bloque-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .bloque-card {
+            background: #f8fbf6;
+            border-radius: 14px;
+            padding: 20px 24px;
+            border-left: 5px solid #1b5e20;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        }
+
+        .bloque-card .bloque-titulo {
+            font-weight: 700;
+            color: #1b5e20;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .bloque-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .bloque-card ul li {
+            padding: 4px 0 4px 28px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="%231b5e20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') left center no-repeat;
+            background-size: 18px;
+            margin-bottom: 2px;
+            font-size: 1rem;
+            color: #2d3a2a;
+        }
+
+        .bloque-card.limitaciones {
+            border-left-color: #e67e22;
+            background: #fef9f0;
+        }
+
+        .bloque-card.limitaciones ul li {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="%23e67e22" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>');
+            background-size: 18px;
+        }
+
+        .bloque-card.estandares {
+            border-left-color: #27ae60;
+            background: #f0faf0;
+        }
+
+        .bloque-card.estandares ul li {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="%2327ae60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>');
+            background-size: 18px;
+        }
+
+        /* ---------- CHIPS DE TECNOLOGÍAS ---------- */
+        .chips-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .chip {
+            background: #e8f5e9;
+            color: #1b5e20;
+            padding: 4px 14px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid #c8e6c9;
+            letter-spacing: 0.3px;
+        }
+
+        .chip.tech {
+            background: #1b5e20;
+            color: #fff;
+            border-color: #1b5e20;
+        }
+
+        /* ---------- TABLA COMPARATIVA ---------- */
+        .tabla-comparativa-wrapper {
+            overflow-x: auto;
+            margin: 30px 0 20px 0;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(27, 94, 32, 0.10);
+            border: 1px solid #e0e8dc;
+        }
+
+        .tabla-comparativa {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            background: #fff;
+        }
+
+        .tabla-comparativa thead {
+            background: linear-gradient(135deg, #1b5e20, #2e7d32);
+            color: #fff;
+        }
+
+        .tabla-comparativa thead th {
+            padding: 14px 18px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border-bottom: 3px solid #f9a825;
+        }
+
+        .tabla-comparativa thead th:first-child {
+            border-radius: 12px 0 0 0;
+        }
+        .tabla-comparativa thead th:last-child {
+            border-radius: 0 12px 0 0;
+        }
+
+        .tabla-comparativa tbody td {
+            padding: 12px 18px;
+            border-bottom: 1px solid #eaf0e6;
+            vertical-align: middle;
+            color: #1e2b1c;
+        }
+
+        .tabla-comparativa tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tabla-comparativa tbody tr:nth-child(even) {
+            background-color: #f8fbf6;
+        }
+
+        .tabla-comparativa tbody tr:hover {
+            background-color: #eaf5e6;
+            transition: background 0.25s ease;
+        }
+
+        .tabla-comparativa .check {
+            color: #1b5e20;
+            font-weight: 700;
+        }
+        .tabla-comparativa .check-verde {
+            color: #27ae60;
+            font-weight: 700;
+        }
+        .tabla-comparativa .check-amarillo {
+            color: #f39c12;
+        }
+
+        .tabla-comparativa .rating {
+            color: #f9a825;
+            letter-spacing: 2px;
+        }
+
+        /* ---------- CONCLUSIÓN ---------- */
+        .conclusion-box {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            border-left: 6px solid #1b5e20;
+            padding: 28px 32px;
+            border-radius: 16px;
+            margin-top: 36px;
+            box-shadow: 0 4px 16px rgba(27, 94, 32, 0.08);
+        }
+
+        .conclusion-box h3 {
+            margin-top: 0;
+            color: #1b5e20;
+        }
+
+        .conclusion-box p {
+            margin-bottom: 8px;
+            color: #1e2b1c;
+        }
+
+        /* ---------- BOTONES DE NAVEGACIÓN ---------- */
+        .navegacion-subpaginas {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #e8f0e4;
+        }
+
+        .botones-navegacion {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .btn-nav {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-nav:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .btn-atras {
+            background: #e8f5e9;
+            color: #1b5e20;
+            border-color: #1b5e20;
+        }
+
+        .btn-atras:hover {
+            background: #1b5e20;
+            color: #fff;
+        }
+
+        .btn-adelante {
+            background: #1b5e20;
+            color: #fff;
+            border-color: #1b5e20;
+        }
+
+        .btn-adelante:hover {
+            background: #f9a825;
+            color: #1b5e20;
+            border-color: #f9a825;
+        }
+
+        /* ---------- PIE ---------- */
+        .pie-pagina {
+            background: linear-gradient(135deg, #1b5e20, #2e7d32);
+            color: #e8f5e9;
+            text-align: center;
+            padding: 24px 0;
+            font-size: 0.95rem;
+            border-top: 4px solid #f9a825;
+        }
+
+        .pie-pagina p {
+            margin-bottom: 4px;
+            text-align: center;
+            color: #e8f5e9;
+        }
+
+        .pie-pagina p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 768px) {
+            .header-institucional .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .header-institucional .logo img {
+                max-height: 60px;
+            }
+
+            .header-institucional .universidad {
+                font-size: 1.1rem;
+            }
+
+            .header-institucional .especializacion {
+                font-size: 0.85rem;
+            }
+
+            .menu-principal ul {
+                justify-content: center;
+            }
+
+            .menu-principal ul li a {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+            }
+
+            .menu-principal ul li .sub-menu {
+                position: static;
+                border-radius: 8px;
+                box-shadow: none;
+                padding: 4px 0 4px 20px;
+                border-top: none;
+                background: rgba(255, 255, 255, 0.05);
+            }
+
+            .menu-principal ul li:hover .sub-menu {
+                display: flex;
+            }
+
+            .pagina-titulo {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 0.98rem;
+            }
+
+            .red-card {
+                padding: 20px;
+            }
+
+            .red-header h3 {
+                font-size: 1.3rem;
+            }
+
+            .ficha-tecnica .etiqueta {
+                width: 40%;
+                white-space: normal;
+            }
+
+            .bloque-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .botones-navegacion {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn-nav {
+                text-align: center;
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+
+            .tabla-comparativa {
+                font-size: 0.82rem;
+            }
+
+            .tabla-comparativa thead th,
+            .tabla-comparativa tbody td {
+                padding: 8px 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu-principal ul {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 2px;
+            }
+
+            .menu-principal ul li a {
+                border-radius: 8px;
+                text-align: center;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            .pagina-titulo {
+                font-size: 1.4rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                border-left-width: 4px;
+                padding-left: 12px;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            .red-card {
+                padding: 16px;
+            }
+
+            .ficha-tecnica {
+                font-size: 0.85rem;
+            }
+            .ficha-tecnica td {
+                padding: 8px 10px;
+            }
+
+            .tabla-comparativa {
+                font-size: 0.72rem;
+            }
+            .tabla-comparativa thead th,
+            .tabla-comparativa tbody td {
+                padding: 5px 6px;
+            }
+
+            .conclusion-box {
+                padding: 16px 18px;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <!-- ============================================================
-    ENCABEZADO INSTITUCIONAL
+    ENCABEZADO
     ============================================================ -->
     <header class="header-institucional">
-        <div class="container header-institucional__contenido">
-            <div class="header-institucional__logo">
+        <div class="container">
+            <div class="logo">
                 <img src="img/logo-udes.png" alt="Universidad de Santander" />
             </div>
-            <div class="header-institucional__texto">
-                <p class="header-institucional__universidad">Universidad de Santander</p>
-                <p class="header-institucional__maestria">Especialización en Aplicación de TIC para la Enseñanza – EATICE</p>
+            <div class="texto">
+                <span class="universidad">Universidad de Santander</span>
+                <span class="especializacion">Especialización en Aplicación de TIC para la Enseñanza – EATICE</span>
             </div>
         </div>
     </header>
 
     <!-- ============================================================
-    MENÚ PRINCIPAL CON SUBMENÚ
+    MENÚ CON SUBMENÚ
     ============================================================ -->
     <nav class="menu-principal">
         <div class="container">
-            <ul class="menu-principal__lista">
+            <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li class="menu-item-has-children">
-                    <a href="modelos.html">Modelos de evaluación y RED ▾</a>
+                <li>
+                    <a href="modelos.html" class="activo">Modelos de evaluación y RED ▾</a>
                     <ul class="sub-menu">
                         <li><a href="seleccionando-modelos.html">Selección de modelos</a></li>
                         <li><a href="recursos.html" class="activo">RED</a></li>
@@ -45,138 +778,84 @@
     </nav>
 
     <!-- ============================================================
-    CONTENIDO PRINCIPAL
+    CONTENIDO PRINCIPAL – RECURSOS EDUCATIVOS DIGITALES
     ============================================================ -->
     <main class="contenido-principal">
         <div class="container">
 
-            <!-- ============================================================
-            BOTÓN VOLVER ARRIBA
-            ============================================================ -->
-            <button class="btn-volver-arriba" id="btnVolverArriba" title="Volver arriba">⬆</button>
+            <h1 class="pagina-titulo">📚 2.2. Recursos Educativos Digitales</h1>
 
-            <h1 class="subpagina-titulo">Recursos Educativos Digitales</h1>
+            <!-- INTRODUCCIÓN -->
+            <p class="intro-texto">
+                Los Recursos Educativos Digitales (RED) constituyen herramientas fundamentales para fortalecer los procesos de enseñanza y aprendizaje, al facilitar la comprensión de conceptos mediante contenidos interactivos, simulaciones y actividades que promueven la participación del estudiante. Su adecuada selección resulta esencial para garantizar el cumplimiento de los objetivos de aprendizaje y favorecer el desarrollo de competencias en diferentes áreas del conocimiento.
+            </p>
+            <p class="intro-texto">
+                Para el desarrollo de este trabajo se seleccionaron dos Recursos Educativos Digitales sobre la temática <strong>Movimiento de Proyectil</strong>, dirigidos a estudiantes de grado décimo en el área de Física. La elección de ambos recursos permitió realizar una evaluación comparativa utilizando los modelos CODA, LORI y Reeves, identificando sus fortalezas, limitaciones y calidad educativa desde diferentes perspectivas.
+            </p>
 
-            <!-- ============================================================
-            INTRODUCCIÓN
-            ============================================================ -->
-            <section class="red-introduccion">
-                <p>
-                    Los <strong>Recursos Educativos Digitales (RED)</strong> constituyen herramientas fundamentales
-                    para fortalecer los procesos de enseñanza y aprendizaje, al facilitar la comprensión de conceptos
-                    mediante contenidos interactivos, simulaciones y actividades que promueven la participación del
-                    estudiante. Su adecuada selección resulta esencial para garantizar el cumplimiento de los objetivos
-                    de aprendizaje y favorecer el desarrollo de competencias en diferentes áreas del conocimiento.
-                </p>
-                <p>
-                    Para el desarrollo de este trabajo se seleccionaron dos Recursos Educativos Digitales sobre la
-                    temática <strong>Movimiento de Proyectil</strong>, dirigidos a estudiantes de grado décimo en el
-                    área de Física. La elección de ambos recursos permitió realizar una evaluación comparativa
-                    utilizando los modelos CODA, LORI y Reeves, identificando sus fortalezas, limitaciones y calidad
-                    educativa desde diferentes perspectivas.
-                </p>
-            </section>
-
-            <!-- ============================================================
-            RED 1: RURAL STEAM LAB – TARJETA PREMIUM
-            ============================================================ -->
-            <article class="red-item tarjeta-red-premium">
-                <div class="tarjeta-red-header">
-                    <span class="badge-red">RED 1</span>
-                    <h2>Rural STEAM Lab – Simulador Interactivo de Movimiento de Proyectil</h2>
+            <!-- =========================================================
+            RED 1 – RURAL STEAM LAB
+            ========================================================= -->
+            <div class="red-card">
+                <div class="red-header">
+                    <h3>🧪 RED 1: Rural STEAM Lab</h3>
+                    <span class="badge-red">Simulador de Movimiento de Proyectil</span>
                 </div>
 
-                <div class="tarjeta-red-grid">
-                    <!-- Columna izquierda: información -->
-                    <div class="tarjeta-red-info">
-                        <div class="info-item">
-                            <span class="info-icon">📘</span>
-                            <div>
-                                <strong>Nombre del RED</strong>
-                                <p>Rural STEAM Lab – Simulador Interactivo de Movimiento de Proyectil</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">📚</span>
-                            <div>
-                                <strong>Área de conocimiento</strong>
-                                <p>Física</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">🎯</span>
-                            <div>
-                                <strong>Temática específica</strong>
-                                <p>Movimiento de Proyectil (Movimiento Parabólico)</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">🎓</span>
-                            <div>
-                                <strong>Nivel o grado de aplicación</strong>
-                                <p>Educación Media – Grado Décimo (10°)</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">✍️</span>
-                            <div>
-                                <strong>Autor(es)</strong>
-                                <p>Ing. Henson Alberto Medina Castillo – Rural STEAM Lab</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">🏛️</span>
-                            <div>
-                                <strong>Institución</strong>
-                                <p>Rural STEAM Lab – Proyecto de innovación educativa originado en la Universidad de Santander (UDES)</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">📦</span>
-                            <div>
-                                <strong>Repositorio donde se encuentra alojado</strong>
-                                <p>Repositorio oficial de Rural STEAM Lab en GitHub</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">🔗</span>
-                            <div>
-                                <strong>Enlace al repositorio</strong>
-                                <p><a href="https://github.com/ruralstemlab/rural-steam-platform" target="_blank">GitHub – Rural STEAM Platform</a></p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">🌐</span>
-                            <div>
-                                <strong>Enlace al RED</strong>
-                                <p><a href="https://ruralsteamlab.com/simulators/projectile-motion/" target="_blank">Simulador de Movimiento de Proyectil – Rural STEAM Lab</a></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Columna derecha: imagen -->
-                    <div class="tarjeta-red-imagen">
-                        <img src="img/rural-steam-lab.jpg" alt="Rural STEAM Lab – Simulador de Movimiento de Proyectil" />
-                        <p class="pie-imagen"><em>Figura 1.</em> Interfaz del simulador Rural STEAM Lab – Movimiento de Proyectil.</p>
-                        <p class="fuente-imagen"><strong>Fuente:</strong> Rural STEAM Lab (2026).</p>
-                    </div>
+                <!-- Imagen -->
+                <div class="red-imagen">
+                    <img src="img/rural-steam-lab.jpg" alt="Rural STEAM Lab – Simulador de Movimiento de Proyectil" />
+                    <p class="figcaption">Figura 1. Interfaz del simulador Rural STEAM Lab – Movimiento de Proyectil. Fuente: Rural STEAM Lab (2026).</p>
                 </div>
 
-                <!-- Sección de descripción, características, limitaciones y estándares -->
-                <div class="tarjeta-red-detalles">
-                    <div class="detalle-bloque">
-                        <h3>📝 Descripción del RED</h3>
-                        <p>
-                            Recurso educativo digital interactivo diseñado para fortalecer el aprendizaje del movimiento
-                            de proyectil mediante simulación. El estudiante puede modificar variables como la velocidad
-                            inicial y el ángulo de lanzamiento para analizar la trayectoria, la altura máxima, el alcance
-                            horizontal y el tiempo de vuelo, favoreciendo el aprendizaje por experimentación y la
-                            comprensión de la cinemática bidimensional.
-                        </p>
-                    </div>
+                <!-- Ficha técnica -->
+                <table class="ficha-tecnica">
+                    <tr>
+                        <td class="etiqueta">📘 Nombre del RED</td>
+                        <td class="valor">Rural STEAM Lab – Simulador Interactivo de Movimiento de Proyectil</td>
+                    </tr>
+                    <tr>
+                        <td class="etiqueta">📚 Área de conocimiento</td>
+                        <td class="valor">Física</td>
+                    </tr>
+                    <tr>
+                        <td class="etiqueta">🎯 Temática específica</td>
+                        <td class="valor">Movimiento de Proyectil (Movimiento Parabólico)</td>
+                    </tr>
+                    <tr>
+                        <td class="etiqueta">🎓 Nivel o grado de aplicación</td>
+                        <td class="valor">Educación Media – Grado Décimo (10°)</td>
+                    </tr>
+                    <tr>
+                        <td class="etiqueta">✍️ Autor(es)</td>
+                        <td class="valor">Ing. Henson Alberto Medina Castillo – Rural STEAM Lab</td>
+                    </tr>
+                    <tr>
+                        <td class="etiqueta">🏛️ Institución</td>
+                        <td class="valor">Rural STEAM Lab – Proyecto de innovación educativa originado en la Universidad de Santander (UDES)</td>
+                    </tr>
+                    <tr>
+                        <td class="etiqueta">📦 Repositorio</td>
+                        <td class="valor"><a href="https://github.com/ruralstemlab/rural-steam-platform" target="_blank">GitHub – Rural STEAM Platform</a></td>
+                    </tr>
+                    <tr>
+                        <td class="etiqueta">🌐 Enlace al RED</td>
+                        <td class="valor"><a href="https://ruralsteamlab.com/simulators/projectile-motion/" target="_blank">Simulador de Movimiento de Proyectil – Rural STEAM Lab</a></td>
+                    </tr>
+                </table>
 
-                    <div class="detalle-bloque">
-                        <h3>⭐ Características y posibilidades de uso</h3>
+                <!-- Descripción -->
+                <div class="bloque-card">
+                    <div class="bloque-titulo">📝 Descripción del RED</div>
+                    <p style="margin:0; font-size:1rem;">
+                        Recurso educativo digital interactivo diseñado para fortalecer el aprendizaje del movimiento de proyectil mediante simulación. El estudiante puede modificar variables como la velocidad inicial y el ángulo de lanzamiento para analizar la trayectoria, la altura máxima, el alcance horizontal y el tiempo de vuelo, favoreciendo el aprendizaje por experimentación y la comprensión de la cinemática bidimensional.
+                    </p>
+                </div>
+
+                <!-- Características -->
+                <div class="bloque-grid">
+                    <div class="bloque-card">
+                        <div class="bloque-titulo">⭐ Características y posibilidades de uso</div>
                         <ul>
                             <li>Simulación interactiva en tiempo real.</li>
                             <li>Permite modificar variables del lanzamiento.</li>
@@ -188,121 +867,101 @@
                         </ul>
                     </div>
 
-                    <div class="detalle-bloque">
-                        <h3>⚠️ Limitaciones del RED</h3>
+                    <div class="bloque-card limitaciones">
+                        <div class="bloque-titulo">⚠️ Limitaciones del RED</div>
                         <ul>
                             <li>Requiere un navegador web moderno.</li>
                             <li>Algunas funciones pueden depender de la conexión a Internet.</li>
                             <li>No reemplaza las prácticas experimentales de laboratorio; actúa como recurso de apoyo para reforzar la comprensión conceptual.</li>
                         </ul>
                     </div>
-
-                    <div class="detalle-bloque">
-                        <h3>✅ Verificación de estándares en el RED</h3>
-                        <ul>
-                            <li>Desarrollado con HTML5, CSS3 y JavaScript.</li>
-                            <li>Diseño adaptable (Responsive).</li>
-                            <li>Interactividad en tiempo real.</li>
-                            <li>Recurso reutilizable.</li>
-                            <li>Compatible con navegadores modernos.</li>
-                            <li>Favorece la accesibilidad desde diferentes dispositivos.</li>
-                            <li>Integrable en ambientes virtuales de aprendizaje mediante enlace web.</li>
-                        </ul>
-                    </div>
-                </div>
-            </article>
-
-            <!-- ============================================================
-            RED 2: PHET – TARJETA PREMIUM
-            ============================================================ -->
-            <article class="red-item tarjeta-red-premium">
-                <div class="tarjeta-red-header">
-                    <span class="badge-red">RED 2</span>
-                    <h2>PhET Interactive Simulations – Projectile Motion</h2>
                 </div>
 
-                <div class="tarjeta-red-grid">
-                    <!-- Columna izquierda: información -->
-                    <div class="tarjeta-red-info">
-                        <div class="info-item">
-                            <span class="info-icon">📘</span>
-                            <div>
-                                <strong>Nombre del RED</strong>
-                                <p>Simulación interactiva "Movimiento de proyectiles" (PhET)</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">📚</span>
-                            <div>
-                                <strong>Área de conocimiento</strong>
-                                <p>Física</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">🎯</span>
-                            <div>
-                                <strong>Temática específica</strong>
-                                <p>Movimiento de Proyectil (Movimiento Parabólico)</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">🎓</span>
-                            <div>
-                                <strong>Nivel o grado de aplicación</strong>
-                                <p>Educación Media – Grado Décimo (10°)</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">✍️</span>
-                            <div>
-                                <strong>Autor(es)</strong>
-                                <p>Equipo PhET Interactive Simulations – Universidad de Colorado Boulder</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">🏛️</span>
-                            <div>
-                                <strong>Institución</strong>
-                                <p>Universidad de Colorado Boulder</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">🌐</span>
-                            <div>
-                                <strong>Sitio oficial</strong>
-                                <p><a href="https://phet.colorado.edu/es/" target="_blank">PhET Interactive Simulations</a></p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">🔗</span>
-                            <div>
-                                <strong>Enlace al RED</strong>
-                                <p><a href="https://phet.colorado.edu/es/simulations/projectile-motion" target="_blank">Simulación Movimiento de Proyectiles</a></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Columna derecha: imagen -->
-                    <div class="tarjeta-red-imagen">
-                        <img src="img/phet-simulations.png" alt="PhET Interactive Simulations – Projectile Motion" />
-                        <p class="pie-imagen"><em>Figura 2.</em> Interfaz de la simulación PhET – Movimiento de Proyectiles.</p>
-                        <p class="fuente-imagen"><strong>Fuente:</strong> PhET Interactive Simulations (2026).</p>
+                <!-- Verificación de estándares -->
+                <div class="bloque-card estandares">
+                    <div class="bloque-titulo">✅ Verificación de estándares en el RED</div>
+                    <ul>
+                        <li>Desarrollado con HTML5, CSS3 y JavaScript.</li>
+                        <li>Diseño adaptable (Responsive).</li>
+                        <li>Interactividad en tiempo real.</li>
+                        <li>Recurso reutilizable.</li>
+                        <li>Compatible con navegadores modernos.</li>
+                        <li>Favorece la accesibilidad desde diferentes dispositivos.</li>
+                        <li>Integrable en ambientes virtuales de aprendizaje mediante enlace web.</li>
+                    </ul>
+                    <div class="chips-container">
+                        <span class="chip tech">HTML5</span>
+                        <span class="chip tech">CSS3</span>
+                        <span class="chip tech">JavaScript</span>
+                        <span class="chip">Responsive</span>
+                        <span class="chip">Canvas</span>
                     </div>
                 </div>
+            </div>
 
-                <!-- Sección de descripción, características, limitaciones y estándares -->
-                <div class="tarjeta-red-detalles">
-                    <div class="detalle-bloque">
-                        <h3>📝 Descripción del RED</h3>
-                        <p>
-                            Es una simulación interactiva que permite estudiar el movimiento de proyectiles mediante la
-                            manipulación de variables como ángulo, velocidad inicial, masa y gravedad. Facilita la
-                            comprensión de conceptos físicos a través de la experimentación virtual.
-                        </p>
-                    </div>
+            <!-- =========================================================
+            RED 2 – PHET
+            ========================================================= -->
+            <div class="red-card">
+                <div class="red-header">
+                    <h3>🔬 RED 2: PhET Interactive Simulations</h3>
+                    <span class="badge-red">Projectile Motion</span>
+                </div>
 
-                    <div class="detalle-bloque">
-                        <h3>⭐ Características y posibilidades de uso</h3>
+                <!-- Imagen -->
+                <div class="red-imagen">
+                    <img src="img/phet-simulations.jpg" alt="PhET Interactive Simulations – Projectile Motion" />
+                    <p class="figcaption">Figura 2. Interfaz de la simulación PhET – Movimiento de Proyectiles. Fuente: PhET Interactive Simulations (2026).</p>
+                </div>
+
+                <!-- Ficha técnica -->
+                <table class="ficha-tecnica">
+                    <tr>
+                        <td class="etiqueta">📘 Nombre del RED</td>
+                        <td class="valor">Simulación interactiva "Movimiento de proyectiles" (PhET)</td>
+                    </tr>
+                    <tr>
+                        <td class="etiqueta">📚 Área de conocimiento</td>
+                        <td class="valor">Física</td>
+                    </tr>
+                    <tr>
+                        <td class="etiqueta">🎯 Temática específica</td>
+                        <td class="valor">Movimiento de Proyectil (Movimiento Parabólico)</td>
+                    </tr>
+                    <tr>
+                        <td class="etiqueta">🎓 Nivel o grado de aplicación</td>
+                        <td class="valor">Educación Media – Grado Décimo (10°)</td>
+                    </tr>
+                    <tr>
+                        <td class="etiqueta">✍️ Autor(es)</td>
+                        <td class="valor">Equipo PhET Interactive Simulations – Universidad de Colorado Boulder</td>
+                    </tr>
+                    <tr>
+                        <td class="etiqueta">🏛️ Institución</td>
+                        <td class="valor">Universidad de Colorado Boulder</td>
+                    </tr>
+                    <tr>
+                        <td class="etiqueta">🌐 Sitio oficial</td>
+                        <td class="valor"><a href="https://phet.colorado.edu/es/" target="_blank">PhET Interactive Simulations</a></td>
+                    </tr>
+                    <tr>
+                        <td class="etiqueta">🔗 Enlace al RED</td>
+                        <td class="valor"><a href="https://phet.colorado.edu/es/simulation/projectile-motion" target="_blank">Simulación Movimiento de Proyectiles</a></td>
+                    </tr>
+                </table>
+
+                <!-- Descripción -->
+                <div class="bloque-card">
+                    <div class="bloque-titulo">📝 Descripción del RED</div>
+                    <p style="margin:0; font-size:1rem;">
+                        Es una simulación interactiva que permite estudiar el movimiento de proyectiles mediante la manipulación de variables como ángulo, velocidad inicial, masa y gravedad. Facilita la comprensión de conceptos físicos a través de la experimentación virtual.
+                    </p>
+                </div>
+
+                <!-- Características -->
+                <div class="bloque-grid">
+                    <div class="bloque-card">
+                        <div class="bloque-titulo">⭐ Características y posibilidades de uso</div>
                         <ul>
                             <li>Interfaz interactiva y fácil de usar.</li>
                             <li>Permite modificar variables en tiempo real.</li>
@@ -312,34 +971,45 @@
                         </ul>
                     </div>
 
-                    <div class="detalle-bloque">
-                        <h3>⚠️ Limitaciones del RED</h3>
+                    <div class="bloque-card limitaciones">
+                        <div class="bloque-titulo">⚠️ Limitaciones del RED</div>
                         <ul>
                             <li>Requiere acceso a internet o dispositivo digital.</li>
                             <li>No reemplaza completamente la experimentación real.</li>
                             <li>Puede requerir orientación docente para su adecuado uso.</li>
                         </ul>
                     </div>
+                </div>
 
-                    <div class="detalle-bloque">
-                        <h3>✅ Verificación de estándares en el RED</h3>
-                        <ul>
-                            <li>Interactividad (LORI).</li>
-                            <li>Usabilidad y diseño (CODA).</li>
-                            <li>Impacto en el aprendizaje y motivación (Reeves).</li>
-                            <li>Pertinencia pedagógica en la enseñanza de conceptos físicos.</li>
-                        </ul>
+                <!-- Verificación de estándares -->
+                <div class="bloque-card estandares">
+                    <div class="bloque-titulo">✅ Verificación de estándares en el RED</div>
+                    <ul>
+                        <li>Interactividad (LORI).</li>
+                        <li>Usabilidad y diseño (CODA).</li>
+                        <li>Impacto en el aprendizaje y motivación (Reeves).</li>
+                        <li>Pertinencia pedagógica en la enseñanza de conceptos físicos.</li>
+                    </ul>
+                    <div class="chips-container">
+                        <span class="chip tech">HTML5</span>
+                        <span class="chip tech">JavaScript</span>
+                        <span class="chip">Responsive</span>
+                        <span class="chip">Canvas</span>
+                        <span class="chip">Multiidioma</span>
                     </div>
                 </div>
-            </article>
+            </div>
 
-            <!-- ============================================================
-            TABLA COMPARATIVA
-            ============================================================ -->
-            <section class="red-comparacion">
+            <!-- =========================================================
+            COMPARACIÓN ENTRE AMBOS RECURSOS
+            ========================================================= -->
+            <section>
                 <h2>📊 Comparación entre ambos recursos</h2>
+                <p style="margin-bottom: 20px;">
+                    La siguiente tabla presenta una comparación de los dos Recursos Educativos Digitales en aspectos clave para la evaluación pedagógica y tecnológica:
+                </p>
 
-                <div class="tabla-responsive">
+                <div class="tabla-comparativa-wrapper">
                     <table class="tabla-comparativa">
                         <thead>
                             <tr>
@@ -351,76 +1021,80 @@
                         <tbody>
                             <tr>
                                 <td><strong>Contextualización rural</strong></td>
-                                <td><span class="check">✔</span> Alta</td>
-                                <td><span class="check">◐</span> Parcial</td>
+                                <td><span class="check-verde">✔ Alta</span></td>
+                                <td><span class="check-amarillo">◐ Parcial</span></td>
                             </tr>
                             <tr>
                                 <td><strong>Interactividad</strong></td>
-                                <td><span class="check">✔</span> Excelente</td>
-                                <td><span class="check">✔</span> Excelente</td>
+                                <td><span class="check-verde">✔ Excelente</span></td>
+                                <td><span class="check-verde">✔ Excelente</span></td>
                             </tr>
                             <tr>
                                 <td><strong>Accesibilidad</strong></td>
-                                <td><span class="check">✔</span> Alta</td>
-                                <td><span class="check">✔</span> Muy alta</td>
+                                <td><span class="check-verde">✔ Alta</span></td>
+                                <td><span class="check-verde">✔ Muy alta</span></td>
                             </tr>
                             <tr>
                                 <td><strong>Uso en aula</strong></td>
-                                <td><span class="check">✔</span> Excelente</td>
-                                <td><span class="check">✔</span> Excelente</td>
+                                <td><span class="check-verde">✔ Excelente</span></td>
+                                <td><span class="check-verde">✔ Excelente</span></td>
                             </tr>
                             <tr>
                                 <td><strong>Reconocimiento internacional</strong></td>
-                                <td><span class="check">◐</span> En desarrollo</td>
-                                <td><span class="check">✔</span> Muy alto</td>
+                                <td><span class="check-amarillo">◐ En desarrollo</span></td>
+                                <td><span class="check-verde">✔ Muy alto</span></td>
                             </tr>
                             <tr>
                                 <td><strong>Enfoque STEAM</strong></td>
-                                <td><span class="check">✔</span> Integrado</td>
-                                <td><span class="check">◐</span> Implícito</td>
+                                <td><span class="check-verde">✔ Integrado</span></td>
+                                <td><span class="check-amarillo">◐ Implícito</span></td>
                             </tr>
                             <tr>
                                 <td><strong>Código abierto / Personalizable</strong></td>
-                                <td><span class="check">✔</span> Sí</td>
-                                <td><span class="check">✖</span> No</td>
+                                <td><span class="check-verde">✔ Sí</span></td>
+                                <td><span class="check-amarillo">✖ No</span></td>
                             </tr>
                             <tr>
                                 <td><strong>Idiomas disponibles</strong></td>
-                                <td><span class="check">◐</span> Español / Inglés</td>
-                                <td><span class="check">✔</span> Múltiples idiomas</td>
+                                <td><span class="check-amarillo">◐ Español / Inglés</span></td>
+                                <td><span class="check-verde">✔ Múltiples idiomas</span></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+                <p style="font-style:italic; color:#556b52; font-size:0.9rem; margin-top:8px;">
+                    Nota. Elaboración propia a partir del análisis de los recursos educativos digitales.
+                </p>
+            </section>
 
-                <!-- CONCLUSIÓN DE LA COMPARACIÓN -->
-                <div class="comparacion-conclusion">
+            <!-- =========================================================
+            CONCLUSIÓN DE LA COMPARACIÓN
+            ========================================================= -->
+            <section>
+                <div class="conclusion-box">
                     <h3>🔍 Conclusión de la comparación</h3>
                     <p>
-                        La selección de estos Recursos Educativos Digitales permitió disponer de dos simuladores
-                        con características complementarias para desarrollar la evaluación mediante los modelos
-                        <strong>CODA</strong>, <strong>LORI</strong> y <strong>Reeves</strong>. Ambos recursos
-                        presentan fortalezas pedagógicas y tecnológicas que facilitan el aprendizaje del movimiento
-                        de proyectil, constituyendo una base adecuada para la aplicación de los instrumentos de
-                        evaluación desarrollados en este trabajo.
+                        La selección de estos Recursos Educativos Digitales permitió disponer de dos simuladores con características complementarias para desarrollar la evaluación mediante los modelos CODA, LORI y Reeves. Ambos recursos presentan fortalezas pedagógicas y tecnológicas que facilitan el aprendizaje del movimiento de proyectil, constituyendo una base adecuada para la aplicación de los instrumentos de evaluación desarrollados en este trabajo.
                     </p>
                     <p>
-                        <em>Rural STEAM Lab</em> ofrece una valiosa contextualización para el entorno rural colombiano
-                        y un enfoque STEAM explícito, mientras que <em>PhET</em> proporciona una plataforma consolidada
-                        con reconocimiento global y una amplia gama de recursos complementarios. La combinación de
-                        ambos recursos permite atender diferentes necesidades educativas y estilos de aprendizaje,
-                        enriqueciendo el proceso de enseñanza-aprendizaje de la Física.
+                        <strong>Rural STEAM Lab</strong> ofrece una valiosa contextualización para el entorno rural colombiano y un enfoque STEAM explícito, mientras que <strong>PhET</strong> proporciona una plataforma consolidada con reconocimiento global y una amplia gama de recursos complementarios. La combinación de ambos recursos permite atender diferentes necesidades educativas y estilos de aprendizaje, enriqueciendo el proceso de enseñanza-aprendizaje de la Física.
                     </p>
                 </div>
             </section>
 
-            <!-- ============================================================
-            BOTONES DE NAVEGACIÓN
-            ============================================================ -->
-            <div class="navegacion-paginas">
-                <a href="seleccionando-modelos.html" class="btn-nav anterior">⬅ Anterior</a>
-                <a href="rediseno.html" class="btn-nav siguiente">Siguiente ➡</a>
-            </div>
+            <!-- =========================================================
+            NAVEGACIÓN ENTRE SUBPÁGINAS (botones)
+            ========================================================= -->
+            <section class="navegacion-subpaginas">
+                <div class="botones-navegacion">
+                    <a href="seleccionando-modelos.html" class="btn-nav btn-atras">
+                        ← Anterior: Selección de modelos
+                    </a>
+                    <a href="rediseno.html" class="btn-nav btn-adelante">
+                        Siguiente: Rediseño del modelo →
+                    </a>
+                </div>
+            </section>
 
         </div>
     </main>
@@ -431,49 +1105,16 @@
     <footer class="pie-pagina">
         <div class="container">
             <p>
-                &copy; 2026 - Nelson Anaya Carvajal - Universidad de Santander
+                &copy; 2026 – Nelson Anaya Carvajal – Universidad de Santander
             </p>
             <p>
                 Especialización en Aplicación de TIC para la Enseñanza – EATICE
             </p>
+            <p style="font-size:0.8rem; opacity:0.8; margin-top:6px;">
+                © 2021 Bajo licencia Creative Commons
+            </p>
         </div>
     </footer>
-
-    <!-- ============================================================
-    JAVASCRIPT PARA EL BOTÓN VOLVER ARRIBA
-    ============================================================ -->
-    <script>
-        // ============================================================
-        // BOTÓN VOLVER ARRIBA
-        // ============================================================
-        (function() {
-            'use strict';
-
-            const btn = document.getElementById('btnVolverArriba');
-
-            if (!btn) return;
-
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 300) {
-                    btn.style.display = 'flex';
-                } else {
-                    btn.style.display = 'none';
-                }
-            });
-
-            btn.addEventListener('click', function() {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-
-            if (window.scrollY <= 300) {
-                btn.style.display = 'none';
-            }
-
-        })();
-    </script>
 
 </body>
 </html>
