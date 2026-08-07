@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aplicación del modelo | Portafolio</title>
+    <title>Aplicación del modelo LORI-RSL | Portafolio</title>
 
-    <!-- ================================================================
-    CSS EMBEBIDO – ESTILO PREMIUM CON MENÚ MEJORADO
-    ================================================================ -->
     <style>
         /* ---------- RESET Y BASE ---------- */
         * {
@@ -113,7 +110,6 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         }
 
-        /* Submenú mejorado (sin espacios) */
         .menu-principal ul li .sub-menu {
             display: none;
             position: absolute;
@@ -203,6 +199,14 @@
             font-weight: 700;
         }
 
+        h3 {
+            font-size: 1.3rem;
+            color: #1b5e20;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
         p {
             margin-bottom: 16px;
             text-align: justify;
@@ -284,6 +288,209 @@
             border-radius: 20px;
             font-size: 0.8rem;
             font-weight: 700;
+        }
+
+        /* Badges de puntuación con colores */
+        .puntaje-excelente {
+            display: inline-block;
+            background: #27ae60;
+            color: #fff;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .puntaje-bueno {
+            display: inline-block;
+            background: #f39c12;
+            color: #fff;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .puntaje-aceptable {
+            display: inline-block;
+            background: #e67e22;
+            color: #fff;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        /* Barras de progreso para dashboard */
+        .progress-bar-container {
+            background: #eaf0e6;
+            border-radius: 20px;
+            height: 24px;
+            overflow: hidden;
+            margin: 4px 0;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #fff;
+            transition: width 0.5s ease;
+        }
+
+        .progress-green {
+            background: linear-gradient(90deg, #27ae60, #2ecc71);
+        }
+
+        .progress-gold {
+            background: linear-gradient(90deg, #f39c12, #f1c40f);
+        }
+
+        /* ---------- FIGURAS / IMÁGENES ---------- */
+        .figura-container {
+            text-align: center;
+            margin: 30px 0 20px 0;
+        }
+
+        .figura-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 14px;
+            border: 1px solid #dce8d6;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        .figura-container .figcaption {
+            font-size: 0.9rem;
+            color: #556b52;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* ---------- DASHBOARD COMPARATIVO (Figura 5) ---------- */
+        .dashboard-comparativo {
+            background: #f8fbf6;
+            border-radius: 16px;
+            padding: 30px 24px;
+            margin: 30px 0 20px 0;
+            border: 1px solid #e0e8dc;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+        }
+
+        .dashboard-comparativo .dashboard-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 12px 0;
+            border-bottom: 1px solid #e8f0e4;
+        }
+
+        .dashboard-comparativo .dashboard-item:last-child {
+            border-bottom: none;
+        }
+
+        .dashboard-comparativo .dashboard-label {
+            font-weight: 700;
+            color: #1b5e20;
+            min-width: 160px;
+            font-size: 1rem;
+        }
+
+        .dashboard-comparativo .dashboard-barra {
+            flex: 1;
+        }
+
+        .dashboard-comparativo .dashboard-puntaje {
+            font-weight: 700;
+            font-size: 1.1rem;
+            min-width: 80px;
+            text-align: right;
+            color: #1b5e20;
+        }
+
+        .dashboard-comparativo .dashboard-nivel {
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 2px 14px;
+            border-radius: 20px;
+            min-width: 90px;
+            text-align: center;
+        }
+
+        .dashboard-nivel-excelente {
+            background: #27ae60;
+            color: #fff;
+        }
+
+        .dashboard-nivel-bueno {
+            background: #f39c12;
+            color: #fff;
+        }
+
+        /* ---------- DIAGRAMA DEL INSTRUMENTO ---------- */
+        .diagrama-instrumento {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            padding: 24px 20px;
+            background: #f8fbf6;
+            border-radius: 16px;
+            border: 1px solid #e0e8dc;
+            margin: 20px 0;
+        }
+
+        .diagrama-instrumento .diagrama-titulo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #1b5e20;
+            margin-bottom: 8px;
+        }
+
+        .diagrama-instrumento .diagrama-fila {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .diagrama-instrumento .diagrama-bloque {
+            background: #fff;
+            border: 2px solid #1b5e20;
+            border-radius: 12px;
+            padding: 10px 18px;
+            font-weight: 600;
+            color: #1b5e20;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .diagrama-instrumento .diagrama-bloque.original {
+            background: #e8f5e9;
+            border-color: #2e7d32;
+        }
+
+        .diagrama-instrumento .diagrama-bloque.nuevo {
+            background: #fff3e0;
+            border-color: #f9a825;
+        }
+
+        .diagrama-instrumento .diagrama-bloque.resultado {
+            background: #1b5e20;
+            color: #fff;
+            border-color: #1b5e20;
+        }
+
+        .diagrama-instrumento .diagrama-flecha {
+            font-size: 1.8rem;
+            color: #1b5e20;
         }
 
         /* ---------- BOTONES DE NAVEGACIÓN ---------- */
@@ -410,6 +617,10 @@
                 font-size: 1.5rem;
             }
 
+            h3 {
+                font-size: 1.1rem;
+            }
+
             p {
                 font-size: 0.98rem;
             }
@@ -432,6 +643,34 @@
                 text-align: center;
                 padding: 10px 16px;
                 font-size: 0.9rem;
+            }
+
+            .dashboard-comparativo .dashboard-item {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .dashboard-comparativo .dashboard-label {
+                min-width: 100%;
+                font-size: 0.95rem;
+            }
+
+            .dashboard-comparativo .dashboard-puntaje {
+                min-width: 60px;
+                font-size: 1rem;
+            }
+
+            .diagrama-instrumento .diagrama-fila {
+                gap: 6px;
+            }
+
+            .diagrama-instrumento .diagrama-bloque {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+
+            .diagrama-instrumento .diagrama-flecha {
+                font-size: 1.2rem;
             }
         }
 
@@ -461,6 +700,10 @@
                 padding-left: 12px;
             }
 
+            h3 {
+                font-size: 1rem;
+            }
+
             .tabla-modelos {
                 font-size: 0.78rem;
             }
@@ -468,6 +711,10 @@
             .tabla-modelos thead th,
             .tabla-modelos tbody td {
                 padding: 5px 6px;
+            }
+
+            .dashboard-comparativo {
+                padding: 16px;
             }
         }
     </style>
@@ -511,148 +758,495 @@
     </nav>
 
     <!-- ============================================================
-    CONTENIDO PRINCIPAL – APLICACIÓN DEL MODELO
+    CONTENIDO PRINCIPAL – APLICACIÓN DEL MODELO LORI-RSL
     ============================================================ -->
     <main class="contenido-principal">
         <div class="container">
 
-            <h1 class="pagina-titulo">📊 Aplicación del modelo de evaluación</h1>
+            <h1 class="pagina-titulo">📊 Aplicación del modelo de evaluación LORI-RSL</h1>
 
             <!-- =========================================================
-            SECCIÓN 1 – APLICACIÓN DE CODA, LORI Y REEVES
+            SECCIÓN 1 – INTRODUCCIÓN
             ========================================================= -->
             <section>
-                <h2>📌 Aplicación de CODA, LORI y Reeves</h2>
+                <h2>1. Introducción</h2>
                 <p>
-                    La aplicación de los modelos <strong>CODA</strong>, <strong>LORI</strong> y <strong>Reeves</strong> a los recursos educativos digitales <em>Rural STEAM Lab – Simulador Interactivo de Movimiento de Proyectil</em> y <em>PhET Interactive Simulations – Projectile Motion</em> permitió obtener una valoración integral desde las dimensiones pedagógica, tecnológica y de diseño instruccional.
+                    Una vez culminado el proceso de rediseño del modelo de evaluación <strong>LORI-RSL</strong>, se procedió a su implementación con el propósito de validar su funcionamiento en un contexto real de evaluación de Recursos Educativos Digitales. Para ello, el instrumento fue aplicado a dos recursos sobre la temática <strong>Movimiento de Proyectil</strong>: el simulador <strong>Rural STEAM Lab – Simulador Interactivo de Movimiento de Proyectil</strong> y la simulación <strong>PhET Interactive Simulations – Projectile Motion</strong>, ambos dirigidos a estudiantes de grado décimo en el área de Física.
+                </p>
+                <p>
+                    La aplicación del modelo permitió valorar de manera sistemática los <strong>catorce criterios</strong> que conforman el instrumento LORI-RSL, integrando los nueve indicadores originales del modelo LORI con cinco nuevos criterios relacionados con la integración del enfoque STEAM, la contextualización al entorno educativo, la calidad de las simulaciones interactivas, el desarrollo del pensamiento sistémico y la gamificación. Esta implementación tuvo como finalidad comprobar la pertinencia del modelo propuesto y analizar su capacidad para ofrecer una evaluación más completa de los Recursos Educativos Digitales.
+                </p>
+                <p>
+                    Los resultados obtenidos permitieron identificar las fortalezas y oportunidades de mejora de cada recurso evaluado, así como evidenciar el aporte de los nuevos criterios incorporados al modelo. De esta manera, la implementación del <strong>LORI-RSL</strong> constituye una fase de validación que demuestra la utilidad del instrumento para apoyar los procesos de selección, evaluación y mejoramiento continuo de Recursos Educativos Digitales en diferentes contextos educativos.
+                </p>
+            </section>
+
+            <!-- =========================================================
+            SECCIÓN 2 – METODOLOGÍA DE APLICACIÓN
+            ========================================================= -->
+            <section>
+                <h2>2. Metodología de aplicación del modelo LORI-RSL</h2>
+                <p>
+                    Con el propósito de validar la pertinencia del modelo de evaluación <strong>LORI-RSL</strong>, se diseñó una metodología de aplicación estructurada en cinco etapas secuenciales que permitieron desarrollar el proceso de evaluación de manera sistemática, objetiva y organizada. Esta metodología orientó la implementación del instrumento en los dos Recursos Educativos Digitales seleccionados, garantizando la valoración de cada uno de los criterios establecidos en el modelo y facilitando el análisis e interpretación de los resultados obtenidos.
+                </p>
+                <p>
+                    En la primera etapa se realizó la <strong>selección del Recurso Educativo Digital (RED)</strong>, identificando aquellos recursos que, por sus características pedagógicas y tecnológicas, resultaban adecuados para el proceso de evaluación. Para este trabajo se seleccionaron el simulador <strong>Rural STEAM Lab – Simulador Interactivo de Movimiento de Proyectil</strong> y la simulación <strong>PhET Interactive Simulations – Projectile Motion</strong>, ambos orientados a la enseñanza del movimiento parabólico en estudiantes de educación media.
+                </p>
+                <p>
+                    Posteriormente, se llevó a cabo la <strong>aplicación del instrumento LORI-RSL</strong>, valorando cada uno de los catorce criterios mediante una escala de uno (1) a cinco (5), donde uno representa el nivel más bajo de cumplimiento y cinco el nivel más alto de calidad. Esta valoración permitió obtener un puntaje cuantitativo para cada recurso y una apreciación cualitativa de sus fortalezas y oportunidades de mejora.
+                </p>
+                <p>
+                    Una vez obtenidos los puntajes, se desarrolló la etapa de <strong>análisis de resultados</strong>, en la cual se compararon los valores alcanzados por cada recurso en los diferentes criterios del modelo. Posteriormente, se realizó la <strong>interpretación de la evaluación</strong>, relacionando los resultados con las características pedagógicas, tecnológicas y comunicacionales de cada Recurso Educativo Digital. Finalmente, se formularon <strong>recomendaciones de mejora</strong> orientadas a fortalecer aquellos aspectos susceptibles de optimización y a apoyar la toma de decisiones sobre la implementación y uso de los recursos en contextos educativos.
+                </p>
+                <p>
+                    La metodología propuesta garantiza un proceso de evaluación organizado y reproducible, permitiendo que el modelo <strong>LORI-RSL</strong> pueda ser aplicado en diferentes Recursos Educativos Digitales y adaptado a diversos escenarios de enseñanza y aprendizaje.
                 </p>
 
+                <div class="figura-container">
+                    <img src="img/metodologia-lori-rsl.png" alt="Metodología de aplicación del modelo LORI-RSL" />
+                    <p class="figcaption">Figura 1. Metodología de aplicación del modelo de evaluación LORI-RSL. Fuente: Elaboración propia (2026).</p>
+                </div>
+            </section>
+
+            <!-- =========================================================
+            SECCIÓN 3 – INSTRUMENTO DE EVALUACIÓN APLICADO
+            ========================================================= -->
+            <section>
+                <h2>3. Instrumento de evaluación aplicado</h2>
+                <p>
+                    La implementación del modelo <strong>LORI-RSL</strong> se realizó mediante un instrumento de evaluación diseñado para valorar integralmente la calidad de los Recursos Educativos Digitales desde las dimensiones <strong>pedagógica, tecnológica y comunicacional</strong>. Este instrumento constituye la principal herramienta del modelo y fue elaborado a partir de la estructura original del <strong>Learning Object Review Instrument (LORI)</strong>, conservando sus nueve criterios de evaluación e incorporando cinco nuevos indicadores derivados del proceso de rediseño.
+                </p>
+                <p>
+                    Los nuevos criterios fueron diseñados para responder a las necesidades de evaluación de Recursos Educativos Digitales que integran metodologías activas, simulaciones interactivas y el enfoque <strong>STEAM</strong>, permitiendo valorar aspectos que no eran considerados de manera explícita por el modelo original. En consecuencia, el instrumento <strong>LORI-RSL</strong> está conformado por <strong>catorce criterios de evaluación</strong>, cada uno de ellos orientado a analizar un aspecto específico de la calidad del recurso.
+                </p>
+                <p>
+                    La valoración de cada criterio se realizó utilizando una <strong>escala de uno (1) a cinco (5)</strong>, donde el valor <strong>1</strong> representa el nivel más bajo de cumplimiento y el valor <strong>5</strong> el nivel más alto de calidad. La suma de los puntajes obtenidos permite establecer una valoración global del recurso educativo, identificar sus fortalezas, reconocer oportunidades de mejora y facilitar la toma de decisiones relacionadas con su implementación y perfeccionamiento.
+                </p>
+
+                <!-- Diagrama del instrumento (Figura 2) -->
+                <div class="figura-container">
+                    <div class="diagrama-instrumento">
+                        <div class="diagrama-titulo">📋 LORI-RSL</div>
+                        <div style="font-size:0.95rem; color:#556b52; margin-bottom:8px;">14 criterios de evaluación</div>
+                        <div class="diagrama-fila">
+                            <span class="diagrama-bloque original">9 originales</span>
+                            <span class="diagrama-flecha">+</span>
+                            <span class="diagrama-bloque nuevo">5 nuevos</span>
+                        </div>
+                        <div class="diagrama-flecha" style="font-size:1.2rem;">⬇</div>
+                        <div class="diagrama-fila">
+                            <span class="diagrama-bloque">Evaluación</span>
+                            <span class="diagrama-flecha">→</span>
+                            <span class="diagrama-bloque resultado">Puntaje / 70</span>
+                            <span class="diagrama-flecha">→</span>
+                            <span class="diagrama-bloque resultado">Nivel de calidad</span>
+                        </div>
+                    </div>
+                    <p class="figcaption">Figura 2. Estructura del instrumento de evaluación LORI-RSL. Fuente: Elaboración propia (2026).</p>
+                </div>
+
+                <p style="margin-top:12px; font-style:italic; color:#556b52;">
+                    A continuación se presenta el instrumento de evaluación utilizado durante la aplicación del modelo <strong>LORI-RSL</strong>.
+                </p>
+
+                <h3>Tabla 1. Instrumento de evaluación del modelo LORI-RSL</h3>
                 <div class="tabla-wrapper">
                     <table class="tabla-modelos">
                         <thead>
                             <tr>
-                                <th>Modelo</th>
-                                <th>Rural STEAM Lab (puntaje)</th>
-                                <th>PhET (puntaje)</th>
-                                <th>Observaciones</th>
+                                <th style="width:5%;">N.º</th>
+                                <th style="width:30%;">Criterio de evaluación</th>
+                                <th style="width:55%;">Descripción</th>
+                                <th style="width:10%;">Puntaje (1-5)</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>CODA</strong></td>
-                                <td><span class="badge-puntaje">4.7 / 5 (94%)</span></td>
-                                <td><span class="badge-puntaje">4.8 / 5 (96%)</span></td>
-                                <td>Ambos recursos destacan en coherencia pedagógica, calidad científica y usabilidad. Oportunidad de mejora en accesibilidad.</td>
+                                <td>1</td>
+                                <td><strong>Calidad del contenido</strong></td>
+                                <td>Evalúa la precisión, actualidad, pertinencia y rigurosidad de la información presentada por el recurso.</td>
+                                <td>☐</td>
                             </tr>
                             <tr>
-                                <td><strong>LORI</strong></td>
-                                <td><span class="badge-puntaje">4.67 / 5 (93.3%)</span></td>
-                                <td><span class="badge-puntaje">4.7 / 5 (94%)</span></td>
-                                <td>Alta calidad en contenido, motivación y diseño. Limitaciones en retroalimentación personalizada e interoperabilidad.</td>
+                                <td>2</td>
+                                <td><strong>Alineación con los objetivos de aprendizaje</strong></td>
+                                <td>Determina el grado de correspondencia entre el recurso y los objetivos educativos propuestos.</td>
+                                <td>☐</td>
                             </tr>
                             <tr>
-                                <td><strong>Reeves</strong></td>
-                                <td><span class="badge-puntaje">4.78 / 5 (95.6%)</span></td>
-                                <td><span class="badge-puntaje">4.78 / 5 (95.6%)</span></td>
-                                <td>Excelente diseño instruccional y aprendizaje significativo. Se sugiere incorporar más actividades guiadas.</td>
+                                <td>3</td>
+                                <td><strong>Retroalimentación y adaptabilidad</strong></td>
+                                <td>Valora la calidad de la retroalimentación ofrecida al estudiante y la capacidad del recurso para responder a diferentes necesidades de aprendizaje.</td>
+                                <td>☐</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><strong>Motivación</strong></td>
+                                <td>Evalúa la capacidad del recurso para despertar el interés y mantener la participación del estudiante.</td>
+                                <td>☐</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><strong>Diseño de la presentación</strong></td>
+                                <td>Analiza la organización visual, legibilidad, estructura y presentación gráfica del recurso.</td>
+                                <td>☐</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><strong>Usabilidad e interacción</strong></td>
+                                <td>Evalúa la facilidad de navegación, utilización e interacción con el recurso educativo.</td>
+                                <td>☐</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><strong>Accesibilidad</strong></td>
+                                <td>Determina si el recurso puede ser utilizado por diferentes tipos de usuarios y dispositivos.</td>
+                                <td>☐</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td><strong>Reutilización</strong></td>
+                                <td>Valora la posibilidad de reutilizar el recurso en diferentes contextos educativos y asignaturas.</td>
+                                <td>☐</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td><strong>Cumplimiento de estándares</strong></td>
+                                <td>Evalúa el cumplimiento de estándares técnicos y educativos que favorecen la interoperabilidad del recurso.</td>
+                                <td>☐</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td><strong>Integración del enfoque STEAM</strong></td>
+                                <td>Analiza la incorporación de actividades interdisciplinarias que integren Ciencia, Tecnología, Ingeniería, Arte y Matemáticas.</td>
+                                <td>☐</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td><strong>Contextualización al entorno educativo</strong></td>
+                                <td>Valora la capacidad del recurso para adaptarse a las características del contexto donde será utilizado.</td>
+                                <td>☐</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td><strong>Calidad de las simulaciones interactivas</strong></td>
+                                <td>Evalúa la precisión, interactividad y capacidad de experimentación de las simulaciones incorporadas en el recurso.</td>
+                                <td>☐</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td><strong>Desarrollo del pensamiento sistémico</strong></td>
+                                <td>Analiza si el recurso favorece la comprensión de las relaciones entre conceptos y el análisis integral de los fenómenos estudiados.</td>
+                                <td>☐</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td><strong>Gamificación y participación del estudiante</strong></td>
+                                <td>Valora la incorporación de elementos que promuevan la motivación, el compromiso y la participación mediante estrategias de gamificación.</td>
+                                <td>☐</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <p style="font-style:italic; color:#556b52; font-size:0.9rem; margin-top:8px;">
-                    Nota. Elaboración propia a partir de la aplicación de los modelos CODA, LORI y Reeves a los RED seleccionados.
+                    <strong>Puntaje total:</strong> ______ / 70 puntos
                 </p>
                 <p>
-                    Los resultados evidencian que ambos recursos presentan una alta calidad educativa y constituyen herramientas pertinentes para fortalecer el aprendizaje del movimiento parabólico en estudiantes de grado décimo. Las principales oportunidades de mejora se relacionan con la accesibilidad, la retroalimentación personalizada y la interoperabilidad con plataformas de gestión del aprendizaje.
+                    Al finalizar la aplicación del instrumento, el puntaje total obtenido por cada Recurso Educativo Digital se interpretó mediante la escala de valoración establecida para el modelo <strong>LORI-RSL</strong>, permitiendo clasificar el nivel de calidad alcanzado y orientar el análisis comparativo entre los recursos evaluados.
                 </p>
             </section>
 
             <!-- =========================================================
-            SECCIÓN 2 – COMPARACIÓN DE MODELOS
+            SECCIÓN 4 – APLICACIÓN AL RED 1 (RURAL STEAM LAB)
             ========================================================= -->
             <section>
-                <h2>📊 Comparación de modelos</h2>
+                <h2>4. Aplicación del modelo LORI-RSL al Recurso Educativo Digital 1</h2>
+                <h3>Rural STEAM Lab – Simulador Interactivo de Movimiento de Proyectil</h3>
                 <p>
-                    El análisis comparativo permitió establecer que los tres modelos son complementarios y ofrecen perspectivas diferentes sobre la calidad de los Recursos Educativos Digitales. Mientras CODA profundiza en los aspectos didácticos y tecnológicos, Reeves enfatiza el diseño instruccional y la experiencia de aprendizaje. LORI integra ambos enfoques, proporcionando una evaluación equilibrada entre la calidad pedagógica, la usabilidad y las características técnicas del recurso.
+                    Con el propósito de validar la aplicabilidad del modelo <strong>LORI-RSL</strong>, el instrumento de evaluación fue implementado en el recurso educativo digital <strong>Rural STEAM Lab – Simulador Interactivo de Movimiento de Proyectil</strong>, desarrollado para apoyar la enseñanza del movimiento parabólico en estudiantes de educación media. Este recurso fue seleccionado por integrar simulaciones interactivas, actividades orientadas al aprendizaje activo y un enfoque pedagógico fundamentado en la metodología <strong>STEAM</strong>, características que permiten valorar de manera integral los nuevos criterios incorporados al modelo propuesto.
+                </p>
+                <p>
+                    La evaluación se realizó mediante la aplicación de los catorce criterios establecidos en el instrumento LORI-RSL, asignando una valoración entre uno (1) y cinco (5) para cada uno de ellos. El proceso permitió analizar tanto la calidad pedagógica y tecnológica del recurso como los aspectos relacionados con la contextualización educativa, la integración interdisciplinaria, la calidad de las simulaciones y la participación del estudiante.
                 </p>
 
+                <div class="figura-container">
+                    <img src="img/rural-steam-lab.jpg" alt="Rural STEAM Lab – Simulador Interactivo de Movimiento de Proyectil" />
+                    <p class="figcaption">Figura 3. Rural STEAM Lab – Simulador Interactivo de Movimiento de Proyectil. Fuente: Rural STEAM Lab (2026).</p>
+                </div>
+
+                <p style="font-style:italic; color:#556b52;">
+                    Los resultados obtenidos mediante la aplicación del instrumento LORI-RSL se presentan en la Tabla 2. En ella se observa la valoración asignada a cada uno de los catorce criterios establecidos por el modelo, así como el puntaje total alcanzado por el recurso educativo evaluado.
+                </p>
+
+                <h3>Tabla 2. Resultados de la aplicación del modelo LORI-RSL al RED Rural STEAM Lab</h3>
                 <div class="tabla-wrapper">
                     <table class="tabla-modelos">
                         <thead>
                             <tr>
-                                <th>Criterio</th>
-                                <th>CODA</th>
-                                <th>LORI</th>
-                                <th>Reeves</th>
+                                <th>Criterio de evaluación</th>
+                                <th style="width:15%;">Puntaje</th>
+                                <th style="width:20%;">Valoración</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td><strong>Enfoque principal</strong></td>
-                                <td>Calidad didáctica y tecnológica</td>
-                                <td>Equilibrio pedagógico-tecnológico</td>
-                                <td>Diseño instruccional y experiencia de aprendizaje</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Número de criterios</strong></td>
-                                <td>10</td>
-                                <td>9</td>
-                                <td>9</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Facilidad de aplicación</strong></td>
-                                <td>Media</td>
-                                <td>Alta</td>
-                                <td>Alta</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Adaptabilidad</strong></td>
-                                <td>Media</td>
-                                <td>Alta</td>
-                                <td>Media</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Énfasis en accesibilidad</strong></td>
-                                <td>Alto</td>
-                                <td>Medio</td>
-                                <td>Bajo</td>
-                            </tr>
+                            <tr><td>Calidad del contenido</td><td>5</td><td><span class="puntaje-excelente">🟢 Excelente</span></td></tr>
+                            <tr><td>Alineación con los objetivos de aprendizaje</td><td>5</td><td><span class="puntaje-excelente">🟢 Excelente</span></td></tr>
+                            <tr><td>Retroalimentación y adaptabilidad</td><td>4</td><td><span class="puntaje-bueno">🟡 Bueno</span></td></tr>
+                            <tr><td>Motivación</td><td>5</td><td><span class="puntaje-excelente">🟢 Excelente</span></td></tr>
+                            <tr><td>Diseño de la presentación</td><td>5</td><td><span class="puntaje-excelente">🟢 Excelente</span></td></tr>
+                            <tr><td>Usabilidad e interacción</td><td>5</td><td><span class="puntaje-excelente">🟢 Excelente</span></td></tr>
+                            <tr><td>Accesibilidad</td><td>4</td><td><span class="puntaje-bueno">🟡 Bueno</span></td></tr>
+                            <tr><td>Reutilización</td><td>5</td><td><span class="puntaje-excelente">🟢 Excelente</span></td></tr>
+                            <tr><td>Cumplimiento de estándares</td><td>5</td><td><span class="puntaje-excelente">🟢 Excelente</span></td></tr>
+                            <tr><td>Integración del enfoque STEAM</td><td>5</td><td><span class="puntaje-excelente">🟢 Excelente</span></td></tr>
+                            <tr><td>Contextualización al entorno educativo</td><td>5</td><td><span class="puntaje-excelente">🟢 Excelente</span></td></tr>
+                            <tr><td>Calidad de las simulaciones interactivas</td><td>5</td><td><span class="puntaje-excelente">🟢 Excelente</span></td></tr>
+                            <tr><td>Desarrollo del pensamiento sistémico</td><td>5</td><td><span class="puntaje-excelente">🟢 Excelente</span></td></tr>
+                            <tr><td>Gamificación y participación del estudiante</td><td>4</td><td><span class="puntaje-bueno">🟡 Bueno</span></td></tr>
                         </tbody>
                     </table>
                 </div>
+                <p style="font-style:italic; color:#556b52; font-size:0.9rem; margin-top:8px;">
+                    <strong>Puntaje total:</strong> 67 / 70 puntos &nbsp;|&nbsp; <strong>Nivel de calidad:</strong> <span class="puntaje-excelente">Excelente (95,7 %)</span>
+                </p>
+
+                <h3>Análisis de resultados</h3>
+                <p>
+                    La aplicación del modelo <strong>LORI-RSL</strong> evidenció que el simulador <strong>Rural STEAM Lab</strong> presenta un nivel de calidad <strong>Excelente</strong>, alcanzando un puntaje de <strong>67 sobre 70 puntos</strong>, equivalente al <strong>95,7 %</strong> de cumplimiento de los criterios establecidos en el instrumento. Los resultados reflejan un alto nivel de coherencia entre los objetivos de aprendizaje, los contenidos desarrollados y las estrategias didácticas implementadas, favoreciendo la comprensión del movimiento de proyectil mediante actividades de exploración y experimentación virtual.
+                </p>
+                <p>
+                    Los criterios incorporados durante el rediseño del modelo permitieron identificar fortalezas que difícilmente podrían evaluarse mediante el instrumento LORI original. En particular, el recurso obtuvo las máximas valoraciones en la <strong>integración del enfoque STEAM</strong>, la <strong>contextualización al entorno educativo</strong>, la <strong>calidad de las simulaciones interactivas</strong> y el <strong>desarrollo del pensamiento sistémico</strong>, aspectos que evidencian su pertinencia para contextos escolares y, especialmente, para instituciones educativas rurales.
+                </p>
+                <p>
+                    Las oportunidades de mejora se concentraron en los criterios de <strong>retroalimentación y adaptabilidad</strong>, así como en <strong>gamificación y participación del estudiante</strong>, los cuales obtuvieron una valoración de cuatro (4) puntos. Aunque estos aspectos presentan un desempeño satisfactorio, podrían fortalecerse mediante la incorporación de retroalimentación personalizada, niveles progresivos de dificultad, insignias digitales o mecanismos de seguimiento del progreso del estudiante, con el fin de incrementar la motivación y enriquecer la experiencia de aprendizaje.
+                </p>
+                <p>
+                    En términos generales, los resultados obtenidos confirman que el modelo <strong>LORI-RSL</strong> permite realizar una evaluación amplia y objetiva del recurso, integrando dimensiones pedagógicas, tecnológicas y comunicacionales que contribuyen a valorar con mayor precisión la calidad de los Recursos Educativos Digitales.
+                </p>
             </section>
 
             <!-- =========================================================
-            SECCIÓN 3 – SELECCIÓN DEL MODELO MÁS ADECUADO
+            SECCIÓN 5 – APLICACIÓN AL RED 2 (PHET)
             ========================================================= -->
             <section>
-                <h2>🎯 Selección del modelo más adecuado</h2>
+                <h2>5. Aplicación del modelo LORI-RSL al Recurso Educativo Digital 2</h2>
+                <h3>PhET Interactive Simulations – Projectile Motion</h3>
                 <p>
-                    Después de aplicar los modelos CODA, LORI y Reeves, se concluyó que el modelo <strong>LORI</strong> es el más adecuado para ser adaptado al contexto de la práctica pedagógica. Esta selección se fundamenta en que LORI ofrece una evaluación integral al combinar criterios pedagógicos, tecnológicos y de usabilidad dentro de un mismo instrumento. Su estructura flexible favorece la incorporación de nuevos indicadores, lo que permitió proponer el modelo <strong>LORI-RSL</strong>.
+                    Con el propósito de complementar el proceso de validación del modelo <strong>LORI-RSL</strong>, el instrumento de evaluación fue aplicado al recurso educativo digital <strong>PhET Interactive Simulations – Projectile Motion</strong>, desarrollado por la <strong>Universidad de Colorado Boulder</strong>. Este recurso fue seleccionado por ser uno de los simuladores educativos más reconocidos a nivel internacional para la enseñanza de la Física, ofreciendo un entorno interactivo que permite experimentar con variables como el ángulo de lanzamiento, la velocidad inicial, la masa y la gravedad, favoreciendo la comprensión del movimiento parabólico mediante la experimentación virtual.
                 </p>
                 <p>
-                    Esta decisión se alinea con los objetivos del trabajo, ya que se buscaba un modelo que pudiera adaptarse a las necesidades específicas del contexto educativo rural y del enfoque STEAM implementado en el proyecto.
+                    La evaluación se realizó utilizando los catorce criterios establecidos en el modelo <strong>LORI-RSL</strong>, asignando una valoración entre uno (1) y cinco (5) para cada criterio. Este procedimiento permitió valorar la calidad pedagógica, tecnológica y comunicacional del recurso, así como analizar el comportamiento de los cinco nuevos indicadores incorporados durante el proceso de rediseño del modelo.
+                </p>
+
+                <div class="figura-container">
+                    <img src="img/phet-simulations.png" alt="PhET Interactive Simulations – Projectile Motion" />
+                    <p class="figcaption">Figura 4. PhET Interactive Simulations – Projectile Motion. Fuente: PhET Interactive Simulations (2026).</p>
+                </div>
+
+                <p style="font-style:italic; color:#556b52;">
+                    Los resultados obtenidos mediante la aplicación del instrumento LORI-RSL se presentan en la Tabla 3, donde se detalla la valoración de cada criterio y el puntaje total alcanzado por el recurso educativo evaluado.
+                </p>
+
+                <h3>Tabla 3. Resultados de la aplicación del modelo LORI-RSL al RED PhET Interactive Simulations</h3>
+                <div class="tabla-wrapper">
+                    <table class="tabla-modelos">
+                        <thead>
+                            <tr>
+                                <th>Criterio de evaluación</th>
+                                <th style="width:15%;">Puntaje</th>
+                                <th style="width:20%;">Valoración</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Calidad del contenido</td><td>5</td><td><span class="puntaje-excelente">🟢 Excelente</span></td></tr>
+                            <tr><td>Alineación con los objetivos de aprendizaje</td><td>5</td><td><span class="puntaje-excelente">🟢 Excelente</span></td></tr>
+                            <tr><td>Retroalimentación y adaptabilidad</td><td>4</td><td><span class="puntaje-bueno">🟡 Bueno</span></td></tr>
+                            <tr><td>Motivación</td><td>5</td><td><span class="puntaje-excelente">🟢 Excelente</span></td></tr>
+                            <tr><td>Diseño de la presentación</td><td>5</td><td><span class="puntaje-excelente">🟢 Excelente</span></td></tr>
+                            <tr><td>Usabilidad e interacción</td><td>5</td><td><span class="puntaje-excelente">🟢 Excelente</span></td></tr>
+                            <tr><td>Accesibilidad</td><td>5</td><td><span class="puntaje-excelente">🟢 Excelente</span></td></tr>
+                            <tr><td>Reutilización</td><td>5</td><td><span class="puntaje-excelente">🟢 Excelente</span></td></tr>
+                            <tr><td>Cumplimiento de estándares</td><td>5</td><td><span class="puntaje-excelente">🟢 Excelente</span></td></tr>
+                            <tr><td>Integración del enfoque STEAM</td><td>4</td><td><span class="puntaje-bueno">🟡 Bueno</span></td></tr>
+                            <tr><td>Contextualización al entorno educativo</td><td>3</td><td><span class="puntaje-aceptable">🟠 Aceptable</span></td></tr>
+                            <tr><td>Calidad de las simulaciones interactivas</td><td>5</td><td><span class="puntaje-excelente">🟢 Excelente</span></td></tr>
+                            <tr><td>Desarrollo del pensamiento sistémico</td><td>4</td><td><span class="puntaje-bueno">🟡 Bueno</span></td></tr>
+                            <tr><td>Gamificación y participación del estudiante</td><td>4</td><td><span class="puntaje-bueno">🟡 Bueno</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-style:italic; color:#556b52; font-size:0.9rem; margin-top:8px;">
+                    <strong>Puntaje total:</strong> 64 / 70 puntos &nbsp;|&nbsp; <strong>Nivel de calidad:</strong> <span class="puntaje-excelente">Excelente (91,4 %)</span>
+                </p>
+
+                <h3>Análisis de resultados</h3>
+                <p>
+                    La aplicación del modelo <strong>LORI-RSL</strong> permitió determinar que el recurso <strong>PhET Interactive Simulations – Projectile Motion</strong> alcanza un nivel de calidad <strong>Excelente</strong>, obteniendo un puntaje de <strong>64 sobre 70 puntos</strong>, equivalente al <strong>91,4 %</strong> del puntaje máximo establecido por el instrumento. Los resultados evidencian un recurso altamente consolidado desde el punto de vista científico y tecnológico, destacándose por la precisión de sus contenidos, la facilidad de uso, la estabilidad de la plataforma y la calidad de las simulaciones que ofrece para el aprendizaje del movimiento parabólico.
+                </p>
+                <p>
+                    Los criterios tradicionales del modelo LORI obtuvieron valoraciones altas, especialmente aquellos relacionados con la calidad del contenido, el diseño de la interfaz, la usabilidad, la reutilización y el cumplimiento de estándares técnicos. Estas características han convertido a <strong>PhET</strong> en uno de los recursos educativos digitales de mayor reconocimiento y utilización en instituciones educativas y universidades de diferentes países.
+                </p>
+                <p>
+                    La incorporación de los nuevos criterios del modelo <strong>LORI-RSL</strong> permitió identificar aspectos que el modelo original no evaluaba de forma explícita. En este sentido, el recurso obtuvo una valoración menor en <strong>contextualización al entorno educativo</strong>, debido a que fue diseñado como una herramienta de uso general y no contempla adaptaciones específicas para contextos locales o rurales. De igual manera, la <strong>integración del enfoque STEAM</strong> y el <strong>desarrollo del pensamiento sistémico</strong> se presentan de manera implícita, razón por la cual recibieron una valoración inferior a la obtenida por el simulador <strong>Rural STEAM Lab</strong>.
+                </p>
+                <p>
+                    En términos generales, los resultados demuestran que <strong>PhET Interactive Simulations</strong> constituye un recurso educativo digital de alta calidad y que el modelo <strong>LORI-RSL</strong> permite identificar fortalezas y oportunidades de mejora que no serían visibles mediante la aplicación exclusiva del modelo LORI original. Esto confirma la utilidad de los nuevos criterios incorporados durante el proceso de rediseño y fortalece la validez del modelo propuesto.
                 </p>
             </section>
 
             <!-- =========================================================
-            SECCIÓN 4 – APLICACIÓN DE LORI-RSL
+            SECCIÓN 6 – COMPARACIÓN DE RESULTADOS
             ========================================================= -->
             <section>
-                <h2>🔬 Aplicación de LORI-RSL</h2>
+                <h2>6. Comparación de resultados</h2>
                 <p>
-                    Con el propósito de validar la pertinencia del modelo <strong>LORI-RSL</strong>, se realizó una aplicación piloto a los dos Recursos Educativos Digitales. Los nuevos criterios permitieron destacar fortalezas adicionales:
+                    Una vez aplicado el modelo de evaluación <strong>LORI-RSL</strong> a los dos Recursos Educativos Digitales seleccionados, se realizó un análisis comparativo con el propósito de identificar sus fortalezas, diferencias y oportunidades de mejora. Esta comparación permitió valorar el comportamiento de cada recurso frente a los catorce criterios del instrumento y, al mismo tiempo, validar la capacidad del modelo para diferenciar recursos educativos con características pedagógicas y tecnológicas distintas.
                 </p>
-                <ul>
-                    <li>
-                        <strong>Rural STEAM Lab</strong> obtuvo una alta puntuación en integración STEAM, contextualización rural y calidad de simulaciones. El recurso promueve el pensamiento sistémico y la gamificación, aunque podría fortalecer la retroalimentación personalizada.
-                    </li>
-                    <li>
-                        <strong>PhET</strong> sobresalió en calidad de simulaciones y precisión científica, pero presentó menor contextualización al entorno rural y una integración menos explícita del enfoque STEAM en comparación con Rural STEAM Lab.
-                    </li>
-                </ul>
                 <p>
-                    La implementación del modelo <strong>LORI-RSL</strong> evidenció que la incorporación de nuevos indicadores fortalece la evaluación de Recursos Educativos Digitales utilizados en la enseñanza de la Física, proporcionando una evaluación más pertinente para los recursos digitales empleados en contextos escolares actuales.
+                    Los resultados obtenidos evidencian que ambos Recursos Educativos Digitales alcanzan un nivel de calidad <strong>Excelente</strong>, superando el 90 % del puntaje máximo establecido por el modelo <strong>LORI-RSL</strong>. Sin embargo, el análisis detallado muestra diferencias importantes en algunos de los nuevos criterios incorporados durante el proceso de rediseño, demostrando que estos indicadores aportan información adicional que no es posible obtener mediante la aplicación del modelo LORI original.
+                </p>
+
+                <h3>Tabla 4. Comparación de los resultados obtenidos mediante el modelo LORI-RSL</h3>
+                <div class="tabla-wrapper">
+                    <table class="tabla-modelos">
+                        <thead>
+                            <tr>
+                                <th>Criterio de evaluación</th>
+                                <th>Rural STEAM Lab</th>
+                                <th>PhET Interactive Simulations</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Calidad del contenido</td><td>🟢 5</td><td>🟢 5</td></tr>
+                            <tr><td>Alineación con los objetivos de aprendizaje</td><td>🟢 5</td><td>🟢 5</td></tr>
+                            <tr><td>Retroalimentación y adaptabilidad</td><td>🟡 4</td><td>🟡 4</td></tr>
+                            <tr><td>Motivación</td><td>🟢 5</td><td>🟢 5</td></tr>
+                            <tr><td>Diseño de la presentación</td><td>🟢 5</td><td>🟢 5</td></tr>
+                            <tr><td>Usabilidad e interacción</td><td>🟢 5</td><td>🟢 5</td></tr>
+                            <tr><td>Accesibilidad</td><td>🟡 4</td><td>🟢 5</td></tr>
+                            <tr><td>Reutilización</td><td>🟢 5</td><td>🟢 5</td></tr>
+                            <tr><td>Cumplimiento de estándares</td><td>🟢 5</td><td>🟢 5</td></tr>
+                            <tr><td>Integración del enfoque STEAM</td><td>🟢 5</td><td>🟡 4</td></tr>
+                            <tr><td>Contextualización al entorno educativo</td><td>🟢 5</td><td>🟠 3</td></tr>
+                            <tr><td>Calidad de las simulaciones interactivas</td><td>🟢 5</td><td>🟢 5</td></tr>
+                            <tr><td>Desarrollo del pensamiento sistémico</td><td>🟢 5</td><td>🟡 4</td></tr>
+                            <tr><td>Gamificación y participación del estudiante</td><td>🟡 4</td><td>🟡 4</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-style:italic; color:#556b52; font-size:0.9rem; margin-top:8px;">
+                    <strong>Puntaje total:</strong> Rural STEAM Lab: <span class="puntaje-excelente">67/70 (95,7 %)</span> &nbsp;|&nbsp; PhET: <span class="puntaje-excelente">64/70 (91,4 %)</span>
+                </p>
+                <p style="font-style:italic; color:#556b52; font-size:0.9rem;">
+                    <strong>Nivel de calidad:</strong> <span class="puntaje-excelente">Excelente</span> en ambos casos.
+                </p>
+
+                <div class="figura-container">
+                    <img src="img/comparacion-lori-rsl.png" alt="Comparación gráfica de los resultados obtenidos por los Recursos Educativos Digitales mediante el modelo LORI-RSL" />
+                    <p class="figcaption">Figura 5. Comparación gráfica de los resultados obtenidos por los Recursos Educativos Digitales mediante el modelo LORI-RSL. Fuente: Elaboración propia (2026).</p>
+                </div>
+
+                <!-- Dashboard comparativo (Figura 6) -->
+                <div class="dashboard-comparativo">
+                    <h3 style="margin-top:0; border-left:none; padding-left:0; text-align:center; font-size:1.4rem;">📊 Dashboard comparativo LORI-RSL</h3>
+                    <p style="text-align:center; color:#556b52; margin-bottom:16px;">
+                        Figura 6. Comparación de resultados finales de los Recursos Educativos Digitales evaluados.
+                    </p>
+
+                    <div class="dashboard-item">
+                        <span class="dashboard-label">🌱 Rural STEAM Lab</span>
+                        <div class="dashboard-barra">
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill progress-green" style="width:95.7%;">95.7%</div>
+                            </div>
+                        </div>
+                        <span class="dashboard-puntaje">67/70</span>
+                        <span class="dashboard-nivel dashboard-nivel-excelente">Excelente</span>
+                    </div>
+
+                    <div class="dashboard-item">
+                        <span class="dashboard-label">🔬 PhET Simulations</span>
+                        <div class="dashboard-barra">
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill progress-gold" style="width:91.4%;">91.4%</div>
+                            </div>
+                        </div>
+                        <span class="dashboard-puntaje">64/70</span>
+                        <span class="dashboard-nivel dashboard-nivel-excelente">Excelente</span>
+                    </div>
+                </div>
+
+                <p style="font-style:italic; color:#556b52;">
+                    La Figura 6 permite observar de manera visual el comportamiento de ambos Recursos Educativos Digitales frente al modelo LORI-RSL. Aunque ambos alcanzan un nivel de calidad excelente, Rural STEAM Lab obtiene una valoración ligeramente superior (95,7 %) debido a la incorporación del enfoque STEAM y su contextualización al entorno educativo, mientras que PhET Interactive Simulations alcanza un 91,4 % con fortalezas en accesibilidad y reconocimiento internacional.
+                </p>
+
+                <h3>Interpretación comparativa</h3>
+                <p>
+                    El análisis comparativo evidencia que ambos Recursos Educativos Digitales presentan una calidad sobresaliente desde las dimensiones pedagógica, tecnológica y comunicacional. Tanto <strong>Rural STEAM Lab</strong> como <strong>PhET Interactive Simulations</strong> obtuvieron la máxima valoración en criterios relacionados con la calidad del contenido, la alineación con los objetivos de aprendizaje, la usabilidad, el diseño de la interfaz, la reutilización y el cumplimiento de estándares técnicos, lo que demuestra que ambos recursos constituyen herramientas pertinentes para apoyar la enseñanza del movimiento de proyectil.
+                </p>
+                <p>
+                    No obstante, las principales diferencias se observaron en los cinco criterios incorporados durante el rediseño del modelo <strong>LORI-RSL</strong>. El simulador <strong>Rural STEAM Lab</strong> alcanzó una valoración superior en la integración del enfoque <strong>STEAM</strong>, la contextualización al entorno educativo y el desarrollo del pensamiento sistémico, debido a que fue diseñado específicamente para responder a las necesidades del contexto escolar colombiano y promover metodologías activas de aprendizaje. Por su parte, <strong>PhET Interactive Simulations</strong> obtuvo una mayor valoración en accesibilidad, gracias a su amplia disponibilidad en diferentes idiomas, plataformas y dispositivos, así como a su consolidación como uno de los simuladores educativos más utilizados a nivel internacional.
+                </p>
+                <p>
+                    Estos resultados evidencian que la incorporación de nuevos criterios fortalece la capacidad del modelo <strong>LORI-RSL</strong> para realizar evaluaciones más completas, permitiendo identificar diferencias cualitativas entre recursos que, bajo los criterios tradicionales del modelo LORI, podrían presentar resultados muy similares. En consecuencia, el modelo propuesto ofrece una visión más amplia de la calidad de los Recursos Educativos Digitales y proporciona información relevante para apoyar los procesos de selección, implementación y mejoramiento continuo en diversos contextos educativos.
+                </p>
+            </section>
+
+            <!-- =========================================================
+            SECCIÓN 7 – VALIDACIÓN DEL MODELO LORI-RSL
+            ========================================================= -->
+            <section>
+                <h2>7. Validación del modelo LORI-RSL</h2>
+                <p>
+                    Una vez implementado el modelo <strong>LORI-RSL</strong> en los dos Recursos Educativos Digitales seleccionados, fue posible analizar su comportamiento y determinar su pertinencia como instrumento para la evaluación de recursos educativos digitales. Los resultados obtenidos permitieron evidenciar que la incorporación de nuevos criterios fortalece el proceso de evaluación y ofrece una visión más amplia de la calidad pedagógica, tecnológica y comunicacional de los recursos. Con base en esta implementación, a continuación se presentan las respuestas a los interrogantes orientadores del Entregable 2.
+                </p>
+
+                <h3>¿De qué manera el modelo rediseñado permite realizar una adecuada evaluación de un Recurso Educativo Digital?</h3>
+                <p>
+                    El modelo <strong>LORI-RSL</strong> permite realizar una evaluación más completa e integral de los Recursos Educativos Digitales al conservar las fortalezas del modelo LORI e incorporar cinco nuevos criterios relacionados con la integración del enfoque STEAM, la contextualización al entorno educativo, la calidad de las simulaciones interactivas, el desarrollo del pensamiento sistémico y la gamificación. La aplicación del instrumento demostró que estos nuevos indicadores complementan la evaluación tradicional, permitiendo valorar aspectos pedagógicos y tecnológicos que anteriormente no eran considerados de forma explícita.
+                </p>
+                <p>
+                    Además, el modelo facilita un proceso de evaluación sistemático mediante una escala uniforme de valoración, permitiendo identificar fortalezas, oportunidades de mejora y aspectos susceptibles de optimización en cada recurso. Esto proporciona información objetiva para apoyar la selección, adaptación e implementación de Recursos Educativos Digitales en diferentes contextos educativos.
+                </p>
+
+                <h3>¿Qué ventajas tiene el modelo LORI-RSL frente a otros modelos de evaluación existentes?</h3>
+                <p>
+                    El principal aporte del modelo <strong>LORI-RSL</strong> consiste en integrar las fortalezas del modelo LORI con nuevos criterios acordes con las tendencias actuales de la educación digital. Mientras otros modelos centran su evaluación en aspectos didácticos, tecnológicos o de diseño instruccional, el modelo propuesto incorpora elementos relacionados con la educación STEAM, la contextualización de los recursos, el aprendizaje mediante simulaciones y el desarrollo del pensamiento sistémico.
+                </p>
+                <p>
+                    Otra ventaja importante es su flexibilidad de aplicación. El modelo puede utilizarse tanto para evaluar recursos educativos desarrollados localmente, como <strong>Rural STEAM Lab</strong>, como recursos de alcance internacional, como <strong>PhET Interactive Simulations</strong>, permitiendo establecer comparaciones objetivas mediante un mismo instrumento de evaluación. De esta manera, el modelo se convierte en una herramienta adaptable a diferentes niveles educativos, áreas del conocimiento y contextos institucionales.
+                </p>
+
+                <h3>¿Qué elementos técnicos, pedagógicos y comunicacionales pueden fortalecerse en el modelo?</h3>
+                <p>
+                    Los resultados obtenidos durante la implementación permitieron identificar oportunidades de mejora tanto en el modelo como en los recursos evaluados. Desde la dimensión técnica, resulta pertinente fortalecer aspectos relacionados con la interoperabilidad con plataformas de aprendizaje, la accesibilidad universal y la integración de analíticas de aprendizaje que permitan realizar un seguimiento más detallado del desempeño de los estudiantes.
+                </p>
+                <p>
+                    En la dimensión pedagógica, se recomienda ampliar los mecanismos de retroalimentación personalizada, incorporar actividades con diferentes niveles de dificultad y fortalecer estrategias de gamificación que incrementen la motivación y favorezcan procesos de aprendizaje más activos. Finalmente, desde la dimensión comunicacional, es posible enriquecer la interacción entre el usuario y el recurso mediante mensajes adaptativos, ayudas contextuales y elementos visuales que faciliten la comprensión de los contenidos y mejoren la experiencia de aprendizaje.
+                </p>
+
+                <h3>Síntesis de la validación</h3>
+                <p>
+                    La implementación realizada permitió comprobar que el modelo <strong>LORI-RSL</strong> constituye un instrumento pertinente para la evaluación de Recursos Educativos Digitales, al ofrecer una valoración integral que combina criterios pedagógicos, tecnológicos y comunicacionales con nuevos indicadores orientados a las necesidades de la educación digital contemporánea. Los resultados obtenidos en los recursos <strong>Rural STEAM Lab</strong> y <strong>PhET Interactive Simulations</strong> evidencian que el modelo es capaz de diferenciar fortalezas y oportunidades de mejora, aportando información útil para la toma de decisiones y el mejoramiento continuo de los recursos educativos.
+                </p>
+            </section>
+
+            <!-- =========================================================
+            SECCIÓN 8 – CONCLUSIONES
+            ========================================================= -->
+            <section>
+                <h2>8. Conclusiones</h2>
+                <p>
+                    La implementación del modelo de evaluación <strong>LORI-RSL</strong> permitió comprobar la pertinencia de la propuesta de rediseño desarrollada a partir del modelo <strong>Learning Object Review Instrument (LORI)</strong>. La incorporación de cinco nuevos criterios orientados al enfoque <strong>STEAM</strong>, la contextualización al entorno educativo, la calidad de las simulaciones interactivas, el desarrollo del pensamiento sistémico y la gamificación fortaleció la capacidad del instrumento para evaluar Recursos Educativos Digitales desde una perspectiva más amplia e integrada, respondiendo a las necesidades actuales de la educación mediada por tecnologías digitales.
+                </p>
+                <p>
+                    La aplicación del instrumento en los Recursos Educativos Digitales <strong>Rural STEAM Lab – Simulador Interactivo de Movimiento de Proyectil</strong> y <strong>PhET Interactive Simulations – Projectile Motion</strong> permitió evidenciar que ambos recursos presentan un nivel de calidad <strong>Excelente</strong>, aunque con fortalezas diferenciadas. Mientras <strong>Rural STEAM Lab</strong> sobresalió por su contextualización al entorno educativo, la integración del enfoque STEAM y el desarrollo del pensamiento sistémico, <strong>PhET Interactive Simulations</strong> destacó por la precisión científica de sus contenidos, la accesibilidad y la consolidación tecnológica alcanzada a nivel internacional. Estos resultados demostraron que el modelo <strong>LORI-RSL</strong> es capaz de identificar diferencias cualitativas entre recursos que, mediante otros instrumentos, podrían presentar valoraciones similares.
+                </p>
+                <p>
+                    Los resultados obtenidos permitieron validar que el modelo <strong>LORI-RSL</strong> constituye una herramienta útil para apoyar los procesos de selección, evaluación y mejoramiento continuo de Recursos Educativos Digitales. La incorporación de nuevos indicadores proporcionó información complementaria que favorece la toma de decisiones pedagógicas y tecnológicas, permitiendo valorar aspectos relacionados con las metodologías activas de aprendizaje y con las demandas de los contextos educativos contemporáneos.
+                </p>
+                <p>
+                    Finalmente, se considera que el modelo propuesto ofrece una alternativa pertinente para la evaluación de Recursos Educativos Digitales en diferentes niveles y áreas del conocimiento. Su estructura flexible facilita futuras adaptaciones e incorpora elementos que responden a las tendencias actuales de la innovación educativa, constituyéndose en un aporte para docentes e investigadores interesados en fortalecer la calidad de los recursos digitales utilizados en los procesos de enseñanza y aprendizaje.
                 </p>
             </section>
 
